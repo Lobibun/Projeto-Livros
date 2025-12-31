@@ -1,8 +1,14 @@
+using LivroCDF.Data;
+using LivroCDF.Services;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
-
+var connectionString = builder.Configuration.GetConnectionString("LivrariaContext");
+builder.Services.AddDbContext<LivrariaContext>(options =>
+    options.UseMySql(connectionString,
+    ServerVersion.AutoDetect(connectionString)));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<LivroService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
