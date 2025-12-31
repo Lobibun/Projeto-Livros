@@ -36,5 +36,14 @@ namespace LivroCDF.Controllers
             }
             return View(livro);
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null) return NotFound();
+            
+            var Livro = await _livroService.FindByIdAsync(id.Value);
+            if (Livro == null) return NotFound();
+            return View(Livro);
+        }
     }
 }

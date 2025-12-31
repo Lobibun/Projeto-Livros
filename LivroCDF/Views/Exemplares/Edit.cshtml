@@ -1,0 +1,38 @@
+﻿@model LivroCDF.Models.Exemplar
+@using LivroCDF.Models.Enums
+
+@{
+    ViewData["Title"] = "Gerenciar Exemplar";
+}
+
+<h2>Gerenciar Exemplar #@Model.Id</h2>
+<h4>Livro: @ViewBag.TituloLivro</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="LivroId" /> <div class="form-group mb-3">
+                <label asp-for="Status" class="control-label">Situação Atual</label>
+                <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<StatusLivro>()"></select>
+                <small class="text-muted">Mudou para Vendido? Selecione aqui.</small>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Valor" class="control-label">Valor Real (R$)</label>
+                <input asp-for="Valor" class="form-control" type="number" step="0.01" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="DataEntrada" class="control-label">Data de Entrada</label>
+                <input asp-for="DataEntrada" class="form-control" />
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Salvar Alterações" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

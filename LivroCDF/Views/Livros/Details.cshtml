@@ -1,0 +1,90 @@
+﻿@model LivroCDF.Models.Livro
+
+@{
+    ViewData["Title"] = "Detalhes do Livro";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">@Model.Titulo</h4>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">Autor:</dt>
+                        <dd class="col-sm-8">@Model.Autor</dd>
+
+                        <dt class="col-sm-4">ISBN:</dt>
+                        <dd class="col-sm-8">@Model.ISBN</dd>
+
+                        <dt class="col-sm-4">Preço Capa:</dt>
+                        <dd class="col-sm-8">R$ @Model.Valor</dd>
+
+                        <dt class="col-sm-4">Estoque:</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge bg-success">@Model.Exemplares.Count() unidades</span>
+                        </dd>
+                    </dl>
+                    <div class="d-grid gap-2">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning">Editar Dados</a>
+                        <a asp-action="Index" class="btn btn-outline-secondary">Voltar para Lista</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3>Inventário Físico</h3>
+            </div>
+
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Entrada</th>
+                        <th>Valor Real</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var exemplar in Model.Exemplares)
+                    {
+                        <tr>
+                            <td>#@exemplar.Id</td>
+                            <td>@exemplar.DataEntrada.ToShortDateString()</td>
+                            <td>R$ @exemplar.Valor</td>
+                            <td>
+                                @if (exemplar.Status == LivroCDF.Models.Enums.StatusLivro.APagar)
+                                {
+                                    <span class="badge bg-warning text-dark">A Pagar</span>
+                                }
+                                else if (exemplar.Status == LivroCDF.Models.Enums.StatusLivro.Estoque)
+                                {
+                                    <span class="badge bg-success">Estoque</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">@exemplar.Status</span>
+                                }
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-danger">X</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            @if (!Model.Exemplares.Any())
+            {
+                <div class="alert alert-warning">
+                    Nenhum exemplar físico cadastrado para este título.
+                </div>
+            }
+        </div>
+    </div>
+</div>

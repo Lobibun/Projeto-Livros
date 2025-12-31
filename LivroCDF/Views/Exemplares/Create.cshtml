@@ -1,0 +1,90 @@
+﻿@model LivroCDF.Models.Exemplar
+@using LivroCDF.Models.Enums
+
+@{
+    ViewData["Title"] = "Entrada de Estoque";
+    var livros = ViewBag.ListaCompleta as List<LivroCDF.Models.Livro>;
+}
+
+<h2>Adicionar Exemplar ao Estoque</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" id="formEstoque">
+
+            <div class="form-group mb-3">
+                <label class="control-label">Escolha o Livro</label>
+                <select asp-for="LivroId" class="form-control" id="ddlLivros" required>
+                    <option value="">-- Selecione um Livro --</option>
+                    @if (livros != null)
+                    {
+                        foreach (var item in livros)
+                        {
+                            <option value="@item.Id" data-preco="@item.Valor">@item.Titulo</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Valor" class="control-label">Valor desta unidade (R$)</label>
+                <input asp-for="Valor" class="form-control" type="number" step="0.01" min="0" id="txtValor" placeholder="0,00" />
+                <small class="text-muted">Se deixar em branco ou 0, usa o preço de capa.</small>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<StatusLivro>()"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="DataEntrada" class="control-label"></label>
+                <input asp-for="DataEntrada" class="form-control" type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label">Quantidade de Cópias</label>
+                <input type="number" name="Quantidade" class="form-control" value="1" min="1" required />
+                <small class="text-muted">Quantos livros chegaram?</small>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Adicionar ao Estoque" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // 1. ATUALIZA PREÇO AO TROCAR LIVRO
+        document.getElementById("ddlLivros").addEventListener("change", function() {
+            var opcaoSelecionada = this.options[this.selectedIndex];
+            var precoDoLivro = opcaoSelecionada.getAttribute("data-preco");
+
+            if(precoDoLivro) {
+                // Formata com ponto para o input type="number" aceitar
+                document.getElementById("txtValor").value = precoDoLivro.replace(",", ".");
+            } else {
+                document.getElementById("txtValor").value = "";
+            }
+        });
+
+        // 2. CORREÇÃO DO "CAMPO VAZIO" AO ENVIAR
+        document.getElementById("formEstoque").addEventListener("submit", function() {
+            var campoValor = document.getElementById("txtValor");
+
+            // Se o campo estiver vazio (""), forçamos ele a ser "0" antes de enviar.
+            // Isso engana a validação do navegador e deixa o Controller fazer a lógica de pegar o preço da capa.
+            if (!campoValor.value) {
+                campoValor.value = 0;
+            }
+        });
+    </script>
+}
