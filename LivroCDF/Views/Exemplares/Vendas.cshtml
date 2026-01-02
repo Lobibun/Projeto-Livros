@@ -1,0 +1,89 @@
+﻿@model IEnumerable<LivroCDF.Models.Exemplar>
+
+@{
+    ViewData["Title"] = "Relatório Financeiro";
+
+    // PROTEÇÃO: Verifica se o Model não é nulo antes de calcular
+    float totalFiltrado = (Model != null) ? Model.Sum(x => x.Valor) : 0;
+    int qtdLivros = (Model != null) ? Model.Count() : 0;
+}
+
+<h1>💰 Relatório de Vendas</h1>
+
+<div class="card p-4 mb-4 bg-light shadow-sm">
+    <h5 class="card-title text-muted mb-3">Filtrar Período</h5>
+
+    <form asp-action="Vendas" method="get">
+        <div class="row align-items-end">
+            <div class="col-md-4">
+                <label class="fw-bold">De (Data Inicial):</label>
+                <input type="date" name="dataInicio" class="form-control" value="@ViewBag.DataInicio" />
+            </div>
+            <div class="col-md-4">
+                <label class="fw-bold">Até (Data Final):</label>
+                <input type="date" name="dataFim" class="form-control" value="@ViewBag.DataFim" />
+            </div>
+            <div class="col-md-4 d-flex gap-2">
+                <button type="submit" class="btn btn-primary flex-grow-1">🔍 Filtrar</button>
+                <a asp-action="Vendas" class="btn btn-outline-secondary">❌ Limpar</a>
+            </div>
+        </div>
+        <small class="text-muted mt-2 d-block">
+            * Deixe os campos vazios para ver <strong>todo o histórico</strong>.
+        </small>
+    </form>
+</div>
+
+@if (qtdLivros > 0)
+{
+    <div class="alert alert-success d-flex justify-content-between align-items-center">
+        <div>
+            <h4 class="alert-heading mb-0">Resultado do Período</h4>
+            <span>Foram vendidos <strong>@qtdLivros</strong> livros.</span>
+        </div>
+        <div class="text-end">
+            <span class="d-block small">Faturamento Total:</span>
+            <span style="font-size: 2em; font-weight: bold;">R$ @totalFiltrado.ToString("N2")</span>
+        </div>
+    </div>
+
+    <table class="table table-striped table-hover mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Livro</th>
+                <th>Data da Venda</th>
+
+                <th>Última Atualização</th>
+
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Livro.Titulo</td>
+
+                    <td>@item.DataVenda?.ToString("dd/MM/yyyy HH:mm")</td>
+
+                    <td class="text-muted">
+                        @item.DataUltimaAtualizacao?.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+
+                    <td class="text-success fw-bold">R$ @item.Valor.ToString("N2")</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Detalhes</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-warning text-center mt-4">
+        <h4>Nenhuma venda encontrada neste período. 📅</h4>
+        <p>Tente ajustar as datas acima.</p>
+    </div>
+}

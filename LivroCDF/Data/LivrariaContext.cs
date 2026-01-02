@@ -10,5 +10,6 @@ namespace LivroCDF.Data
 
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Exemplar> Exemplares { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }

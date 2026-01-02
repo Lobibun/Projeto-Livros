@@ -5,10 +5,10 @@ namespace LivroCDF.Models.Enums
     public enum StatusLivro : int
     {
         [Display(Name = "Em Estoque")]
-        Estoque,
+        Estoque = 0,
         [Display(Name = "A Pagar")]
-        APagar,
+        APagar = 1,
         [Display(Name = "Vendido")]
-        Vendido
+        Vendido = 2
     }
 }

@@ -4,6 +4,7 @@ using LivroCDF.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LivroCDF.Migrations
 {
     [DbContext(typeof(LivrariaContext))]
-    partial class LivrariaContextModelSnapshot : ModelSnapshot
+    [Migration("20260102173849_CriandoTabelaClientes")]
+    partial class CriandoTabelaClientes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,8 +48,7 @@ namespace LivroCDF.Migrations
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("Telefone")
-                        .HasMaxLength(15)
-                        .HasColumnType("varchar(15)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -60,9 +62,6 @@ namespace LivroCDF.Migrations
                         .HasColumnType("int");
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("ClienteId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("DataEntrada")
                         .HasColumnType("datetime(6)");
@@ -84,8 +83,6 @@ namespace LivroCDF.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClienteId");
-
                     b.HasIndex("LivroId");
 
                     b.ToTable("Exemplares");
@@ -103,17 +100,7 @@ namespace LivroCDF.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int?>("ClienteId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("DataVenda")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<string>("ISBN")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -126,40 +113,18 @@ namespace LivroCDF.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClienteId");
-
                     b.ToTable("Livros");
                 });
 
             modelBuilder.Entity("LivroCDF.Models.Exemplar", b =>
                 {
-                    b.HasOne("LivroCDF.Models.Cliente", "Cliente")
-                        .WithMany("Compras")
-                        .HasForeignKey("ClienteId");
-
                     b.HasOne("LivroCDF.Models.Livro", "Livro")
                         .WithMany("Exemplares")
                         .HasForeignKey("LivroId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Cliente");
-
                     b.Navigation("Livro");
-                });
-
-            modelBuilder.Entity("LivroCDF.Models.Livro", b =>
-                {
-                    b.HasOne("LivroCDF.Models.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId");
-
-                    b.Navigation("Cliente");
-                });
-
-            modelBuilder.Entity("LivroCDF.Models.Cliente", b =>
-                {
-                    b.Navigation("Compras");
                 });
 
             modelBuilder.Entity("LivroCDF.Models.Livro", b =>

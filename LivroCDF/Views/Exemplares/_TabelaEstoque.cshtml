@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LivroCDF.Models.Exemplar>
+@using LivroCDF.Models.Enums
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Livro</th>
+            <th>Data Entrada</th>
+            <th>Valor</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string classeLinha = (item.Status == StatusLivro.APagar) ? "table-warning" : "";
+            <tr class="@classeLinha">
+                <td>@item.Livro.Titulo</td>
+                <td>@item.DataEntrada.ToShortDateString()</td>
+                <td>R$ @item.Valor</td>
+                <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">✏️</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">🗑️</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info mt-3">Nenhum livro encontrado.</div>
+}

@@ -9,22 +9,17 @@ namespace LivroCDF.Services
     public class LivroService
     {
         private readonly LivrariaContext _context;
-        public Livro LivroPai { get; set; }
 
         public LivroService(LivrariaContext context)
         {
             _context = context;
         }
+
         public async Task<List<Livro>> FindAllAsync()
         {
             return await _context.Livros
                 .Include(x => x.Exemplares)
                 .ToListAsync();
-        }
-        public async Task IsertAsync(Livro obj)
-        {
-            _context.Add(obj);
-            await _context.SaveChangesAsync();
         }
 
         public async Task<Livro> FindByIdAsync(int id)
@@ -34,11 +29,44 @@ namespace LivroCDF.Services
                 .FirstOrDefaultAsync(obj => obj.Id == id);
         }
 
+        public async Task InsertAsync(Livro obj)
+        {
+            _context.Add(obj);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Livro obj)
+        {
+            bool exists = await _context.Livros.AnyAsync(x => x.Id == obj.Id);
+            if (!exists)
+            {
+                throw new KeyNotFoundException("Livro não encontrado");
+            }
+            _context.Update(obj);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task RemoveAsync(int id)
+        {
+            var obj = await _context.Livros.FindAsync(id);
+            if (obj != null)
+            {
+                _context.Livros.Remove(obj);
+                await _context.SaveChangesAsync();
+            }
+        }
         public async Task<List<Exemplar>> BuscarTodosExemplaresAsync()
         {
             return await _context.Exemplares
                 .Include(exemplar => exemplar.Livro)
                 .ToListAsync();
+        }
+
+        public async Task<Exemplar> BuscarExemplarPorIdAsync(int id)
+        {
+            return await _context.Exemplares
+                .Include(x => x.Livro)
+                .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task InserirExemplarAsync(Exemplar exemplar)
@@ -53,12 +81,6 @@ namespace LivroCDF.Services
             }
             _context.Add(exemplar);
             await _context.SaveChangesAsync();
-        }
-        public async Task<Exemplar> BuscarExemplarPorIdAsync(int id)
-        {
-            return await _context.Exemplares
-                .Include(x => x.Livro)
-               .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task AtualizarExemplarAsync(Exemplar exemplar)

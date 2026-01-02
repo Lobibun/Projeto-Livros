@@ -11,12 +11,20 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-controller="Exemplares" asp-action="Edit">
             <input type="hidden" asp-for="Id" />
-            <input type="hidden" asp-for="LivroId" /> <div class="form-group mb-3">
+            <input type="hidden" asp-for="LivroId" />
+
+            <div class="form-group mb-3">
                 <label asp-for="Status" class="control-label">Situação Atual</label>
-                <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<StatusLivro>()"></select>
-                <small class="text-muted">Mudou para Vendido? Selecione aqui.</small>
+                <select asp-for="Status" id="ddlStatus" class="form-control" asp-items="Html.GetEnumSelectList<StatusLivro>()" onchange="verificarStatus()"></select>
+            </div>
+
+            <div class="form-group mb-3" id="divCliente" style="display:none;">
+                <label asp-for="ClienteId" class="control-label fw-bold" style="color: #d63384;">Cliente (Comprador)</label>
+                <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId">
+                    <option value="">-- Selecione o Cliente --</option>
+                </select>
             </div>
 
             <div class="form-group mb-3">
@@ -25,14 +33,52 @@
             </div>
 
             <div class="form-group mb-3">
-                <label asp-for="DataEntrada" class="control-label">Data de Entrada</label>
-                <input asp-for="DataEntrada" class="form-control" />
+                <label asp-for="DataEntrada" class="control-label fw-bold">Data de Entrada</label>
+                <input asp-for="DataEntrada" class="form-control bg-light" type="datetime-local" readonly
+                       value="@Model.DataEntrada.ToString("yyyy-MM-ddTHH:mm")" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="DataVenda" class="control-label fw-bold">Data da Venda</label>
+                <input asp-for="DataVenda" class="form-control" type="datetime-local"
+                       value="@(Model.DataVenda?.ToString("yyyy-MM-ddTHH:mm"))" />
             </div>
 
             <div class="form-group mt-3">
                 <input type="submit" value="Salvar Alterações" class="btn btn-primary" />
+
                 <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
             </div>
         </form>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function verificarStatus() {
+            var statusSelect = document.getElementById("ddlStatus");
+            var divCliente = document.getElementById("divCliente");
+
+            // Pega o texto da opção selecionada
+            var textoSelecionado = statusSelect.options[statusSelect.selectedIndex].text;
+
+            // Se for "Vendido" ou "A Pagar", mostra o campo Cliente
+            if (textoSelecionado === "Vendido" || textoSelecionado === "A Pagar") {
+                divCliente.style.display = "block";
+            } else {
+                divCliente.style.display = "none";
+                // Opcional: Limpar o cliente se mudar para Disponível
+                // document.getElementById("ClienteId").value = "";
+            }
+        }
+
+        // Roda a função ao carregar a página para exibir se já estiver salvo como Vendido
+        document.addEventListener("DOMContentLoaded", function() {
+            verificarStatus();
+        });
+    </script>
+}

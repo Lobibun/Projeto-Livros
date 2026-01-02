@@ -9,6 +9,7 @@ builder.Services.AddDbContext<LivrariaContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<LivroService>();
+builder.Services.AddScoped<ClienteService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

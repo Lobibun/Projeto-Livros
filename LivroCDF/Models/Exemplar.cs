@@ -10,9 +10,15 @@ namespace LivroCDF.Models
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public float Valor { get; set; }
         public DateTime DataEntrada { get; set; } = DateTime.Now;
-        public DateTime? DataSaida { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime? DataVenda { get; set; }
         public StatusLivro Status { get; set; }
         public int LivroId { get; set; }
         public Livro Livro { get; set; }
+        public int? ClienteId { get; set; }
+
+        public Cliente Cliente { get; set; }
+        public DateTime? DataUltimaAtualizacao { get; set; }
     }
 }

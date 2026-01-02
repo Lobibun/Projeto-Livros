@@ -1,0 +1,89 @@
+﻿@model LivroCDF.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes do Cliente</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Nome)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Nome)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Email)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Email)</dd>
+    </dl>
+</div>
+
+<hr />
+<h3>Histórico de Compras / Pendências</h3>
+
+@if (Model.Compras != null && Model.Compras.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Livro</th>
+                <th>Data Pagamento</th>
+                <th>Valor</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Compras)
+            {
+                // LÓGICA DE EXIBIÇÃO
+                // Se não tem DataVenda, consideramos pendente (Amarelo)
+                bool estaPendente = item.DataVenda == null;
+
+                // 'table-warning' é a classe do Bootstrap que deixa amarelo
+                string classeCss = estaPendente ? "table-warning fw-bold" : "";
+
+                // Se pendente escreve "A Pagar", senão mostra a data
+                string textoData = estaPendente ? "A Pagar" : item.DataVenda?.ToString("dd/MM/yyyy");
+
+                <tr class="@classeCss">
+                    <td>
+                        @item.Livro?.Titulo
+                        @if (estaPendente)
+                        {
+                            <span class="badge bg-danger ms-2">Pendente</span>
+                        }
+                    </td>
+                    <td>@textoData</td>
+                    <td>@item.Valor.ToString("C2")</td>
+                    <td class="text-center">
+                        @switch (item.Status)
+                        {
+                            case LivroCDF.Models.Enums.StatusLivro.APagar:
+                                <span class="badge bg-warning text-dark">Aguardando Pagamento</span>
+                                break;
+                            case LivroCDF.Models.Enums.StatusLivro.Vendido:
+                                <span class="badge bg-success">Vendido</span>
+                                break;
+                            case LivroCDF.Models.Enums.StatusLivro.Estoque:
+                                <span class="badge bg-primary">Disponível</span>
+                                break;
+                            default:
+                                @item.Status
+                                break;
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        Nenhuma movimentação registrada para este cliente.
+    </div>
+}
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Editar</a> |
+    <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+</div>

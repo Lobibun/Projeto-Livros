@@ -4,40 +4,52 @@
     ViewData["Title"] = "Controle de Estoque";
 }
 
-<h2>@ViewData["Title"]</h2>
+<h1>📦 Controle de Estoque (Ativos)</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-success">Nova Entrada de Estoque</a>
-</p>
+<div class="row mb-3">
+    <div class="col-md-6">
+        <a asp-action="Create" class="btn btn-success">Nova Entrada</a>
+    </div>
+</div>
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>Título do Livro</th>
-            <th>Data Entrada</th>
-            <th>Valor (Unidade)</th>
-            <th>Status</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Livro.Titulo</td>
-                <td>@item.DataEntrada.ToShortDateString()</td>
-                <td>R$ @item.Valor</td>
-                <td>@Html.DisplayFor(modelItem => item.Status)</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning" title="Mudar Status / Corrigir">
-                        ✏️
-                    </a>
+<div class="card p-3 mb-4 bg-light">
+    <div class="row">
+        <div class="col-md-8">
+            <label>Pesquisa Rápida (Nome do Livro):</label>
+            <input type="text" id="campoBusca" class="form-control" placeholder="Nome do livro" />
+        </div>
+        <div class="col-md-4">
+            <label>Filtro Rápido:</label>
+            <select id="filtroStatus" class="form-control">
+                <option value="">Todos</option>
+                <option value="0">Em Estoque</option>
+                <option value="1">A Pagar</option>
+            </select>
+        </div>
+    </div>
+</div>
 
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Remover Erro">
-                        🗑️
-                    </a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div id="containerTabela">
+    <partial name="_TabelaEstoque" model="Model" />
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Função que chama o servidor
+            function atualizarTabela() {
+                var termo = $("#campoBusca").val();
+                var status = $("#filtroStatus").val();
+
+                // Faz a requisição para o Controller sem recarregar a página
+                $.get("/Exemplares/FiltrarEstoque", { termoPesquisa: termo, filtroStatus: status }, function (data) {
+                    $("#containerTabela").html(data);
+                });
+            }
+
+            // Ocorre quando digita algo (input) ou muda o dropdown (change)
+            $("#campoBusca").on("input", atualizarTabela);
+            $("#filtroStatus").on("change", atualizarTabela);
+        });
+    </script>
+}
