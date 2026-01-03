@@ -1,0 +1,120 @@
+﻿@model IEnumerable<LivroCDF.Models.LogAuditoria>
+
+@{
+    ViewData["Title"] = "Histórico de Atividades";
+}
+
+<h2 class="text-primary mb-4"><i class="bi bi-shield-check"></i> Auditoria e Logs</h2>
+
+<div class="card mb-4 shadow-sm">
+    <div class="card-header bg-light">
+        <strong><i class="bi bi-filter"></i> Filtros de Pesquisa</strong>
+    </div>
+    <div class="card-body">
+        @* O Form usa GET para passar os parâmetros na URL *@
+        <form asp-action="Index" method="get" class="row g-3 align-items-end">
+
+            @* 1. Filtro Data Início *@
+            <div class="col-md-2">
+                <label class="form-label">De:</label>
+                @* value="@ViewBag..." serve para manter a data preenchida após filtrar *@
+                <input type="date" name="minDate" class="form-control" value="@ViewBag.MinDate" />
+            </div>
+
+            @* 2. Filtro Data Fim *@
+            <div class="col-md-2">
+                <label class="form-label">Até:</label>
+                <input type="date" name="maxDate" class="form-control" value="@ViewBag.MaxDate" />
+            </div>
+
+            @* 3. Filtro Funcionário (AQUI ESTÁ A NOVIDADE) *@
+            <div class="col-md-3">
+                <label class="form-label">Funcionário / Usuário:</label>
+                @* O 'name="funcionario"' deve ser IGUAL ao parâmetro do Controller *@
+                <select name="funcionario" asp-items="ViewBag.ListaUsuarios" class="form-select">
+                    <option value="">-- Todos os Funcionários --</option>
+                </select>
+            </div>
+
+            @* 4. Filtro Tipo de Ação *@
+            <div class="col-md-3">
+                <label class="form-label">Tipo de Ação:</label>
+                <select name="tipoAcao" asp-items="ViewBag.ListaAcoes" class="form-select">
+                    <option value="">-- Todas as Ações --</option>
+                </select>
+            </div>
+
+            @* Botões de Ação *@
+            <div class="col-md-2 d-flex gap-2">
+                <button type="submit" class="btn btn-primary w-100" title="Filtrar Resultados">
+                    <i class="bi bi-search"></i>
+                </button>
+                <a asp-action="Index" class="btn btn-outline-secondary" title="Limpar Filtros">
+                    <i class="bi bi-x-lg"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Data/Hora</th>
+                <th>Usuário</th>
+                <th>Ação</th>
+                <th>O que foi feito</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width: 180px;">
+                        <i class="bi bi-clock"></i> @item.DataAcao.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+                    <td>
+                        <span class="badge bg-secondary">
+                            <i class="bi bi-person-fill"></i> @item.Usuario
+                        </span>
+                    </td>
+                    <td>
+                        @* Melhoria visual: Usando Badges em vez de apenas texto colorido *@
+                        @if (item.Acao.Contains("Venda"))
+                        {
+                            <span class="badge bg-success">@item.Acao</span>
+                        }
+                        else if (item.Acao.Contains("Exclusão") || item.Acao.Contains("Remover"))
+                        {
+                            <span class="badge bg-danger">@item.Acao</span>
+                        }
+                        else if (item.Acao.Contains("Entrada") || item.Acao.Contains("Novo"))
+                        {
+                            <span class="badge bg-primary">@item.Acao</span>
+                        }
+                        else if (item.Acao.Contains("Edição"))
+                        {
+                            <span class="badge bg-warning text-dark">@item.Acao</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-info text-dark">@item.Acao</span>
+                        }
+                    </td>
+                    <td class="text-muted small">@item.Detalhes</td>
+                </tr>
+            }
+
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="4" class="text-center text-muted py-4">
+                        <i class="bi bi-inbox fs-4"></i><br />
+                        Nenhum registro encontrado com esses filtros.
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

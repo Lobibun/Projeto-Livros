@@ -1,0 +1,119 @@
+﻿@model List<LivroCDF.Controllers.UsuarioViewModel>
+
+@{
+    ViewData["Title"] = "Gerenciar Usuários";
+}
+
+<div class="container mt-4">
+    <h2><i class="bi bi-people-fill"></i> Controle de Usuários</h2>
+
+    @if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Erro"]</div>
+    }
+    @if (TempData["Sucesso"] != null)
+    {
+        <div class="alert alert-success">@TempData["Sucesso"]</div>
+    }
+
+    <div class="card shadow-sm mt-3">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="ps-4">Usuário</th>
+                        <th>Nível</th>
+                        <th class="text-end pe-4">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td class="ps-4 align-middle">@user.Email</td>
+                            <td class="align-middle">
+                                @foreach (var role in user.Roles)
+                                {
+                                    if (role == "SuperAdmin")
+                                    {
+                                        <span class="badge bg-danger">CEO</span>
+                                    }
+                                    else if (role == "Admin")
+                                    {
+
+                                        <span class="badge bg-warning text-dark">GERENTE</span>
+                                    }
+                                    else
+                                    {
+
+                                        <span class="badge bg-secondary">Básico</span>
+                                    }
+                                }
+                            </td>
+                            <td class="text-end pe-4">
+
+                                @* --- BOTÕES DE CEO --- *@
+                                @if (User.IsInRole("SuperAdmin"))
+                                {
+                                    // Promover
+                                    if (!user.Roles.Contains("Admin") && !user.Roles.Contains("SuperAdmin"))
+                                    {
+                                        <form asp-action="TornarAdmin" asp-route-userId="@user.UserId" method="post" class="d-inline">
+                                            <button type="submit" class="btn btn-sm btn-outline-success" title="Promover a Gerente">
+                                                <i class="bi bi-arrow-up-circle-fill"></i>
+                                            </button>
+                                        </form>
+                                    }
+                                    // Rebaixar (Novo)
+                                    else if (user.Roles.Contains("Admin"))
+                                    {
+                                        <form asp-action="RebaixarParaComum" asp-route-userId="@user.UserId" method="post" class="d-inline">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary" title="Rebaixar para Comum">
+                                                <i class="bi bi-arrow-down-circle-fill"></i>
+                                            </button>
+                                        </form>
+                                    }
+                                }
+
+                                @* --- BOTÃO RESETAR SENHA (SÓ O CEO VÊ) --- *@
+                                @if (User.IsInRole("SuperAdmin") && !user.Roles.Contains("SuperAdmin"))
+                                {
+                                    <form asp-action="ResetarSenha" asp-route-userId="@user.UserId" method="post" class="d-inline ms-1">
+                                        <button type="submit" class="btn btn-sm btn-warning" title="Resetar Senha para 'Livraria@123'" onclick="return confirm('A senha voltará a ser Livraria@123. Confirmar?');">
+                                            <i class="bi bi-key-fill"></i>
+                                        </button>
+                                    </form>
+                                }
+
+                                @* --- BOTÃO EXCLUIR --- *@
+                                <button type="button" class="btn btn-sm btn-danger ms-1" data-bs-toggle="modal" data-bs-target="#deleteModal-@user.UserId">
+                                    <i class="bi bi-trash-fill"></i>
+                                </button>
+
+                                <div class="modal fade" id="deleteModal-@user.UserId" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Apagar Usuário</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body text-start">
+                                                Deseja realmente excluir <strong>@user.Email</strong>?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                <form asp-action="Excluir" asp-route-userId="@user.UserId" method="post">
+                                                    <button type="submit" class="btn btn-danger">Excluir</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

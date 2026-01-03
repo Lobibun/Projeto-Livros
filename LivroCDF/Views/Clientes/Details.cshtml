@@ -1,4 +1,5 @@
-﻿@model LivroCDF.Models.Cliente
+﻿@using LivroCDF.Models.Enums
+@model LivroCDF.Models.Cliente
 
 @{
     ViewData["Title"] = "Detalhes";
@@ -26,46 +27,83 @@
         <thead>
             <tr>
                 <th>Livro</th>
-                <th>Data Pagamento</th>
+                <th>Data da Venda</th> @* Mudamos o nome para ficar mais claro *@
                 <th>Valor</th>
-                <th>Status</th>
+                <th class="text-center">Status</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Compras)
             {
-                // LÓGICA DE EXIBIÇÃO
-                // Se não tem DataVenda, consideramos pendente (Amarelo)
-                bool estaPendente = item.DataVenda == null;
+                // LÓGICA CORRIGIDA:
+                // É pendente se o Status for 'APagar', independente da data.
+                bool estaPendente = item.Status == StatusLivro.APagar;
 
-                // 'table-warning' é a classe do Bootstrap que deixa amarelo
+                // Se for pendente, pinta a linha de amarelo
                 string classeCss = estaPendente ? "table-warning fw-bold" : "";
-
-                // Se pendente escreve "A Pagar", senão mostra a data
-                string textoData = estaPendente ? "A Pagar" : item.DataVenda?.ToString("dd/MM/yyyy");
 
                 <tr class="@classeCss">
                     <td>
                         @item.Livro?.Titulo
                         @if (estaPendente)
                         {
-                            <span class="badge bg-danger ms-2">Pendente</span>
+                            // Um ícone de alerta extra para chamar atenção
+                            <span class="text-danger ms-2" title="Débito em aberto">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                            </span>
                         }
                     </td>
-                    <td>@textoData</td>
+
+                    @* MOSTRAR A DATA SEMPRE (Seja venda paga ou fiado) *@
+                    <td>
+                        @if (item.DataVenda.HasValue)
+                        {
+                            <span class="text-dark">
+                                <i class="bi bi-calendar-event"></i> @item.DataVenda.Value.ToString("dd/MM/yyyy")
+                            </span>
+
+                            @* Se for A Pagar, mostra quantos dias faz *@
+                            @if (item.Status == LivroCDF.Models.Enums.StatusLivro.APagar)
+                            {
+                                var dias = (DateTime.Now - item.DataVenda.Value).Days;
+                                if (dias > 0)
+                                {
+                                    <br />
+                
+                                    <small class="text-danger fw-bold">(@dias dias atrás)</small>
+                                }
+                                else
+                                {
+                                    <br />
+                
+                                    <small class="text-danger fw-bold">(Hoje)</small>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </td>
+
                     <td>@item.Valor.ToString("C2")</td>
+
                     <td class="text-center">
                         @switch (item.Status)
                         {
                             case LivroCDF.Models.Enums.StatusLivro.APagar:
-                                <span class="badge bg-warning text-dark">Aguardando Pagamento</span>
+                                <span class="badge bg-danger">Aguardando Pagamento</span>
                                 break;
+
                             case LivroCDF.Models.Enums.StatusLivro.Vendido:
-                                <span class="badge bg-success">Vendido</span>
+                                <span class="badge bg-success">Venda Concluída</span>
                                 break;
+
                             case LivroCDF.Models.Enums.StatusLivro.Estoque:
-                                <span class="badge bg-primary">Disponível</span>
+                               
+                                <span class="badge bg-secondary text-decoration-line-through">Estornado / Devolvido</span>
                                 break;
+
                             default:
                                 @item.Status
                                 break;
@@ -79,11 +117,11 @@
 else
 {
     <div class="alert alert-info">
-        Nenhuma movimentação registrada para este cliente.
+        <i class="bi bi-info-circle"></i> Nenhuma movimentação registrada para este cliente.
     </div>
 }
 
 <div class="mt-3">
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Editar</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Editar Cliente</a> |
     <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
 </div>

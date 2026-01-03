@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Threading.Tasks;
 using LivroCDF.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LivroCDF.Controllers
 {
+    [Authorize]
     public class ExemplaresController : Controller
     {
         private readonly LivroService _service;
@@ -80,8 +82,12 @@ namespace LivroCDF.Controllers
         public async Task<IActionResult> Create(Exemplar exemplar, int Quantidade)
         {
             ModelState.Remove("Livro");
+            // Se tiver validação de Cliente, remova também se não for obrigatório na criação
+            ModelState.Remove("Cliente");
+
             if (ModelState.IsValid)
             {
+                // 1. Cria as cópias
                 for (int i = 0; i < Quantidade; i++)
                 {
                     var novaCopia = new Exemplar
@@ -93,13 +99,26 @@ namespace LivroCDF.Controllers
                     };
                     await _service.InserirExemplarAsync(novaCopia);
                 }
+
+                // 2. --- LOG DE AUDITORIA (ENTRADA) ---
+                var log = new LogAuditoria
+                {
+                    Usuario = User.Identity.Name ?? "Desconhecido",
+                    Acao = "Entrada de Estoque",
+                    Detalhes = $"Adicionou {Quantidade} cópia(s) para o Livro ID: {exemplar.LivroId}",
+                    DataAcao = DateTime.Now
+                };
+                _context.LogsAuditoria.Add(log);
+                await _context.SaveChangesAsync();
+                // --------------------------------------
+
                 return RedirectToAction(nameof(Index));
             }
+
             var listLivros = await _service.FindAllAsync();
             ViewBag.LivroId = new SelectList(listLivros, "Id", "Titulo");
             ViewBag.ListaCompleta = listLivros;
             return View(exemplar);
-
         }
 
         public async Task<IActionResult> Edit(int? id)
@@ -121,10 +140,32 @@ namespace LivroCDF.Controllers
         {
             if (id != exemplar.Id) return NotFound();
 
-            // VOCÊ JÁ TINHA ISSO
-            ModelState.Remove("Livro");
+            // 1. BUSCAR O ESTADO ORIGINAL (Antes da edição)
+            // Usamos AsNoTracking para não travar o Entity Framework na hora de salvar depois
+            var original = await _context.Exemplares
+                                         .AsNoTracking()
+                                         .Include(e => e.Livro) // Traz o livro para caso precise recarregar a tela
+                                         .FirstOrDefaultAsync(x => x.Id == id);
 
-            // ADICIONE ESTA LINHA ABAIXO:
+            if (original == null) return NotFound();
+
+            // 2. REGRA DOS 90 DIAS (Bloqueio de Estorno)
+            // Se estava VENDIDO e agora NÃO ESTÁ MAIS (ou seja, tentou devolver/estornar)
+            if (original.Status == StatusLivro.Vendido && exemplar.Status != StatusLivro.Vendido)
+            {
+                if (original.DataVenda.HasValue)
+                {
+                    var diasPassados = (DateTime.Now - original.DataVenda.Value).Days;
+
+                    if (diasPassados > 90)
+                    {
+                        // Adiciona Erro na tela e impede de salvar
+                        ModelState.AddModelError("Status", $"Não é possível estornar. Prazo de 90 dias expirado ({diasPassados} dias desde a venda).");
+                    }
+                }
+            }
+
+            ModelState.Remove("Livro");
             ModelState.Remove("Cliente");
 
             if (ModelState.IsValid)
@@ -133,35 +174,68 @@ namespace LivroCDF.Controllers
                 {
                     exemplar.DataUltimaAtualizacao = DateTime.Now;
 
-                    if (exemplar.Status == StatusLivro.Vendido)
+                    // 3. Lógica de Datas
+                    // Se marcou como Vendido ou A Pagar, e não tinha data, coloca a data de hoje
+                    if ((exemplar.Status == StatusLivro.Vendido || exemplar.Status == StatusLivro.APagar) && exemplar.DataVenda == null)
                     {
-                        if (exemplar.DataVenda == null)
-                        {
-                            exemplar.DataVenda = DateTime.Now;
-                        }
+                        exemplar.DataVenda = DateTime.Now;
                     }
-                    else
+
+                    // Se voltou para Estoque, LIMPA a data de venda (para não aparecer data antiga na próxima venda)
+                    if (exemplar.Status == StatusLivro.Estoque)
                     {
                         exemplar.DataVenda = null;
+                        exemplar.ClienteId = null; // Remove o cliente também, já que voltou pro estoque
                     }
 
                     await _service.AtualizarExemplarAsync(exemplar);
+
+                    // --- LOG DE AUDITORIA ---
+                    var log = new LogAuditoria
+                    {
+                        Usuario = User.Identity.Name ?? "Desconhecido",
+                        DataAcao = DateTime.Now
+                    };
+
+                    if (exemplar.Status == StatusLivro.Vendido)
+                    {
+                        log.Acao = "Venda Realizada";
+                        log.Detalhes = $"Vendeu o exemplar ID: {exemplar.Id}. Cliente ID: {exemplar.ClienteId ?? 0}";
+                    }
+                    else if (original.Status == StatusLivro.Vendido && exemplar.Status == StatusLivro.Estoque)
+                    {
+                        // Log específico para estorno
+                        log.Acao = "Estorno / Devolução";
+                        log.Detalhes = $"Livro devolvido ao estoque. ID: {exemplar.Id}";
+                    }
+                    else
+                    {
+                        log.Acao = "Edição de Exemplar";
+                        string nomeStatus = exemplar.Status switch
+                        {
+                            StatusLivro.APagar => "A Pagar",
+                            StatusLivro.Estoque => "Em Estoque",
+                            _ => exemplar.Status.ToString()
+                        };
+                        log.Detalhes = $"Atualizou status do exemplar {exemplar.Id} para {nomeStatus}";
+                    }
+
+                    _context.LogsAuditoria.Add(log);
+                    await _context.SaveChangesAsync();
+                    // ------------------------
+
                     return RedirectToAction(nameof(Index));
                 }
                 catch (Exception ex)
                 {
-                    // Sugestão: Logar o erro aqui ou retornar uma view de erro
+                    // Logar o erro se necessário
                     throw;
                 }
             }
 
-            // Se chegar aqui, recarrega os dados para a DropDownList novamente
-            ViewBag.TituloLivro = exemplar.Livro?.Titulo; // Pode estar nulo aqui, cuidado
-
-            // É importante recarregar as listas (ViewData/ViewBag) se a validação falhar
-            // O select do Cliente precisa ser repopulado:
+            // Se der erro (ex: validação dos 90 dias), recarrega os dados para a tela não quebrar
+            ViewBag.TituloLivro = original.Livro?.Titulo;
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Nome", exemplar.ClienteId);
-
             return View(exemplar);
         }
 
@@ -181,6 +255,19 @@ namespace LivroCDF.Controllers
         public async Task<IActionResult> DeleteComfirmado(int id)
         {
             await _service.RemoverExemplarAsync(id);
+
+            // --- LOG DE AUDITORIA (EXCLUSÃO) ---
+            var log = new LogAuditoria
+            {
+                Usuario = User.Identity.Name ?? "Desconhecido",
+                Acao = "Exclusão de Exemplar",
+                Detalhes = $"Removeu o exemplar ID: {id} do sistema.",
+                DataAcao = DateTime.Now
+            };
+            _context.LogsAuditoria.Add(log);
+            await _context.SaveChangesAsync();
+            // ------------------------------------
+
             return RedirectToAction(nameof(Index));
         }
 

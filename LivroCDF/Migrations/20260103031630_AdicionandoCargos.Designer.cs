@@ -4,6 +4,7 @@ using LivroCDF.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LivroCDF.Migrations
 {
     [DbContext(typeof(LivrariaContext))]
-    partial class LivrariaContextModelSnapshot : ModelSnapshot
+    [Migration("20260103031630_AdicionandoCargos")]
+    partial class AdicionandoCargos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -129,34 +132,6 @@ namespace LivroCDF.Migrations
                     b.HasIndex("ClienteId");
 
                     b.ToTable("Livros");
-                });
-
-            modelBuilder.Entity("LivroCDF.Models.LogAuditoria", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Acao")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime>("DataAcao")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Detalhes")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Usuario")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("LogsAuditoria");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

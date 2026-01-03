@@ -1,0 +1,68 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
+        // Verifica se o usuário é nulo para evitar erro caso o banco tenha sido resetado
+        var ehSuperAdmin = user != null && await UserManager.IsInRoleAsync(user, "SuperAdmin");
+        var ehAdmin = user != null && await UserManager.IsInRoleAsync(user, "Admin");
+
+        // --- MENU DO USUÁRIO LOGADO ---
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle"></i> Olá, @User.Identity?.Name
+                @if (ehSuperAdmin)
+                {
+                    <span class="badge bg-danger">CEO</span>
+                }
+                else if (ehAdmin)
+                {
+
+                    <span class="badge bg-warning text-dark">GERENTE</span>
+                }
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                @* --- ÁREA VIP: SÓ APARECE PARA ADMIN OU SUPERADMIN --- *@
+                @if (ehSuperAdmin || ehAdmin)
+                {
+                    <li><h6 class="dropdown-header">Administração</h6></li>
+
+                    @* --- NOVO LINK ADICIONADO AQUI --- *@
+                    <li>
+                        <a class="dropdown-item" asp-controller="Usuarios" asp-action="Index">
+                            <i class="bi bi-people"></i> Lista de Usuários
+                        </a>
+                    </li>
+
+                    <li>
+                        @* Link para criar novo usuário *@
+                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">
+                            <i class="bi bi-person-plus-fill"></i> Criar Novo Usuário
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                }
+
+                @* --- LINKS PADRÃO --- *@
+                <li>
+                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">Meu Perfil</a>
+                </li>
+
+                <li><hr class="dropdown-divider"></li>
+
+                <li>
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="dropdown-item text-danger" style="cursor:pointer;">
+                            <i class="bi bi-box-arrow-right"></i> Sair
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </li>
+    }
+</ul>
