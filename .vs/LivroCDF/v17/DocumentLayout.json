@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\_tabelaclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\_tabelaclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\usuarios\\_tabelausuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\usuarios\\_tabelausuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\_tabelavendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\_tabelavendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,32 +67,16 @@
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\_tabelaestoque.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\_tabelaestoque.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\_tabelaclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\_tabelaclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -99,20 +119,8 @@
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -270,7 +278,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 247,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -278,72 +286,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Index.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAADwvzAAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Vendas.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAIwF0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T23:46:58.894Z",
+              "WhenOpened": "2026-01-02T16:47:29.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
+              "RelativeToolTip": "LivroCDF\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T15:59:51.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_TabelaClientes.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml*",
+              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T05:14:56.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAwwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T03:25:33.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAADwv0kAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T03:33:22.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_TabelaUsuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAADwv5MAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T12:07:18.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Edit.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Edit.cshtml",
               "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Edit.cshtml",
               "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Edit.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAADwv1YAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAADwv2kAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-31T03:29:23.737Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_TabelaLivros.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T20:42:53.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LivrosController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\LivrosController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\LivrosController.cs",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAIwPQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T23:35:05.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClientesController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ClientesController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAABwBAAAAAAAAAAAAwCYBAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T18:20:44.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Details.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Details.cshtml",
@@ -356,20 +390,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Vendas.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAIwGAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAABwBAAAAAAAAAAAAwCYBAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T18:20:44.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_TabelaVendas.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T16:47:29.717Z",
+              "WhenOpened": "2026-01-05T11:48:08.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "ViewState": "AgIAAGoAAAAAAAAAAADwv34AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T02:03:07.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LivrosController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\LivrosController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\LivrosController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAPQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T23:35:05.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_TabelaLivros.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T20:42:53.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExemplaresController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ExemplaresController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\ExemplaresController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwF0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T00:54:13.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Index.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwvzAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T23:46:58.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Index.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Index.cshtml",
@@ -382,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "_HistoricoCliente.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
@@ -395,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Delete.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Delete.cshtml",
@@ -408,20 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-31T02:03:07.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "_TabelaEstoque.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
@@ -434,20 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ExemplaresController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ExemplaresController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\ExemplaresController.cs",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAIwBEBAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T00:54:13.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "20260103194201_AdicaoFotoLivro.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
@@ -460,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "LivroFormViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\ViewModels\\LivroFormViewModel.cs",
               "RelativeDocumentMoniker": "LivroCDF\\ViewModels\\LivroFormViewModel.cs",
@@ -473,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Edit.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Edit.cshtml",
@@ -486,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Delete.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Delete.cshtml",
@@ -499,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Create.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Create.cshtml",
@@ -512,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Details.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Details.cshtml",
@@ -525,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Livro.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Livro.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Models\\Livro.cs",
@@ -538,20 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "_TabelaClientes.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
-              "ViewState": "AgIAAEwAAAAAAAAAAADwv1cAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T05:14:56.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Index.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Index.cshtml",
@@ -564,20 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "ViewState": "AgIAAJMAAAAAAAAAAADwv54AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T03:33:22.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Edit.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Edit.cshtml",
@@ -590,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "LivroService.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Services\\LivroService.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Services\\LivroService.cs",
@@ -603,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
@@ -616,33 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
-              "RelativeToolTip": "LivroCDF\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T15:59:51.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAIwIwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T03:25:33.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "Email.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
@@ -655,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "Email.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
@@ -668,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "ChangePassword.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
@@ -681,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "_ManageNav.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
@@ -694,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
@@ -707,7 +741,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
@@ -720,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "_ManageNav.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
@@ -733,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
@@ -746,7 +780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -759,7 +793,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
@@ -772,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Shared\\_Layout.cshtml",
@@ -785,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -798,7 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
@@ -811,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -824,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -837,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Models\\Cliente.cs",
@@ -850,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Program.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Program.cs",
@@ -863,7 +897,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "20260103160624_Modifica\u00E7\u00E3oUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103160624_Modifica\u00E7\u00E3oUsuario.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103160624_Modifica\u00E7\u00E3oUsuario.cs",
@@ -876,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "LivrariaContext.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Data\\LivrariaContext.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Data\\LivrariaContext.cs",
@@ -889,7 +923,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Create.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Create.cshtml",
@@ -902,7 +936,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "20260103142037_AdicionaFotoCliente.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103142037_AdicionaFotoCliente.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103142037_AdicionaFotoCliente.cs",
@@ -915,7 +949,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Controllers\\HomeController.cs",
@@ -928,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "AuditoriaController.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\AuditoriaController.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Controllers\\AuditoriaController.cs",
@@ -941,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Auditoria\\Index.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Auditoria\\Index.cshtml",
@@ -953,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "Exemplar.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Exemplar.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Models\\Exemplar.cs",
@@ -965,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 65,
               "Title": "20260103042932_CriarLogs.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103042932_CriarLogs.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103042932_CriarLogs.cs",
@@ -977,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "LogAuditoria.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\LogAuditoria.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Models\\LogAuditoria.cs",
@@ -989,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 66,
               "Title": "20260103031630_AdicionandoCargos.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103031630_AdicionandoCargos.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103031630_AdicionandoCargos.cs",
@@ -1001,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Delete.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Delete.cshtml",
@@ -1013,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "ClienteService.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Services\\ClienteService.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Services\\ClienteService.cs",
@@ -1025,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 59,
               "Title": "20260102195701_AdicionandoClienteNoExemplar.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102195701_AdicionandoClienteNoExemplar.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102195701_AdicionandoClienteNoExemplar.cs",
@@ -1036,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "20260102200036_AdicionandoClienteNoExemplar.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102200036_AdicionandoClienteNoExemplar.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102200036_AdicionandoClienteNoExemplar.cs",
@@ -1048,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 64,
               "Title": "20260102192029_AdicionandoVendas.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102192029_AdicionandoVendas.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102192029_AdicionandoVendas.cs",
@@ -1060,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 60,
               "Title": "20260102173849_CriandoTabelaClientes.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102173849_CriandoTabelaClientes.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102173849_CriandoTabelaClientes.cs",
@@ -1072,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 61,
               "Title": "StatusLivro.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Enums\\StatusLivro.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Models\\Enums\\StatusLivro.cs",
@@ -1084,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 62,
               "Title": "20251230232533_Inicial.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20251230232533_Inicial.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20251230232533_Inicial.cs",
@@ -1096,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 63,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\appsettings.json",
               "RelativeDocumentMoniker": "LivroCDF\\appsettings.json",

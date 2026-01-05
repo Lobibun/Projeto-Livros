@@ -128,6 +128,38 @@ namespace LivroCDF.Controllers
             await _userManager.DeleteAsync(usuarioAlvo);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> FiltrarUsuarios(string termo)
+        {
+            var usuariosQuery = _userManager.Users.AsQueryable();
+
+            if (!string.IsNullOrEmpty(termo))
+            {
+                termo = termo.ToLower();
+                usuariosQuery = usuariosQuery.Where(u => u.UserName.ToLower().Contains(termo) ||
+                                                         u.Email.ToLower().Contains(termo));
+            }
+
+            var usuarios = await usuariosQuery.ToListAsync();
+            var listaViewModel = new List<UsuarioViewModel>();
+
+            foreach (var user in usuarios)
+            {
+                var roles = await _userManager.GetRolesAsync(user);
+                listaViewModel.Add(new UsuarioViewModel
+                {
+                    UserId = user.Id,
+                    Email = user.Email,
+                    Nome = user.Nome,
+                    FotoCaminho = user.FotoCaminho,
+                    Roles = roles
+                });
+            }
+
+            return PartialView("_TabelaUsuarios", listaViewModel);
+        }
+
     }
 
     public class UsuarioViewModel

@@ -5,6 +5,9 @@
     ViewData["Title"] = "Gerenciar Exemplar";
 }
 
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+
 <div class="d-flex align-items-center mb-3">
     @if (Model.Livro != null && !string.IsNullOrEmpty(Model.Livro.FotoCaminho))
     {
@@ -18,20 +21,20 @@
 <hr />
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5">
         <form asp-controller="Exemplares" asp-action="Edit">
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="LivroId" />
 
             <div class="form-group mb-3">
                 <label asp-for="Status" class="control-label">Situação Atual</label>
-                <select asp-for="Status" id="ddlStatus" class="form-control" asp-items="Html.GetEnumSelectList<StatusLivro>()" onchange="verificarStatus()"></select>
+                <select asp-for="Status" id="ddlStatus" class="form-select" asp-items="Html.GetEnumSelectList<StatusLivro>()"></select>
             </div>
 
-            <div class="form-group mb-3" id="divCliente" style="display:none;">
+            <div class="form-group mb-3 p-3 border rounded bg-light" id="divCliente" style="display:none;">
                 <label asp-for="ClienteId" class="control-label fw-bold" style="color: #d63384;">Cliente (Comprador)</label>
-                <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId">
-                    <option value="">-- Selecione o Cliente --</option>
+                <select asp-for="ClienteId" id="ddlCliente" class="form-select" asp-items="ViewBag.ClienteId">
+                    <option value="">-- Pesquise o Cliente --</option>
                 </select>
             </div>
 
@@ -65,23 +68,39 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <script>
-        // MANTIVE O SCRIPT ORIGINAL EXATAMENTE COMO ESTAVA
-        function verificarStatus() {
-            var statusSelect = document.getElementById("ddlStatus");
-            var divCliente = document.getElementById("divCliente");
+        $(document).ready(function() {
+            // 1. Inicializa Select2 no Cliente
+            $('#ddlCliente').select2({
+                theme: 'bootstrap-5',
+                placeholder: "Selecione o Cliente...",
+                allowClear: true,
+                width: '100%'
+            });
 
-            var textoSelecionado = statusSelect.options[statusSelect.selectedIndex].text;
+            // 2. Monitora mudança no Status
+            $('#ddlStatus').change(function() {
+                verificarStatus();
+            });
 
-            if (textoSelecionado === "Vendido" || textoSelecionado === "A Pagar") {
-                divCliente.style.display = "block";
-            } else {
-                divCliente.style.display = "none";
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
+            // 3. Executa ao carregar a página
             verificarStatus();
         });
+
+        // Função para mostrar/esconder o campo de cliente
+        function verificarStatus() {
+            // Pega o texto da opção selecionada
+            var texto = $("#ddlStatus option:selected").text();
+
+            if (texto === "Vendido" || texto === "A Pagar") {
+                $("#divCliente").slideDown(); // Efeito suave
+            } else {
+                $("#divCliente").slideUp();
+                // Opcional: Limpar o cliente se mudar status para Estoque?
+                // $("#ddlCliente").val(null).trigger("change");
+            }
+        }
     </script>
 }

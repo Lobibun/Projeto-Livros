@@ -1,0 +1,148 @@
+﻿@model List<LivroCDF.Controllers.UsuarioViewModel>
+
+<div class="table-responsive">
+    <table class="table table-hover align-middle mb-0">
+        <thead class="table-dark">
+            <tr>
+                <th class="ps-4">Foto</th>
+                <th>Usuário</th>
+                <th>Nível</th>
+                <th class="text-end pe-4">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td class="ps-4">
+                            @if (!string.IsNullOrEmpty(user.FotoCaminho))
+                            {
+                                <img src="@user.FotoCaminho" class="rounded-circle border border-2 border-white shadow-sm"
+                                     style="width: 50px; height: 50px; object-fit: cover;"
+                                     alt="Foto do usuário" />
+                            }
+                            else
+                            {
+                                <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center shadow-sm"
+                                     style="width: 50px; height: 50px; font-size: 20px; font-weight: bold;">
+                                    @if (!string.IsNullOrEmpty(user.Nome))
+                                    {
+                                        @user.Nome.Substring(0, 1).ToUpper()
+                                    }
+                                    else
+                                    {
+                                        @user.Email.Substring(0, 1).ToUpper()
+                                    }
+                                </div>
+                            }
+                        </td>
+
+                        <td>
+                            @if (!string.IsNullOrEmpty(user.Nome))
+                            {
+                                <div class="fw-bold">@user.Nome</div>
+                                <small class="text-muted">@user.Email</small>
+                            }
+                            else
+                            {
+                                <div class="fw-bold">@user.Email</div>
+                            }
+                        </td>
+
+                        <td>
+                            @foreach (var role in user.Roles)
+                            {
+                                if (role == "SuperAdmin")
+                                {
+                                    <span class="badge bg-danger">CEO / Admin</span>
+                                }
+                                else if (role == "Admin")
+                                {
+                                    <span class="badge bg-warning text-dark">GERENTE</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Básico</span>
+                                }
+                            }
+                        </td>
+
+                        <td class="text-end pe-4">
+                            @* Ações exclusivas para quem é CEO (SuperAdmin) *@
+                            @if (User.IsInRole("SuperAdmin"))
+                            {
+                                // Promover para Gerente
+                                if (!user.Roles.Contains("Admin") && !user.Roles.Contains("SuperAdmin"))
+                                {
+                                    <form asp-action="TornarAdmin" asp-route-userId="@user.UserId" method="post" class="d-inline">
+                                        <button type="submit" class="btn btn-sm btn-outline-success" title="Promover a Gerente">
+                                            <i class="bi bi-arrow-up-circle-fill"></i>
+                                        </button>
+                                    </form>
+                                }
+                                // Rebaixar de Gerente
+                                else if (user.Roles.Contains("Admin"))
+                                {
+                                    <form asp-action="RebaixarParaComum" asp-route-userId="@user.UserId" method="post" class="d-inline">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary" title="Rebaixar para Comum">
+                                            <i class="bi bi-arrow-down-circle-fill"></i>
+                                        </button>
+                                    </form>
+                                }
+
+                                // Resetar Senha (Exceto a do próprio CEO)
+                                @if (!user.Roles.Contains("SuperAdmin"))
+                                {
+                                    <form asp-action="ResetarSenha" asp-route-userId="@user.UserId" method="post" class="d-inline ms-1">
+                                        <button type="submit" class="btn btn-sm btn-warning" title="Resetar Senha para 'Livraria@123'"
+                                                onclick="return confirm('Tem certeza? A senha será resetada para Livraria@123');">
+                                            <i class="bi bi-key-fill"></i>
+                                        </button>
+                                    </form>
+                                }
+                            }
+
+                            @* Botão de Excluir *@
+                            <button type="button" class="btn btn-sm btn-danger ms-1" data-bs-toggle="modal" data-bs-target="#deleteModal-@user.UserId" title="Excluir Usuário">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+
+                            <div class="modal fade" id="deleteModal-@user.UserId" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Apagar Usuário</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p>Tem certeza que deseja excluir o usuário:</p>
+                                            <p class="fw-bold text-danger text-center fs-5">@user.Email</p>
+                                            <p class="small text-muted">Esta ação não pode ser desfeita.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <form asp-action="Excluir" asp-route-userId="@user.UserId" method="post">
+                                                <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" class="text-center text-muted py-4">
+                        <i class="bi bi-search display-6"></i><br />
+                        Nenhum usuário encontrado.
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -69,6 +69,36 @@ namespace LivroCDF.Controllers
             return View(await consulta.ToListAsync());
         }
 
+        [HttpGet]
+        public async Task<ActionResult> FiltrarVendas(string termo, DateTime? dataInicio, DateTime? dataFim)
+        {
+            var consulta = _context.Exemplares
+                .Include(e => e.Livro)
+                .Include(e => e.Cliente)
+                .Where(x => x.Status == StatusLivro.Vendido)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(termo))
+            {
+                consulta = consulta.Where(x => x.Livro.Titulo.Contains(termo) ||
+                                               (x.Cliente != null && x.Cliente.Nome.Contains(termo)));
+            }
+
+            if (dataInicio.HasValue)
+            {
+                consulta = consulta.Where(x => x.DataVenda >= dataInicio.Value);
+            }
+
+            if (dataFim.HasValue)
+            {
+                var fimdoDia = dataFim.Value.Date.AddDays(1).AddTicks(-1);
+                consulta = consulta.Where(x => x.DataVenda <= fimdoDia);
+            }
+            consulta = consulta.OrderByDescending(x => x.DataVenda);
+
+            return PartialView("_TabelaVendas", await consulta.ToListAsync());
+        }
+
         public async Task<IActionResult> Create()
         {
             var ListLivros = await _service.FindAllAsync();
