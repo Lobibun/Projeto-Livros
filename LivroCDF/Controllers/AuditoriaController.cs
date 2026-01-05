@@ -1,4 +1,4 @@
-﻿using LivroCDF.Data; // Seu namespace do banco
+﻿using LivroCDF.Data;
 using LivroCDF.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LivroCDF.Controllers
 {
-    [Authorize(Roles = "SuperAdmin,Admin")] // Só chefes veem isso
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class AuditoriaController : Controller
     {
         private readonly LivrariaContext _context;
@@ -23,7 +23,6 @@ namespace LivroCDF.Controllers
         {
             var query = _context.LogsAuditoria.AsQueryable();
 
-            // Filtros de Data (Igual antes)
             if (minDate.HasValue) query = query.Where(l => l.DataAcao >= minDate.Value);
             if (maxDate.HasValue)
             {
@@ -31,27 +30,19 @@ namespace LivroCDF.Controllers
                 query = query.Where(l => l.DataAcao <= dataFim);
             }
 
-            // Filtro de Ação (Igual antes)
             if (!string.IsNullOrEmpty(tipoAcao)) query = query.Where(l => l.Acao == tipoAcao);
 
-            // --- NOVO FILTRO: FUNCIONÁRIO ---
             if (!string.IsNullOrEmpty(funcionario))
             {
                 query = query.Where(l => l.Usuario == funcionario);
             }
-            // --------------------------------
 
-            // Carregar Listas para os Dropdowns
-
-            // 1. Lista de Ações
             var listaAcoes = await _context.LogsAuditoria.Select(l => l.Acao).Distinct().OrderBy(a => a).ToListAsync();
             ViewBag.ListaAcoes = new SelectList(listaAcoes, tipoAcao);
 
-            // 2. Lista de Usuários (Funcionários)
             var listaUsuarios = await _context.LogsAuditoria.Select(l => l.Usuario).Distinct().OrderBy(u => u).ToListAsync();
-            ViewBag.ListaUsuarios = new SelectList(listaUsuarios, funcionario); // <--- Enviamos para a View
+            ViewBag.ListaUsuarios = new SelectList(listaUsuarios, funcionario); 
 
-            // Manter valores dos filtros de data
             ViewBag.MinDate = minDate?.ToString("yyyy-MM-dd");
             ViewBag.MaxDate = maxDate?.ToString("yyyy-MM-dd");
 

@@ -11,13 +11,28 @@
                 <h4 class="mb-0"><i class="bi bi-person-plus-fill"></i> Cadastrar Novo Usuário</h4>
             </div>
             <div class="card-body">
-                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                @* 1. ADICIONADO: enctype="multipart/form-data" é obrigatório para upload *@
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                    @* 2. ADICIONADO: Campo para o Nome *@
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.Nome" class="form-control" placeholder="Nome Completo" />
+                        <label asp-for="Input.Nome">Nome Completo</label>
+                        <span asp-validation-for="Input.Nome" class="text-danger"></span>
+                    </div>
 
                     <div class="form-floating mb-3">
                         <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="nome@exemplo.com" />
                         <label asp-for="Input.Email">E-mail do Usuário</label>
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
+                    @* 3. ADICIONADO: Campo para a Foto de Perfil *@
+                    <div class="mb-3">
+                        <label asp-for="Input.ArquivoFoto" class="form-label text-muted">Foto de Perfil (Opcional)</label>
+                        <input asp-for="Input.ArquivoFoto" class="form-control" type="file" accept="image/*" />
+                        <span asp-validation-for="Input.ArquivoFoto" class="text-danger"></span>
                     </div>
 
                     <div class="row">

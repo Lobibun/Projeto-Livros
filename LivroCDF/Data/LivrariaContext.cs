@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace LivroCDF.Data
 {
-    public class LivrariaContext : IdentityDbContext
+    public class LivrariaContext : IdentityDbContext<Usuario>
     {
         public LivrariaContext(DbContextOptions<LivrariaContext> options) : base(options) 
         { }

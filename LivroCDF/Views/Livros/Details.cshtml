@@ -5,86 +5,98 @@
 }
 
 <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-5">
-            <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">@Model.Titulo</h4>
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                    @if (!string.IsNullOrEmpty(Model.FotoCaminho))
+                    {
+                        <img src="@Model.FotoCaminho" class="img-fluid rounded shadow"
+                             style="max-height: 300px; width: auto;" alt="Capa do Livro" />
+                    }
+                    else
+                    {
+                        <div class="bg-light d-flex align-items-center justify-content-center rounded border" style="height: 300px;">
+                            <span class="text-muted"><i class="bi bi-image"></i> Sem Capa</span>
+                        </div>
+                    }
                 </div>
-                <div class="card-body">
+
+                <div class="col-md-9">
+                    <h2 class="text-primary fw-bold">@Model.Titulo</h2>
+                    <h5 class="text-muted mb-4">@Model.Autor</h5>
+
                     <dl class="row">
-                        <dt class="col-sm-4">Autor:</dt>
-                        <dd class="col-sm-8">@Model.Autor</dd>
+                        <dt class="col-sm-3">ISBN:</dt>
+                        <dd class="col-sm-9">@Model.ISBN</dd>
 
-                        <dt class="col-sm-4">ISBN:</dt>
-                        <dd class="col-sm-8">@Model.ISBN</dd>
+                        <dt class="col-sm-3">Preço Base:</dt>
+                        <dd class="col-sm-9 fs-5 text-success fw-bold">R$ @Model.Valor.ToString("F2")</dd>
 
-                        <dt class="col-sm-4">Preço Capa:</dt>
-                        <dd class="col-sm-8">R$ @Model.Valor</dd>
-
-                        <dt class="col-sm-4">Estoque:</dt>
-                        <dd class="col-sm-8">
-                            <span class="badge bg-success">@Model.Exemplares.Count() unidades</span>
+                        <dt class="col-sm-3">Estoque Total:</dt>
+                        <dd class="col-sm-9">
+                            <span class="badge bg-primary">@Model.Exemplares.Count() unidades</span>
                         </dd>
                     </dl>
-                    <div class="d-grid gap-2">
-                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning">Editar Dados</a>
+
+                    <div class="mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">
+                            <i class="bi bi-pencil-square"></i> Editar Dados
+                        </a>
                         <a asp-action="Index" class="btn btn-outline-secondary">Voltar para Lista</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-md-7">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3>Inventário Físico</h3>
-            </div>
-
-            <table class="table table-bordered table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Entrada</th>
-                        <th>Valor Real</th>
-                        <th>Status</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var exemplar in Model.Exemplares)
-                    {
-                        <tr>
-                            <td>#@exemplar.Id</td>
-                            <td>@exemplar.DataEntrada.ToShortDateString()</td>
-                            <td>R$ @exemplar.Valor</td>
-                            <td>
-                                @if (exemplar.Status == LivroCDF.Models.Enums.StatusLivro.APagar)
-                                {
-                                    <span class="badge bg-warning text-dark">A Pagar</span>
-                                }
-                                else if (exemplar.Status == LivroCDF.Models.Enums.StatusLivro.Estoque)
-                                {
-                                    <span class="badge bg-success">Estoque</span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-secondary">@exemplar.Status</span>
-                                }
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-danger">X</button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-
-            @if (!Model.Exemplares.Any())
-            {
-                <div class="alert alert-warning">
-                    Nenhum exemplar físico cadastrado para este título.
-                </div>
-            }
-        </div>
     </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Inventário Físico</h3>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Entrada</th>
+                <th>Valor Real</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var exemplar in Model.Exemplares)
+            {
+                <tr>
+                    <td>#@exemplar.Id</td>
+                    <td>@exemplar.DataEntrada.ToShortDateString()</td>
+                    <td>R$ @exemplar.Valor</td>
+                    <td>
+                        @if (exemplar.Status == LivroCDF.Models.Enums.StatusLivro.APagar)
+                        {
+                            <span class="badge bg-warning text-dark">A Pagar</span>
+                        }
+                        else if (exemplar.Status == LivroCDF.Models.Enums.StatusLivro.Estoque)
+                        {
+                            <span class="badge bg-success">Estoque</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">@exemplar.Status</span>
+                        }
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-danger">X</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (!Model.Exemplares.Any())
+    {
+        <div class="alert alert-warning">
+            Nenhum exemplar físico cadastrado para este título.
+        </div>
+    }
 </div>

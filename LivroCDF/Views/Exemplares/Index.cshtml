@@ -36,18 +36,16 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // Função que chama o servidor
+            // SCRIPT ORIGINAL DE AJAX MANTIDO
             function atualizarTabela() {
                 var termo = $("#campoBusca").val();
                 var status = $("#filtroStatus").val();
 
-                // Faz a requisição para o Controller sem recarregar a página
                 $.get("/Exemplares/FiltrarEstoque", { termoPesquisa: termo, filtroStatus: status }, function (data) {
                     $("#containerTabela").html(data);
                 });
             }
 
-            // Ocorre quando digita algo (input) ou muda o dropdown (change)
             $("#campoBusca").on("input", atualizarTabela);
             $("#filtroStatus").on("change", atualizarTabela);
         });

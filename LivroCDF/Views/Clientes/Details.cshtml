@@ -1,127 +1,123 @@
-﻿@using LivroCDF.Models.Enums
-@model LivroCDF.Models.Cliente
+﻿@model LivroCDF.Models.Cliente
+@using LivroCDF.Models.Enums
 
 @{
-    ViewData["Title"] = "Detalhes";
+    ViewData["Title"] = "Detalhes do Cliente";
 }
 
-<h1>Detalhes do Cliente</h1>
+<div class="container mt-4">
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Nome)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Nome)</dd>
-
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Email)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Email)</dd>
-    </dl>
-</div>
-
-<hr />
-<h3>Histórico de Compras / Pendências</h3>
-
-@if (Model.Compras != null && Model.Compras.Any())
-{
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Livro</th>
-                <th>Data da Venda</th> @* Mudamos o nome para ficar mais claro *@
-                <th>Valor</th>
-                <th class="text-center">Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Compras)
-            {
-                // LÓGICA CORRIGIDA:
-                // É pendente se o Status for 'APagar', independente da data.
-                bool estaPendente = item.Status == StatusLivro.APagar;
-
-                // Se for pendente, pinta a linha de amarelo
-                string classeCss = estaPendente ? "table-warning fw-bold" : "";
-
-                <tr class="@classeCss">
-                    <td>
-                        @item.Livro?.Titulo
-                        @if (estaPendente)
-                        {
-                            // Um ícone de alerta extra para chamar atenção
-                            <span class="text-danger ms-2" title="Débito em aberto">
-                                <i class="bi bi-exclamation-circle-fill"></i>
-                            </span>
-                        }
-                    </td>
-
-                    @* MOSTRAR A DATA SEMPRE (Seja venda paga ou fiado) *@
-                    <td>
-                        @if (item.DataVenda.HasValue)
-                        {
-                            <span class="text-dark">
-                                <i class="bi bi-calendar-event"></i> @item.DataVenda.Value.ToString("dd/MM/yyyy")
-                            </span>
-
-                            @* Se for A Pagar, mostra quantos dias faz *@
-                            @if (item.Status == LivroCDF.Models.Enums.StatusLivro.APagar)
-                            {
-                                var dias = (DateTime.Now - item.DataVenda.Value).Days;
-                                if (dias > 0)
-                                {
-                                    <br />
-                
-                                    <small class="text-danger fw-bold">(@dias dias atrás)</small>
-                                }
-                                else
-                                {
-                                    <br />
-                
-                                    <small class="text-danger fw-bold">(Hoje)</small>
-                                }
-                            }
-                        }
-                        else
-                        {
-                            <span>-</span>
-                        }
-                    </td>
-
-                    <td>@item.Valor.ToString("C2")</td>
-
-                    <td class="text-center">
-                        @switch (item.Status)
-                        {
-                            case LivroCDF.Models.Enums.StatusLivro.APagar:
-                                <span class="badge bg-danger">Aguardando Pagamento</span>
-                                break;
-
-                            case LivroCDF.Models.Enums.StatusLivro.Vendido:
-                                <span class="badge bg-success">Venda Concluída</span>
-                                break;
-
-                            case LivroCDF.Models.Enums.StatusLivro.Estoque:
-                               
-                                <span class="badge bg-secondary text-decoration-line-through">Estornado / Devolvido</span>
-                                break;
-
-                            default:
-                                @item.Status
-                                break;
-                        }
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <div class="alert alert-info">
-        <i class="bi bi-info-circle"></i> Nenhuma movimentação registrada para este cliente.
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                    @if (!string.IsNullOrEmpty(Model.FotoCaminho))
+                    {
+                        <img src="@Model.FotoCaminho" alt="Foto de @Model.Nome" class="rounded-circle img-thumbnail shadow-sm" style="width: 150px; height: 150px; object-fit: cover;">
+                    }
+                    else
+                    {
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm" style="width: 150px; height: 150px;">
+                            <i class="bi bi-person text-secondary" style="font-size: 80px;"></i>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-9">
+                    <h2 class="display-6 fw-bold">@Html.DisplayFor(model => model.Nome)</h2>
+                    <p class="text-muted fs-5 mb-1"><i class="bi bi-envelope"></i> @Html.DisplayFor(model => model.Email)</p>
+                    <p class="text-muted fs-5"><i class="bi bi-telephone"></i> @(string.IsNullOrEmpty(Model.Telefone) ? "Não informado" : Model.Telefone)</p>
+                    <div class="mt-3">
+                        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar Dados</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-}
 
-<div class="mt-3">
-    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Editar Cliente</a> |
-    <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+    <h3 class="mb-3 text-primary"><i class="bi bi-clock-history"></i> Histórico de Compras / Pendências</h3>
+
+    <div class="card bg-light mb-3 p-3 shadow-sm">
+        <div class="row g-2 align-items-end">
+            <div class="col-md-4">
+                <label class="small text-muted fw-bold">Buscar Livro:</label>
+                <input type="text" id="filtroTermo" class="form-control" placeholder="Ex: Dom Casmurro..." />
+            </div>
+            <div class="col-md-2">
+                <label class="small text-muted fw-bold">Status:</label>
+                <select id="filtroStatus" class="form-select" asp-items="Html.GetEnumSelectList<StatusLivro>()">
+                    <option value="">Todos</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="small text-muted fw-bold">Data Início:</label>
+                <input type="date" id="filtroInicio" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="small text-muted fw-bold">Data Fim:</label>
+                <input type="date" id="filtroFim" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <button onclick="limparFiltros()" class="btn btn-outline-secondary w-100">Limpar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="containerHistorico">
+        @if (Model.Compras != null && Model.Compras.Any())
+        {
+            <partial name="_HistoricoCliente" model="Model.Compras.OrderByDescending(x => x.DataVenda)" />
+        }
+        else
+        {
+            <div class="alert alert-info shadow-sm">
+                <i class="bi bi-info-circle-fill"></i> Nenhuma movimentação registrada para este cliente.
+            </div>
+        }
+    </div>
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Voltar para Lista
+        </a>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#filtroTermo").on("keyup", function() { atualizarHistorico(); });
+            $("#filtroStatus, #filtroInicio, #filtroFim").on("change", function() { atualizarHistorico(); });
+        });
+
+        function atualizarHistorico() {
+            var clienteId = @Model.Id;
+            var termo = $("#filtroTermo").val();
+            var status = $("#filtroStatus").val();
+            var inicio = $("#filtroInicio").val();
+            var fim = $("#filtroFim").val();
+
+            $("#containerHistorico").css("opacity", "0.5");
+
+            $.get("/Clientes/FiltrarHistorico",
+                {
+                    clienteId: clienteId,
+                    termo: termo,
+                    status: status,
+                    dataInicio: inicio,
+                    dataFim: fim
+                },
+                function (data) {
+                    $("#containerHistorico").html(data);
+                    $("#containerHistorico").css("opacity", "1");
+                }
+            );
+        }
+
+        function limparFiltros() {
+            $("#filtroTermo").val("");
+            $("#filtroStatus").val("");
+            $("#filtroInicio").val("");
+            $("#filtroFim").val("");
+            atualizarHistorico();
+        }
+    </script>
+}

@@ -9,7 +9,8 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Create">
+        <form asp-action="Create" enctype="multipart/form-data">
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group mb-3">
@@ -39,6 +40,11 @@
                 <span asp-validation-for="Endereco" class="text-danger"></span>
             </div>
 
+            <div class="form-group mb-3 p-3 border rounded bg-light">
+                <label asp-for="ArquivoFoto" class="control-label fw-bold">Foto do Perfil</label>
+                <input asp-for="ArquivoFoto" class="form-control mt-2" type="file" accept="image/*" />
+                <span asp-validation-for="ArquivoFoto" class="text-danger"></span>
+            </div>
             <div class="form-group mt-4">
                 <input type="submit" value="Salvar Cliente" class="btn btn-success" />
                 <a asp-action="Index" class="btn btn-secondary">Voltar</a>
@@ -55,26 +61,14 @@
     <script>
         function mascaraFone(event) {
             var v = event.target.value;
-
-            // Remove tudo o que não é dígito
             v = v.replace(/\D/g, "");
-
-            // Trava em 11 dígitos (DDD + 9 digitos)
-            if (v.length > 11) {
-                v = v.substring(0, 11);
-            }
-
-            // Coloca parênteses em volta dos dois primeiros dígitos (DDD)
+            if (v.length > 11) { v = v.substring(0, 11); }
             v = v.replace(/^(\d\d)(\d)/g, "($1) $2");
-
-            if (v.length > 14) { // Se for Celular (11 números + máscara)
-                // Formato: (XX) 9XXXX-XXXX
+            if (v.length > 14) {
                 v = v.replace(/(\d{5})(\d)/, "$1-$2");
-            } else { // Se for Fixo (10 números + máscara)
-                // Formato: (XX) XXXX-XXXX
+            } else {
                 v = v.replace(/(\d{4})(\d)/, "$1-$2");
             }
-
             event.target.value = v;
         }
     </script>

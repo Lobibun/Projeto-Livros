@@ -3,6 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LivroCDF.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+using System.Linq;
+using System;
+using LivroCDF.Models.Enums;
 
 namespace LivroCDF.Controllers
 {
@@ -15,15 +21,56 @@ namespace LivroCDF.Controllers
         {
             _context = context;
         }
-        
+
+        [HttpPost]
+        public async Task<IActionResult> RemoverFoto(int id)
+        {
+            var cliente = await _context.Clientes.FindAsync(id);
+            if (cliente == null) return NotFound();
+
+            if (!string.IsNullOrEmpty(cliente.FotoCaminho))
+            {
+                string caminhoFisico = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cliente.FotoCaminho.TrimStart('/'));
+                if (System.IO.File.Exists(caminhoFisico))
+                {
+                    try
+                    {
+                        System.IO.File.Delete(caminhoFisico);
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+
+            cliente.FotoCaminho = null;
+            _context.Update(cliente);
+            await _context.SaveChangesAsync();
+
+            var log = new LogAuditoria
+            {
+                Usuario = User.Identity.Name ?? "Desconhecido",
+                Acao = "Remoção de Foto",
+                Detalhes = $"Removeu a foto do cliente ID {id}: {cliente.Nome}",
+                DataAcao = DateTime.Now
+            };
+            _context.LogsAuditoria.Add(log);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Edit), new { id = cliente.Id });
+        }
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
+
             var cliente = await _context.Clientes
-            .Include(c => c.Compras)
-            .ThenInclude(e => e.Livro)
-            .FirstOrDefaultAsync(m => m.Id == id);
+                .Include(c => c.Compras)
+                .ThenInclude(e => e.Livro)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (cliente == null) return NotFound();
+
             return View(cliente);
         }
 
@@ -38,10 +85,25 @@ namespace LivroCDF.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (cliente.ArquivoFoto != null)
+                {
+                    string pastaDestino = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens");
+                    if (!Directory.Exists(pastaDestino)) Directory.CreateDirectory(pastaDestino);
+
+                    string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(cliente.ArquivoFoto.FileName);
+                    string caminhoArquivo = Path.Combine(pastaDestino, nomeArquivo);
+
+                    using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                    {
+                        await cliente.ArquivoFoto.CopyToAsync(stream);
+                    }
+
+                    cliente.FotoCaminho = "/imagens/" + nomeArquivo;
+                }
+
                 _context.Add(cliente);
                 await _context.SaveChangesAsync();
 
-                // --- LOG DE AUDITORIA (NOVO CLIENTE) ---
                 var log = new LogAuditoria
                 {
                     Usuario = User.Identity.Name ?? "Desconhecido",
@@ -51,19 +113,18 @@ namespace LivroCDF.Controllers
                 };
                 _context.LogsAuditoria.Add(log);
                 await _context.SaveChangesAsync();
-                // ---------------------------------------
 
                 return RedirectToAction(nameof(Index));
             }
             return View(cliente);
         }
-
         public async Task<IActionResult> Edit(int? id)
         {
-           if (id == null) return NotFound();
+            if (id == null) return NotFound();
 
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente == null) return NotFound();
+
             return View(cliente);
         }
 
@@ -77,10 +138,37 @@ namespace LivroCDF.Controllers
             {
                 try
                 {
+                    var clienteBanco = await _context.Clientes
+                        .AsNoTracking()
+                        .FirstOrDefaultAsync(c => c.Id == id);
+
+                    if (cliente.ArquivoFoto != null)
+                    {
+                        string pastaDestino = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens");
+                        if (!Directory.Exists(pastaDestino)) Directory.CreateDirectory(pastaDestino);
+
+                        string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(cliente.ArquivoFoto.FileName);
+                        string caminhoArquivo = Path.Combine(pastaDestino, nomeArquivo);
+
+                        using (var stream = new FileStream(caminhoArquivo, FileMode.Create))
+                        {
+                            await cliente.ArquivoFoto.CopyToAsync(stream);
+                        }
+
+                        cliente.FotoCaminho = "/imagens/" + nomeArquivo;
+                    }
+                    else
+                    {
+                        if (clienteBanco != null)
+                        {
+                            cliente.FotoCaminho = clienteBanco.FotoCaminho;
+                        }
+                    }
+
                     _context.Update(cliente);
                     await _context.SaveChangesAsync();
 
-                    // --- LOG DE AUDITORIA (EDITAR CLIENTE) ---
+                    // Log
                     var log = new LogAuditoria
                     {
                         Usuario = User.Identity.Name ?? "Desconhecido",
@@ -90,7 +178,6 @@ namespace LivroCDF.Controllers
                     };
                     _context.LogsAuditoria.Add(log);
                     await _context.SaveChangesAsync();
-                    // -----------------------------------------
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -117,11 +204,10 @@ namespace LivroCDF.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var cliente = await _context.Clientes
-                .Include(c => c.Compras) // Carrega as compras para verificar
+                .Include(c => c.Compras)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (cliente == null) return NotFound();
-
 
             if (cliente.Compras != null && cliente.Compras.Any())
             {
@@ -130,6 +216,12 @@ namespace LivroCDF.Controllers
             }
 
             string nomeClienteApagado = cliente.Nome;
+
+            if (!string.IsNullOrEmpty(cliente.FotoCaminho))
+            {
+                string caminhoFisico = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cliente.FotoCaminho.TrimStart('/'));
+                if (System.IO.File.Exists(caminhoFisico)) System.IO.File.Delete(caminhoFisico);
+            }
 
             _context.Clientes.Remove(cliente);
             await _context.SaveChangesAsync();
@@ -143,18 +235,15 @@ namespace LivroCDF.Controllers
             };
             _context.LogsAuditoria.Add(log);
             await _context.SaveChangesAsync();
-            // ----------------------------------------------
 
             return RedirectToAction(nameof(Index));
         }
 
-
-
         public async Task<IActionResult> Index()
         {
             var clientes = await _context.Clientes
-                                         .Include(c => c.Compras) // Carrega as compras junto
-                                         .ToListAsync();
+                .Include(c => c.Compras)
+                .ToListAsync();
             return View(clientes);
         }
 
@@ -162,16 +251,48 @@ namespace LivroCDF.Controllers
         public async Task<IActionResult> FiltrarClientes(string termoPesquisa)
         {
             var consulta = _context.Clientes
-                                   .Include(c => c.Compras) // Importante carregar aqui também
-                                   .AsQueryable();
+                .Include(c => c.Compras)
+                .AsQueryable();
 
             if (!string.IsNullOrEmpty(termoPesquisa))
             {
-                // Pesquisa por Nome ou Email
                 consulta = consulta.Where(c => c.Nome.Contains(termoPesquisa) || c.Email.Contains(termoPesquisa));
             }
 
             return PartialView("_TabelaClientes", await consulta.ToListAsync());
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> FiltrarHistorico(int clienteId, string termo, StatusLivro? status, DateTime? dataInicio, DateTime? dataFim)
+        {
+            var consulta = _context.Exemplares
+                                    .Include(e => e.Livro)
+                                    .Where(x => x.ClienteId == clienteId)
+                                    .AsQueryable();
+            if (!string.IsNullOrEmpty(termo))
+            {
+                consulta = consulta.Where(x => x.Livro.Titulo.Contains(termo));
+            }
+
+            if (status.HasValue)
+            {
+                consulta = consulta.Where(x => x.Status == status.Value);
+            }
+
+            if (dataInicio.HasValue)
+            {
+                consulta = consulta.Where(x => (x.DataVenda ?? x.DataEntrada) == dataInicio.Value);
+            }
+
+            if (dataFim.HasValue)
+            {
+                var fimDoDia = dataFim.Value.Date.AddDays(1).AddTicks(-1);
+            }
+
+            consulta = consulta.OrderByDescending(x => x.DataVenda).ThenByDescending(x => x.DataEntrada);
+
+            var resultados = await consulta.ToListAsync();
+            return PartialView("_HistoricoCliente", resultados);
         }
     }
 }

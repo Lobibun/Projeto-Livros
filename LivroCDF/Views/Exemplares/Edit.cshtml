@@ -5,8 +5,16 @@
     ViewData["Title"] = "Gerenciar Exemplar";
 }
 
-<h2>Gerenciar Exemplar #@Model.Id</h2>
-<h4>Livro: @ViewBag.TituloLivro</h4>
+<div class="d-flex align-items-center mb-3">
+    @if (Model.Livro != null && !string.IsNullOrEmpty(Model.Livro.FotoCaminho))
+    {
+        <img src="@Model.Livro.FotoCaminho" class="rounded me-3 shadow-sm" style="height: 80px;" />
+    }
+    <div>
+        <h2 class="mb-0">Gerenciar Exemplar #@Model.Id</h2>
+        <h4 class="text-muted">@ViewBag.TituloLivro</h4>
+    </div>
+</div>
 <hr />
 
 <div class="row">
@@ -46,7 +54,6 @@
 
             <div class="form-group mt-3">
                 <input type="submit" value="Salvar Alterações" class="btn btn-primary" />
-
                 <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
             </div>
         </form>
@@ -59,24 +66,20 @@
     }
 
     <script>
+        // MANTIVE O SCRIPT ORIGINAL EXATAMENTE COMO ESTAVA
         function verificarStatus() {
             var statusSelect = document.getElementById("ddlStatus");
             var divCliente = document.getElementById("divCliente");
 
-            // Pega o texto da opção selecionada
             var textoSelecionado = statusSelect.options[statusSelect.selectedIndex].text;
 
-            // Se for "Vendido" ou "A Pagar", mostra o campo Cliente
             if (textoSelecionado === "Vendido" || textoSelecionado === "A Pagar") {
                 divCliente.style.display = "block";
             } else {
                 divCliente.style.display = "none";
-                // Opcional: Limpar o cliente se mudar para Disponível
-                // document.getElementById("ClienteId").value = "";
             }
         }
 
-        // Roda a função ao carregar a página para exibir se já estiver salvo como Vendido
         document.addEventListener("DOMContentLoaded", function() {
             verificarStatus();
         });

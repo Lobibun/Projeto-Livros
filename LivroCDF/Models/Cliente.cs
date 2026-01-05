@@ -1,10 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LivroCDF.Models
 {
     public class Cliente
     {
         public int Id {get;set;}
+        public string? FotoCaminho {get;set;}
+
+        [NotMapped]
+        [Display(Name = "Foto de Perfil")]
+        public IFormFile? ArquivoFoto { get;set;}
+        [NotMapped] 
+        public bool RemoverFoto { get; set; }
 
         [Required(ErrorMessage = "O nome é obrigatório.")]
         [StringLength(100, ErrorMessage = "O nome não pode ter mais de 100 caracteres.")]

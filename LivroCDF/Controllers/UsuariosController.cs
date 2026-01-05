@@ -4,15 +4,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using LivroCDF.Models;
 
 namespace LivroCDF.Controllers
 {
-    [Authorize(Roles = "SuperAdmin,Admin")] // Só a chefia entra aqui
+    [Authorize(Roles = "SuperAdmin,Admin")]
     public class UsuariosController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<Usuario> _userManager;
 
-        public UsuariosController(UserManager<IdentityUser> userManager)
+        public UsuariosController(UserManager<Usuario> userManager)
         {
             _userManager = userManager;
         }
@@ -29,6 +31,8 @@ namespace LivroCDF.Controllers
                 {
                     UserId = user.Id,
                     Email = user.Email,
+                    Nome = user.Nome,
+                    FotoCaminho = user.FotoCaminho,
                     Roles = roles
                 });
             }
@@ -37,23 +41,25 @@ namespace LivroCDF.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "SuperAdmin")] // SÓ O CEO PODE PROMOVER
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> TornarAdmin(string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
                 await _userManager.AddToRoleAsync(user, "Admin");
-                await _userManager.RemoveFromRoleAsync(user, "Comum"); 
+                if (await _userManager.IsInRoleAsync(user, "Comum"))
+                {
+                    await _userManager.RemoveFromRoleAsync(user, "Comum");
+                }
             }
             return RedirectToAction("Index");
         }
 
         [HttpPost]
-        [Authorize(Roles = "SuperAdmin")] // Trava de segurança no servidor
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> ResetarSenha(string userId)
         {
-            // Verificação extra manual
             if (!User.IsInRole("SuperAdmin"))
             {
                 TempData["Erro"] = "Apenas o CEO pode resetar senhas.";
@@ -63,13 +69,11 @@ namespace LivroCDF.Controllers
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null) return NotFound();
 
-            // Remove a senha antiga e coloca a padrão
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             var removeResult = await _userManager.RemovePasswordAsync(user);
 
             if (removeResult.Succeeded)
             {
-                // A NOVA SENHA PADRÃO SERÁ: Livraria@123
                 var addResult = await _userManager.AddPasswordAsync(user, "Livraria@123");
                 if (addResult.Succeeded)
                 {
@@ -87,7 +91,6 @@ namespace LivroCDF.Controllers
             var user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
-                // Verifica se não está tentando rebaixar outro SuperAdmin
                 if (await _userManager.IsInRoleAsync(user, "SuperAdmin"))
                 {
                     TempData["Erro"] = "Você não pode rebaixar um CEO.";
@@ -106,28 +109,22 @@ namespace LivroCDF.Controllers
             var usuarioAlvo = await _userManager.FindByIdAsync(userId);
             if (usuarioAlvo == null) return NotFound();
 
-            // --- REGRAS DE PODER ---
-
-            // 1. Ninguém pode se auto-deletar por aqui (segurança)
             if (usuarioAlvo.UserName == User.Identity.Name)
             {
                 TempData["Erro"] = "Você não pode excluir a si mesmo!";
                 return RedirectToAction("Index");
             }
 
-            // 2. Verifica se quem está tentando excluir é CEO ou Admin
             bool souCEO = User.IsInRole("SuperAdmin");
             bool alvoEhAdmin = await _userManager.IsInRoleAsync(usuarioAlvo, "Admin");
             bool alvoEhCEO = await _userManager.IsInRoleAsync(usuarioAlvo, "SuperAdmin");
 
-            // Se eu sou apenas Admin, NÃO posso apagar outro Admin nem o CEO
             if (!souCEO && (alvoEhAdmin || alvoEhCEO))
             {
                 TempData["Erro"] = "Permissão Negada: Gerentes não podem apagar outros Gerentes ou o CEO.";
                 return RedirectToAction("Index");
             }
 
-            // Se passou pelas regras, apaga
             await _userManager.DeleteAsync(usuarioAlvo);
             return RedirectToAction("Index");
         }
@@ -136,7 +133,9 @@ namespace LivroCDF.Controllers
     public class UsuarioViewModel
     {
         public string UserId { get; set; }
+        public string Nome { get; set; }
         public string Email { get; set; }
+        public string FotoCaminho { get; set; }
         public IList<string> Roles { get; set; }
     }
 }

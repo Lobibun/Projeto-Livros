@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 namespace LivroCDF.Models
+
 {
     public class Livro
     {
@@ -14,6 +16,7 @@ namespace LivroCDF.Models
         public DateTime? DataVenda { get; set; }
         public int? ClienteId { get; set; } 
         public Cliente? Cliente { get; set; }
+        public string? FotoCaminho { get; set; }
         public ICollection<Exemplar> Exemplares { get; set; } = new List<Exemplar>();
     }
 }

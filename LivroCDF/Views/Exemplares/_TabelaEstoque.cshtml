@@ -1,35 +1,53 @@
 ﻿@model IEnumerable<LivroCDF.Models.Exemplar>
 @using LivroCDF.Models.Enums
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>Livro</th>
-            <th>Data Entrada</th>
-            <th>Valor</th>
-            <th>Status</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            string classeLinha = (item.Status == StatusLivro.APagar) ? "table-warning" : "";
-            <tr class="@classeLinha">
-                <td>@item.Livro.Titulo</td>
-                <td>@item.DataEntrada.ToShortDateString()</td>
-                <td>R$ @item.Valor</td>
-                <td>@Html.DisplayFor(modelItem => item.Status)</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">✏️</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">🗑️</a>
-                </td>
+<div class="table-responsive">
+    <table class="table table-hover align-middle">
+        <thead>
+            <tr>
+                <th style="width: 60px;">Capa</th>
+                <th>Livro</th>
+                <th>Data Entrada</th>
+                <th>Valor</th>
+                <th>Status</th>
+                <th>Ações</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                string classeLinha = (item.Status == StatusLivro.APagar) ? "table-warning" : "";
+                <tr class="@classeLinha">
+                    <td>
+                        @if (item.Livro != null && !string.IsNullOrEmpty(item.Livro.FotoCaminho))
+                        {
+                            <img src="@item.Livro.FotoCaminho" class="rounded shadow-sm"
+                                 style="width: 40px; height: 60px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center rounded"
+                                 style="width: 40px; height: 60px;">
+                                <i class="bi bi-book"></i>
+                            </div>
+                        }
+                    </td>
 
-@if (!Model.Any())
-{
-    <div class="alert alert-info mt-3">Nenhum livro encontrado.</div>
-}
+                    <td>@item.Livro.Titulo</td>
+                    <td>@item.DataEntrada.ToShortDateString()</td>
+                    <td>R$ @item.Valor</td>
+                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning" title="Editar">✏️</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Excluir">🗑️</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info mt-3">Nenhum livro encontrado.</div>
+    }
+</div>

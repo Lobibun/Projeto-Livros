@@ -1,34 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.IO;             
+using LivroCDF.Models;        
 
 namespace LivroCDF.Areas.Identity.Pages.Account
 {
-    // Esta é a classe que o erro estava procurando!
     [Authorize(Roles = "SuperAdmin,Admin")]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
+        private readonly SignInManager<Usuario> _signInManager;
+        private readonly UserManager<Usuario> _userManager;
+        private readonly IUserStore<Usuario> _userStore;
+        private readonly IUserEmailStore<Usuario> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            IUserStore<IdentityUser> userStore,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<Usuario> userManager,
+            IUserStore<Usuario> userStore,
+            SignInManager<Usuario> signInManager,
             ILogger<RegisterModel> logger)
         {
             _userManager = userManager;
@@ -45,6 +47,20 @@ namespace LivroCDF.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+            // Sugestão: Adicione Nome, já que criamos no Model
+            [Required(ErrorMessage = "O Nome é obrigatório")]
+            [Display(Name = "Nome Completo")]
+            public string Nome { get; set; }
+
+            public string? FotoCaminho { get; set; }
+
+            [NotMapped]
+            [Display(Name = "Foto de Perfil")]
+            public IFormFile? ArquivoFoto { get; set; } // O arquivo vem aqui
+
+            [NotMapped]
+            public bool RemoverFoto { get; set; }
+
             [Required(ErrorMessage = "O Email é obrigatório")]
             [EmailAddress(ErrorMessage = "Email inválido")]
             [Display(Name = "Email")]
@@ -75,6 +91,30 @@ namespace LivroCDF.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
+                // MUDANÇA 2: Passamos os dados extras para o objeto User
+                user.Nome = Input.Nome;
+
+                // MUDANÇA 3: Lógica de salvar a foto
+                if (Input.ArquivoFoto != null)
+                {
+                    // Define pasta física: wwwroot/imagens/usuarios
+                    string pastaDestino = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagens", "usuarios");
+
+                    if (!Directory.Exists(pastaDestino)) Directory.CreateDirectory(pastaDestino);
+
+                    // Cria nome único para não substituir fotos de outros
+                    string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(Input.ArquivoFoto.FileName);
+
+                    // Salva no disco
+                    using (var stream = new FileStream(Path.Combine(pastaDestino, nomeArquivo), FileMode.Create))
+                    {
+                        await Input.ArquivoFoto.CopyToAsync(stream);
+                    }
+
+                    // Salva o caminho relativo no banco
+                    user.FotoCaminho = $"/imagens/usuarios/{nomeArquivo}";
+                }
+
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
@@ -83,11 +123,7 @@ namespace LivroCDF.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("Admin criou uma nova conta.");
-
-                    // Adiciona como 'Comum' por padrão
                     await _userManager.AddToRoleAsync(user, "Comum");
-
-                    // Redireciona para a lista de usuários (NÃO faz login)
                     return RedirectToAction("Index", "Usuarios");
                 }
                 foreach (var error in result.Errors)
@@ -95,30 +131,29 @@ namespace LivroCDF.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-
             return Page();
         }
 
-        private IdentityUser CreateUser()
+        // MUDANÇA 4: CreateUser deve retornar um 'Usuario'
+        private Usuario CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
+                return Activator.CreateInstance<Usuario>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
-                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor.");
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(Usuario)}'.");
             }
         }
 
-        private IUserEmailStore<IdentityUser> GetEmailStore()
+        private IUserEmailStore<Usuario> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<IdentityUser>)_userStore;
+            return (IUserEmailStore<Usuario>)_userStore;
         }
     }
 }

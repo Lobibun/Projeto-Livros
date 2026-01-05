@@ -82,12 +82,12 @@ namespace LivroCDF.Controllers
         public async Task<IActionResult> Create(Exemplar exemplar, int Quantidade)
         {
             ModelState.Remove("Livro");
-            // Se tiver validação de Cliente, remova também se não for obrigatório na criação
+
             ModelState.Remove("Cliente");
 
             if (ModelState.IsValid)
             {
-                // 1. Cria as cópias
+ 
                 for (int i = 0; i < Quantidade; i++)
                 {
                     var novaCopia = new Exemplar
@@ -100,7 +100,6 @@ namespace LivroCDF.Controllers
                     await _service.InserirExemplarAsync(novaCopia);
                 }
 
-                // 2. --- LOG DE AUDITORIA (ENTRADA) ---
                 var log = new LogAuditoria
                 {
                     Usuario = User.Identity.Name ?? "Desconhecido",
@@ -140,17 +139,14 @@ namespace LivroCDF.Controllers
         {
             if (id != exemplar.Id) return NotFound();
 
-            // 1. BUSCAR O ESTADO ORIGINAL (Antes da edição)
-            // Usamos AsNoTracking para não travar o Entity Framework na hora de salvar depois
             var original = await _context.Exemplares
                                          .AsNoTracking()
-                                         .Include(e => e.Livro) // Traz o livro para caso precise recarregar a tela
+                                         .Include(e => e.Livro) 
                                          .FirstOrDefaultAsync(x => x.Id == id);
 
             if (original == null) return NotFound();
 
-            // 2. REGRA DOS 90 DIAS (Bloqueio de Estorno)
-            // Se estava VENDIDO e agora NÃO ESTÁ MAIS (ou seja, tentou devolver/estornar)
+
             if (original.Status == StatusLivro.Vendido && exemplar.Status != StatusLivro.Vendido)
             {
                 if (original.DataVenda.HasValue)
@@ -159,7 +155,6 @@ namespace LivroCDF.Controllers
 
                     if (diasPassados > 90)
                     {
-                        // Adiciona Erro na tela e impede de salvar
                         ModelState.AddModelError("Status", $"Não é possível estornar. Prazo de 90 dias expirado ({diasPassados} dias desde a venda).");
                     }
                 }
@@ -174,23 +169,21 @@ namespace LivroCDF.Controllers
                 {
                     exemplar.DataUltimaAtualizacao = DateTime.Now;
 
-                    // 3. Lógica de Datas
-                    // Se marcou como Vendido ou A Pagar, e não tinha data, coloca a data de hoje
+                   
                     if ((exemplar.Status == StatusLivro.Vendido || exemplar.Status == StatusLivro.APagar) && exemplar.DataVenda == null)
                     {
                         exemplar.DataVenda = DateTime.Now;
                     }
 
-                    // Se voltou para Estoque, LIMPA a data de venda (para não aparecer data antiga na próxima venda)
+                   
                     if (exemplar.Status == StatusLivro.Estoque)
                     {
                         exemplar.DataVenda = null;
-                        exemplar.ClienteId = null; // Remove o cliente também, já que voltou pro estoque
+                        exemplar.ClienteId = null; 
                     }
 
                     await _service.AtualizarExemplarAsync(exemplar);
 
-                    // --- LOG DE AUDITORIA ---
                     var log = new LogAuditoria
                     {
                         Usuario = User.Identity.Name ?? "Desconhecido",
@@ -228,12 +221,10 @@ namespace LivroCDF.Controllers
                 }
                 catch (Exception ex)
                 {
-                    // Logar o erro se necessário
                     throw;
                 }
             }
 
-            // Se der erro (ex: validação dos 90 dias), recarrega os dados para a tela não quebrar
             ViewBag.TituloLivro = original.Livro?.Titulo;
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Nome", exemplar.ClienteId);
             return View(exemplar);
@@ -256,7 +247,6 @@ namespace LivroCDF.Controllers
         {
             await _service.RemoverExemplarAsync(id);
 
-            // --- LOG DE AUDITORIA (EXCLUSÃO) ---
             var log = new LogAuditoria
             {
                 Usuario = User.Identity.Name ?? "Desconhecido",
@@ -266,7 +256,6 @@ namespace LivroCDF.Controllers
             };
             _context.LogsAuditoria.Add(log);
             await _context.SaveChangesAsync();
-            // ------------------------------------
 
             return RedirectToAction(nameof(Index));
         }

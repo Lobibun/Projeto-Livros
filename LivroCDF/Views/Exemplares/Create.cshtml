@@ -13,15 +13,24 @@
     <div class="col-md-4">
         <form asp-action="Create" id="formEstoque">
 
+            <div class="text-center mb-3" id="previewCapaContainer" style="display:none;">
+                <img id="imgCapaPreview" src="" class="rounded shadow-sm" style="max-height: 150px; border: 1px solid #ddd;" />
+                <p class="text-muted small mt-1">Capa do livro selecionado</p>
+            </div>
+
             <div class="form-group mb-3">
                 <label class="control-label">Escolha o Livro</label>
                 <select asp-for="LivroId" class="form-control" id="ddlLivros" required>
-                    <option value="">-- Selecione um Livro --</option>
+                    <option value="" data-imagem="">-- Selecione um Livro --</option>
                     @if (livros != null)
                     {
                         foreach (var item in livros)
                         {
-                            <option value="@item.Id" data-preco="@item.Valor">@item.Titulo</option>
+                            <option value="@item.Id"
+                                    data-preco="@item.Valor"
+                                    data-imagem="@item.FotoCaminho">
+                                @item.Titulo
+                            </option>
                         }
                     }
                 </select>
@@ -63,25 +72,31 @@
     }
 
     <script>
-        // 1. ATUALIZA PREÇO AO TROCAR LIVRO
         document.getElementById("ddlLivros").addEventListener("change", function() {
             var opcaoSelecionada = this.options[this.selectedIndex];
-            var precoDoLivro = opcaoSelecionada.getAttribute("data-preco");
 
+            var precoDoLivro = opcaoSelecionada.getAttribute("data-preco");
             if(precoDoLivro) {
-                // Formata com ponto para o input type="number" aceitar
                 document.getElementById("txtValor").value = precoDoLivro.replace(",", ".");
             } else {
                 document.getElementById("txtValor").value = "";
             }
+
+            var imgCaminho = opcaoSelecionada.getAttribute("data-imagem");
+            var imgPreview = document.getElementById("imgCapaPreview");
+            var containerPreview = document.getElementById("previewCapaContainer");
+
+            if (imgCaminho) {
+                imgPreview.src = imgCaminho;
+                containerPreview.style.display = "block";
+            } else {
+                imgPreview.src = "";
+                containerPreview.style.display = "none";
+            }
         });
 
-        // 2. CORREÇÃO DO "CAMPO VAZIO" AO ENVIAR
         document.getElementById("formEstoque").addEventListener("submit", function() {
             var campoValor = document.getElementById("txtValor");
-
-            // Se o campo estiver vazio (""), forçamos ele a ser "0" antes de enviar.
-            // Isso engana a validação do navegador e deixa o Controller fazer a lógica de pegar o preço da capa.
             if (!campoValor.value) {
                 campoValor.value = 0;
             }

@@ -1,0 +1,115 @@
+﻿@model IEnumerable<LivroCDF.Models.Exemplar>
+@using LivroCDF.Models.Enums
+
+<div class="table-responsive shadow-sm rounded">
+    <table class="table table-hover align-middle mb-0">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 80px;">Capa</th>
+                <th>Livro</th>
+                <th>Data da Venda / Tempo</th>
+                <th>Valor</th>
+                <th class="text-center">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                bool estaPendente = item.Status == StatusLivro.APagar;
+                string classeLinha = estaPendente ? "table-warning" : "";
+
+                <tr class="@classeLinha">
+                    <td>
+                        @if (item.Livro != null && !string.IsNullOrEmpty(item.Livro.FotoCaminho))
+                        {
+                            <img src="@item.Livro.FotoCaminho" class="rounded shadow-sm" style="width: 50px; height: 75px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center rounded" style="width: 50px; height: 75px;">
+                                <i class="bi bi-book"></i>
+                            </div>
+                        }
+                    </td>
+
+                    <td class="fw-bold text-dark">
+                        @item.Livro?.Titulo
+                        @if (estaPendente)
+                        {
+                            <span class="text-danger ms-2" title="Pagamento Pendente">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                            </span>
+                        }
+                    </td>
+
+                    <td>
+                        @if (item.DataVenda.HasValue)
+                        {
+                            <div class="fw-bold">
+                                <i class="bi bi-calendar-event"></i> @item.DataVenda.Value.ToString("dd/MM/yyyy")
+                            </div>
+
+                            // SUA LÓGICA DE TEMPO ORIGINAL
+                            var tempoDecorrido = DateTime.Now - item.DataVenda.Value;
+                            string textoTempo;
+                            string corTempo = "text-muted";
+
+                            if (tempoDecorrido.TotalDays >= 1)
+                            {
+                                int dias = (int)tempoDecorrido.TotalDays;
+                                textoTempo = $"Pego há {dias} " + (dias == 1 ? "dia" : "dias");
+                                if (estaPendente) { corTempo = "text-danger fw-bold"; } // Vermelho se deve faz dias
+                            }
+                            else if (tempoDecorrido.TotalHours >= 1)
+                            {
+                                int horas = (int)tempoDecorrido.TotalHours;
+                                textoTempo = $"Pego há {horas} " + (horas == 1 ? "hora" : "horas");
+                                corTempo = "text-primary"; // Azul se foi hoje
+                            }
+                            else
+                            {
+                                int minutos = (int)tempoDecorrido.TotalMinutes;
+                                textoTempo = $"Pego há {minutos} " + (minutos == 1 ? "minuto" : "minutos");
+                                corTempo = "text-success fw-bold"; // Verde se acabou de pegar
+                            }
+
+                            <small class="@corTempo" style="font-size: 0.85rem;">
+                                @textoTempo
+                            </small>
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </td>
+
+                    <td>@item.Valor.ToString("C2")</td>
+
+                    <td class="text-center">
+                        @switch (item.Status)
+                        {
+                            case StatusLivro.APagar:
+                                <span class="badge bg-danger">Aguardando Pagamento</span>
+                                break;
+                            case StatusLivro.Vendido:
+                                <span class="badge bg-success">Pago / Concluído</span>
+                                break;
+                            case StatusLivro.Estoque:
+                                <span class="badge bg-secondary text-decoration-line-through">Devolvido</span>
+                                break;
+                            default:
+                                <span class="badge bg-dark">@item.Status</span>
+                                break;
+                        }
+                    </td>
+                </tr>
+            }
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="5" class="text-center text-muted py-4">Nenhum registro encontrado.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

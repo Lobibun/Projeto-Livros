@@ -5,55 +5,51 @@
 }
 
 <h1>Deletar</h1>
+
 @if (ViewData["ErroExclusao"] != null)
 {
     <div class="alert alert-danger">
         <i class="bi bi-x-circle-fill"></i> @ViewData["ErroExclusao"]
     </div>
 }
-<h3>Você tem certeza que deseja excluir este livro?</h3>
+
 <div class="alert alert-danger" role="alert">
     <i class="bi bi-exclamation-triangle-fill"></i>
     Atenção: Esta ação não poderá ser desfeita e pode afetar exemplares vinculados.
 </div>
 
-<div>
-    <h4>Livro</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
+<div class="card shadow-sm border-danger">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2 text-center">
+                @if (!string.IsNullOrEmpty(Model.FotoCaminho))
+                {
+                    <img src="@Model.FotoCaminho" class="img-fluid rounded" style="max-height: 150px;" />
+                }
+                else
+                {
+                    <i class="bi bi-book display-1 text-muted"></i>
+                }
+            </div>
+            <div class="col-md-10">
+                <h3 class="text-danger">@Model.Titulo</h3>
+                <dl class="row mt-3">
+                    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Autor)</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.Autor)</dd>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Autor)
-        </dd>
+                    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.ISBN)</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => model.ISBN)</dd>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ISBN)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ISBN)
-        </dd>
+                    <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Valor)</dt>
+                    <dd class="col-sm-10">@Model.Valor.ToString("C2")</dd>
+                </dl>
+            </div>
+        </div>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Valor)
-        </dt>
-        <dd class="col-sm-10">
-            @* O "C" formata como moeda (R$) automaticamente *@
-            @Model.Valor.ToString("C2")
-        </dd>
-    </dl>
-
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Excluir Definitivamente" class="btn btn-danger" /> |
-        <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
-    </form>
+        <form asp-action="Delete" class="mt-4 text-end">
+            <input type="hidden" asp-for="Id" />
+            <a asp-action="Index" class="btn btn-secondary me-2">Cancelar</a>
+            <input type="submit" value="Excluir Definitivamente" class="btn btn-danger" />
+        </form>
+    </div>
 </div>

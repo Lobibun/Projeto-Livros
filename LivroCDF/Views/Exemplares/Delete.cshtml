@@ -13,7 +13,19 @@
 <div>
     <h4>Detalhes do Exemplar</h4>
     <hr />
-    <dl class="row">
+    <dl class="row align-items-center">
+        <dt class="col-sm-2">Capa</dt>
+        <dd class="col-sm-10">
+            @if (Model.Livro != null && !string.IsNullOrEmpty(Model.Livro.FotoCaminho))
+            {
+                <img src="@Model.Livro.FotoCaminho" class="rounded shadow-sm" style="height: 100px;" />
+            }
+            else
+            {
+                <span class="text-muted">Sem capa</span>
+            }
+        </dd>
+
         <dt class="col-sm-2">Livro</dt>
         <dd class="col-sm-10">@Model.Livro.Titulo</dd>
 

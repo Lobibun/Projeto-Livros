@@ -2,6 +2,8 @@ using LivroCDF.Data;
 using LivroCDF.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using LivroCDF.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("LivrariaContext");
@@ -10,7 +12,7 @@ builder.Services.AddDbContext<LivrariaContext>(options =>
     ServerVersion.AutoDetect(connectionString)));
 
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+builder.Services.AddDefaultIdentity<Usuario>(options =>
 {
  
     options.SignIn.RequireConfirmedAccount = false;
@@ -35,7 +37,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Usuario>>();
 
     // Cria os nomes dos cargos se não existirem
     string[] roleNames = { "SuperAdmin", "Admin", "Comum" };
@@ -55,7 +57,7 @@ using (var scope = app.Services.CreateScope())
 
     if (powerUser == null)
     {
-        powerUser = new IdentityUser { UserName = emailDoChefe, Email = emailDoChefe, EmailConfirmed = true };
+        powerUser = new Usuario { UserName = emailDoChefe, Email = emailDoChefe, EmailConfirmed = true };
         await userManager.CreateAsync(powerUser, senhaDoChefe);
     }
 

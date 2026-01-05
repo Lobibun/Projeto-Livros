@@ -1,56 +1,62 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using LivroCDF.Models
+@inject SignInManager<Usuario> SignInManager
+@inject UserManager<Usuario> UserManager
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
     {
         var user = await UserManager.GetUserAsync(User);
-        // Verifica se o usuário é nulo para evitar erro caso o banco tenha sido resetado
         var ehSuperAdmin = user != null && await UserManager.IsInRoleAsync(user, "SuperAdmin");
         var ehAdmin = user != null && await UserManager.IsInRoleAsync(user, "Admin");
 
-        // --- MENU DO USUÁRIO LOGADO ---
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle"></i> Olá, @User.Identity?.Name
+            <a class="nav-link dropdown-toggle text-dark d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                @* --- FOTO DO USUÁRIO --- *@
+                @if (user != null && !string.IsNullOrEmpty(user.FotoCaminho))
+                {
+                    <img src="@user.FotoCaminho" class="rounded-circle me-2" style="width:28px; height:28px; object-fit:cover;" />
+                }
+                else
+                {
+                    <i class="bi bi-person-circle me-2"></i>
+                }
+
+                @* --- EXIBE O NOME (OU EMAIL SE NOME FOR NULO) --- *@
+                <span>Olá, @(user?.Nome ?? User.Identity?.Name)</span>
+
                 @if (ehSuperAdmin)
                 {
-                    <span class="badge bg-danger">CEO</span>
+                    <span class="badge bg-danger ms-2">CEO</span>
                 }
                 else if (ehAdmin)
                 {
-
-                    <span class="badge bg-warning text-dark">GERENTE</span>
+                    <span class="badge bg-warning text-dark ms-2">GERENTE</span>
                 }
             </a>
 
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-
-                @* --- ÁREA VIP: SÓ APARECE PARA ADMIN OU SUPERADMIN --- *@
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="navbarDropdown">
                 @if (ehSuperAdmin || ehAdmin)
                 {
                     <li><h6 class="dropdown-header">Administração</h6></li>
-
-                    @* --- NOVO LINK ADICIONADO AQUI --- *@
                     <li>
                         <a class="dropdown-item" asp-controller="Usuarios" asp-action="Index">
-                            <i class="bi bi-people"></i> Lista de Usuários
+                            <i class="bi bi-people me-2"></i> Lista de Usuários
                         </a>
                     </li>
-
                     <li>
-                        @* Link para criar novo usuário *@
                         <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">
-                            <i class="bi bi-person-plus-fill"></i> Criar Novo Usuário
+                            <i class="bi bi-person-plus-fill me-2"></i> Criar Novo Usuário
                         </a>
                     </li>
                     <li><hr class="dropdown-divider"></li>
                 }
 
-                @* --- LINKS PADRÃO --- *@
                 <li>
-                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">Meu Perfil</a>
+                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">
+                        <i class="bi bi-gear me-2"></i> Configurações
+                    </a>
                 </li>
 
                 <li><hr class="dropdown-divider"></li>
@@ -58,7 +64,7 @@
                 <li>
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                         <button type="submit" class="dropdown-item text-danger" style="cursor:pointer;">
-                            <i class="bi bi-box-arrow-right"></i> Sair
+                            <i class="bi bi-box-arrow-right me-2"></i> Sair
                         </button>
                     </form>
                 </li>

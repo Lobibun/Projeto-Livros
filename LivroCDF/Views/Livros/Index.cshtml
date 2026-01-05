@@ -1,79 +1,61 @@
-﻿@using LivroCDF.Models.Enums @* <--- Adicionei isso para facilitar *@
-@model IEnumerable<LivroCDF.Models.Livro>
+﻿@model IEnumerable<LivroCDF.Models.Livro>
 
 @{
     ViewData["Title"] = "Catálogo de Livros";
 }
 
-<h2 class="text-primary"><i class="bi bi-book"></i> @ViewData["Title"]</h2>
+<div class="container mt-4">
 
-<p class="my-3">
-    <a asp-action="Create" class="btn btn-primary shadow-sm">
-        <i class="bi bi-plus-lg"></i> Novo Título
-    </a>
-</p>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary fw-bold mb-0">
+            <i class="bi bi-book"></i> @ViewData["Title"]
+        </h2>
+        <a asp-action="Create" class="btn btn-primary shadow-sm">
+            <i class="bi bi-plus-lg"></i> Novo Título
+        </a>
+    </div>
 
-<table class="table table-striped table-hover align-middle">
-    <thead class="table-dark">
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.Titulo)</th>
-            <th>@Html.DisplayNameFor(model => model.Autor)</th>
-            <th>@Html.DisplayNameFor(model => model.ISBN)</th>
-            <th>Preço Capa</th>
-            <th>Disponibilidade</th> @* Mudei o nome da coluna *@
-            <th class="text-end">Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td class="fw-bold">@Html.DisplayFor(modelItem => item.Titulo)</td>
-                <td>@Html.DisplayFor(modelItem => item.Autor)</td>
-                <td><small class="text-muted">@Html.DisplayFor(modelItem => item.ISBN)</small></td>
-                <td>R$ @Html.DisplayFor(modelItem => item.Valor)</td>
-
-                @* --- AQUI ESTÁ A MUDANÇA PRINCIPAL --- *@
-                <td>
-                    @{
-                        // Conta APENAS os exemplares que estão com Status = Estoque
-                        // Ignora Vendidos e A Pagar
-                        var qtdReal = item.Exemplares != null
-                        ? item.Exemplares.Count(x => x.Status == StatusLivro.Estoque)
-                        : 0;
-                    }
-
-                    @if (qtdReal > 0)
-                    {
-                        // Se tiver livro, mostra verde
-                        <span class="badge bg-success rounded-pill">
-                            <i class="bi bi-check-circle"></i> @qtdReal Disponíveis
+    <div class="card bg-light mb-4 shadow-sm border-0">
+        <div class="card-body py-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label small fw-bold text-muted mb-1">Pesquisar Livro</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted">
+                            <i class="bi bi-search"></i>
                         </span>
-                    }
-                    else
-                    {
-                        // Se for zero, mostra Esgotado em vermelho
-                        <span class="badge bg-danger rounded-pill">
-                            <i class="bi bi-x-circle"></i> Esgotado
-                        </span>
-                    }
-                </td>
-                @* ------------------------------------- *@
-
-                <td class="text-end">
-                    <div class="btn-group" role="group">
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning" title="Editar">
-                            <i class="bi bi-pencil"></i>
-                        </a>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info" title="Detalhes">
-                            <i class="bi bi-eye"></i>
-                        </a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Excluir">
-                            <i class="bi bi-trash"></i>
-                        </a>
+                        <input type="text" id="filtroTexto" class="form-control border-start-0"
+                               placeholder="Digite o Título, Autor ou ISBN..." />
                     </div>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="containerTabela">
+        <partial name="_TabelaLivros" model="Model" />
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Monitora a digitação no campo de busca
+            $("#filtroTexto").on("keyup", function () {
+                var termo = $(this).val();
+
+                // Animação visual de "carregando"
+                $("#containerTabela").css("opacity", "0.5");
+
+                $.get("/Livros/FiltrarCatalogo", { termo: termo }, function (data) {
+                    $("#containerTabela").html(data);
+                    $("#containerTabela").css("opacity", "1");
+                }).fail(function() {
+                    alert("Erro ao filtrar livros.");
+                    $("#containerTabela").css("opacity", "1");
+                });
+            });
+        });
+    </script>
+}
