@@ -4,87 +4,101 @@
     ViewData["Title"] = "Cadastrar Livro";
 }
 
-<h2>@ViewData["Title"]</h2>
+<div class="container mt-3 mt-md-4">
+    <form asp-action="Create" enctype="multipart/form-data">
+        <div class="row justify-content-center">
 
-<h4>Dados do Livro</h4>
-<hr />
-<div class="row">
-    <div class="col-md-8">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card shadow border-0 h-100">
+                    <div class="card-header bg-white py-3 fw-bold text-center text-primary border-bottom-0">
+                        <i class="bi bi-image"></i> Capa
+                    </div>
+                    <div class="card-body text-center d-flex flex-column justify-content-center align-items-center bg-light">
 
-            <div class="row">
-                <div class="col-md-5 mb-3">
-                    <div class="card bg-light">
-                        <div class="card-body text-center">
-                            <label class="form-label fw-bold mb-3">Capa do Livro</label>
-
-                            <div class="mb-3">
-                                <img id="imgPreview" src="/imagens/sem-foto.png"
-                                     class="img-fluid border border-2 border-white shadow-sm"
-                                     style="max-height: 250px; min-height: 200px; object-fit: contain; background: #ddd;"
-                                     onerror="this.src='https://via.placeholder.com/150x220?text=Sem+Capa'" />
-                            </div>
-
-                            <button type="button" class="btn btn-outline-primary w-100 mb-2" onclick="buscarCapaGoogle()">
-                                <i class="bi bi-google"></i> Buscar Capa Automática
-                            </button>
-
-                            <small class="text-muted d-block my-2">- ou suba um arquivo -</small>
-
-                            <input asp-for="ArquivoFoto" type="file" class="form-control form-control-sm" onchange="previewImagemManual(this)" />
-
-                            <input type="hidden" asp-for="CapaUrlExterna" id="CapaUrlExterna" />
-
-                            <div id="msgErroGoogle" class="text-danger mt-2 small fw-bold" style="display:none;"></div>
+                        <div class="mb-3 position-relative shadow-sm bg-white p-1 rounded" style="max-width: 180px; width: 60%; aspect-ratio: 2/3;">
+                            <img id="imgPreview" src="/imagens/sem-foto.png"
+                                 class="w-100 h-100 rounded"
+                                 style="object-fit: cover;"
+                                 onerror="this.src='https://via.placeholder.com/150x220?text=Sem+Capa'" />
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-md-7">
-                    <div class="form-group mb-3">
-                        <label asp-for="Titulo" class="control-label"></label>
-                        <input asp-for="Titulo" class="form-control" id="InputTitulo" placeholder="Ex: Dom Casmurro" />
-                        <span asp-validation-for="Titulo" class="text-danger"></span>
-                    </div>
+                        <button type="button" class="btn btn-primary w-100 mb-2 shadow-sm" onclick="buscarCapaGoogle()">
+                            <i class="bi bi-google"></i> <span class="d-none d-sm-inline">Buscar Capa Auto</span><span class="d-inline d-sm-none">Google Capa</span>
+                        </button>
 
-                    <div class="form-group mb-3">
-                        <label asp-for="Autor" class="control-label"></label>
-                        <input asp-for="Autor" class="form-control" id="InputAutor" />
-                        <span asp-validation-for="Autor" class="text-danger"></span>
-                    </div>
+                        <div class="text-muted small my-2">ou envie arquivo</div>
 
-                    <div class="form-group mb-3">
-                        <label asp-for="ISBN" class="control-label"></label>
-                        <input asp-for="ISBN" class="form-control" id="InputISBN" placeholder="Opcional, mas melhora a busca da capa" />
-                        <span asp-validation-for="ISBN" class="text-danger"></span>
-                    </div>
+                        <input asp-for="ArquivoFoto" type="file" class="form-control form-control-sm mb-2" onchange="previewImagemManual(this)" accept="image/*" />
+                        <span asp-validation-for="ArquivoFoto" class="text-danger small"></span>
 
-                    <div class="form-group mb-3">
-                        <label asp-for="Valor" class="control-label">Preço de Capa (Padrão)</label>
-                        <div class="input-group">
-                            <span class="input-group-text">R$</span>
-                            <input asp-for="Valor" class="form-control" type="number" step="0.01" />
-                        </div>
-                        <span asp-validation-for="Valor" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group mt-4">
-                        <input type="submit" value="Salvar" class="btn btn-success px-4" />
-                        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                        <input type="hidden" asp-for="CapaUrlExterna" id="CapaUrlExterna" />
+                        <div id="msgErroGoogle" class="alert alert-warning mt-2 small p-2 w-100" style="display:none;"><i class="bi bi-exclamation-triangle"></i> Não achou.</div>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+
+            <div class="col-12 col-md-8">
+                <div class="card shadow border-0">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h5 class="mb-0 fw-bold"><i class="bi bi-book-half"></i> Dados</h5>
+                    </div>
+                    <div class="card-body p-3 p-md-4">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Titulo" class="form-control" id="InputTitulo" placeholder="Titulo" />
+                            <label asp-for="Titulo">Título do Livro</label>
+                            <span asp-validation-for="Titulo" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input asp-for="Autor" class="form-control" id="InputAutor" placeholder="Autor" />
+                                    <label asp-for="Autor">Autor(es)</label>
+                                </div>
+                                <span asp-validation-for="Autor" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input asp-for="ISBN" class="form-control" id="InputISBN" placeholder="ISBN" />
+                                    <label asp-for="ISBN">ISBN</label>
+                                </div>
+                                <span asp-validation-for="ISBN" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4 mb-4">
+                            <label asp-for="Valor" class="form-label fw-bold text-muted small">PREÇO BASE</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bg-light text-success fw-bold">R$</span>
+                                <input asp-for="Valor" class="form-control fw-bold text-dark" type="number" step="0.01" placeholder="0,00" />
+                            </div>
+                            <span asp-validation-for="Valor" class="text-danger"></span>
+                        </div>
+
+                        <hr />
+
+                        <div class="d-flex flex-column flex-md-row justify-content-end gap-2">
+                            <a asp-action="Index" class="btn btn-outline-secondary px-4 w-100 w-md-auto py-2">Cancelar</a>
+                            <button type="submit" class="btn btn-success px-5 shadow-sm fw-bold w-100 w-md-auto py-2">
+                                <i class="bi bi-check-lg"></i> Salvar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-
     <script>
+        // Mesmo Script que você já tinha, funciona bem no mobile
         function buscarCapaGoogle() {
             var titulo = document.getElementById("InputTitulo").value;
             var autor = document.getElementById("InputAutor").value;
@@ -92,33 +106,30 @@
             var msgErro = document.getElementById("msgErroGoogle");
 
             msgErro.style.display = "none";
-            msgErro.innerText = "";
 
             if (!titulo && !isbn) {
-                alert("Preencha o Título ou o ISBN para buscar a capa.");
+                alert("Preencha Título ou ISBN.");
                 return;
             }
 
-            // Prioriza ISBN, depois Título + Autor
             var query = isbn ? `isbn:${isbn}` : `intitle:${titulo}` + (autor ? `+inauthor:${autor}` : ``);
-            var urlApi = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+            document.body.style.cursor = "wait";
 
-            fetch(urlApi)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.totalItems > 0 && data.items[0].volumeInfo.imageLinks) {
-                        var imgUrl = data.items[0].volumeInfo.imageLinks.thumbnail.replace("http://", "https://");
-
-                        document.getElementById("imgPreview").src = imgUrl;
-                        document.getElementById("CapaUrlExterna").value = imgUrl;
-                        document.getElementById("ArquivoFoto").value = ""; // Limpa upload manual
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`)
+                .then(r => r.json())
+                .then(d => {
+                    document.body.style.cursor = "default";
+                    if (d.totalItems > 0 && d.items[0].volumeInfo.imageLinks) {
+                        var url = d.items[0].volumeInfo.imageLinks.thumbnail.replace("http://", "https://");
+                        document.getElementById("imgPreview").src = url;
+                        document.getElementById("CapaUrlExterna").value = url;
+                        document.getElementById("ArquivoFoto").value = "";
                     } else {
-                        msgErro.innerText = "Capa não encontrada no Google Books.";
                         msgErro.style.display = "block";
                     }
                 })
-                .catch(err => {
-                    msgErro.innerText = "Erro de conexão com o Google.";
+                .catch(() => {
+                    document.body.style.cursor = "default";
                     msgErro.style.display = "block";
                 });
         }
@@ -128,7 +139,7 @@
                 var reader = new FileReader();
                 reader.onload = function (e) {
                     document.getElementById("imgPreview").src = e.target.result;
-                    document.getElementById("CapaUrlExterna").value = ""; // Limpa URL externa
+                    document.getElementById("CapaUrlExterna").value = "";
                 }
                 reader.readAsDataURL(input.files[0]);
             }

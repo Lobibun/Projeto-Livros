@@ -5,62 +5,76 @@
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
-<h3>@ViewData["Title"]</h3>
+<h3 class="mb-4 fw-bold text-dark">@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
 
 <div class="row">
     <div class="col-md-8">
-        <form id="profile-form" method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <form id="profile-form" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger border-0" role="alert"></div>
 
-            <div class="d-flex align-items-center mb-4 p-3 border rounded bg-light">
+                    <div class="d-flex align-items-center mb-5 p-4 rounded-3 bg-light border border-dashed">
+                        <div class="position-relative me-4">
+                            @if (!string.IsNullOrEmpty(Model.Input.FotoCaminho))
+                            {
+                                <img src="@Model.Input.FotoCaminho" class="rounded-circle shadow-sm object-fit-cover"
+                                     style="width: 100px; height: 100px;" alt="Foto de Perfil" />
 
-                <div class="position-relative me-3" style="width: 80px; height: 80px;">
-                    @if (!string.IsNullOrEmpty(Model.Input.FotoCaminho))
-                    {
-                        <img src="@Model.Input.FotoCaminho" class="rounded-circle shadow-sm w-100 h-100" style="object-fit:cover;" alt="Foto de Perfil" />
-
-                        <button type="submit" asp-page-handler="RemoverFoto"
-                                class="btn btn-danger btn-sm position-absolute d-flex justify-content-center align-items-center p-0"
-                                style="top: -5px; right: -5px; width: 24px; height: 24px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"
-                                title="Remover foto atual">
-                            <i class="bi bi-x" style="font-size: 1.2rem; line-height: 0;"></i>
-                            <span class="visually-hidden">X</span>
-                        </button>
-                    }
-                    else
-                    {
-                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center text-white w-100 h-100">
-                            <i class="bi bi-person-fill" style="font-size: 40px;"></i>
+                                <button type="submit" asp-page-handler="RemoverFoto"
+                                        class="btn btn-danger btn-sm position-absolute rounded-circle p-0 d-flex justify-content-center align-items-center shadow-sm"
+                                        style="top: 0; right: 0; width: 28px; height: 28px; border: 2px solid white;"
+                                        title="Remover foto atual"
+                                        onclick="return confirm('Deseja remover sua foto de perfil?');">
+                                    <i class="bi bi-x fs-5"></i>
+                                </button>
+                            }
+                            else
+                            {
+                                <div class="bg-white rounded-circle d-flex align-items-center justify-content-center text-primary shadow-sm"
+                                     style="width: 100px; height: 100px; border: 4px solid #f8f9fa;">
+                                    <i class="bi bi-person-fill display-4"></i>
+                                </div>
+                            }
                         </div>
-                    }
-                </div>
 
-                <div class="flex-grow-1">
-                    <label asp-for="Input.ArquivoFoto" class="form-label fw-bold mb-1">Alterar Foto</label>
-                    <input asp-for="Input.ArquivoFoto" class="form-control form-control-sm" type="file" accept="image/*" />
-                    <span asp-validation-for="Input.ArquivoFoto" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Username" class="form-control" disabled />
-                <label asp-for="Username">E-mail (Login)</label>
-            </div>
+                        <div class="flex-grow-1">
+                            <label asp-for="Input.ArquivoFoto" class="form-label fw-bold text-dark">Alterar Foto de Perfil</label>
+                            <input asp-for="Input.ArquivoFoto" class="form-control" type="file" accept="image/*" />
+                            <span asp-validation-for="Input.ArquivoFoto" class="text-danger small"></span>
+                            <div class="form-text text-muted small">Formatos aceitos: JPG, PNG.</div>
+                        </div>
+                    </div>
 
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Nome" class="form-control" placeholder="Seu nome completo" />
-                <label asp-for="Input.Nome">Nome Completo</label>
-                <span asp-validation-for="Input.Nome" class="text-danger"></span>
-            </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Username" class="form-control" disabled />
+                        <label asp-for="Username">E-mail (Login)</label>
+                    </div>
 
-            <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Telefone" />
-                <label asp-for="Input.PhoneNumber">Telefone</label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="Input.Nome" class="form-control" placeholder="Nome Completo" />
+                                <label asp-for="Input.Nome">Nome Completo</label>
+                            </div>
+                            <span asp-validation-for="Input.Nome" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Telefone" />
+                                <label asp-for="Input.PhoneNumber">Telefone</label>
+                            </div>
+                            <span asp-validation-for="Input.PhoneNumber" class="text-danger small"></span>
+                        </div>
+                    </div>
 
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Salvar Alterações</button>
-        </form>
+                    <button id="update-profile-button" type="submit" class="btn btn-primary btn-lg w-100 shadow-sm">
+                        <i class="bi bi-save me-1"></i> Salvar Alterações
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 

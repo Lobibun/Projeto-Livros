@@ -1,8 +1,90 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model LivroCDF.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Painel Codex</h1>
+    <p class="text-secondary">Visão geral do acervo e financeiro</p>
+</div>
+
+<div class="row g-3">
+    <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dashboard bg-gradient-estoque shadow h-100">
+            <div class="card-header">
+                <i class="bi bi-box-seam"></i> Estoque
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.QtdEmEstoque</h2>
+                <p class="card-text">Exemplares na prateleira</p>
+                <i class="bi bi-bookshelf card-icon-bg"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dashboard bg-gradient-vendas shadow h-100">
+            <div class="card-header">
+                <i class="bi bi-cart-check"></i> Vendidos
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.QtdVendidos</h2>
+                <p class="card-text">Total baixado</p>
+                <i class="bi bi-bag-check card-icon-bg"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dashboard bg-gradient-apagar shadow h-100">
+            <div class="card-header">
+                <i class="bi bi-exclamation-circle"></i> A Pagar
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.ValorTotalAPagar.ToString("C2")</h2>
+                <p class="card-text">@Model.QtdAPagar exemplares pendentes</p>
+                <i class="bi bi-cash-coin card-icon-bg"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+        <div class="card card-dashboard bg-gradient-clientes shadow h-100">
+            <div class="card-header">
+                <i class="bi bi-people"></i> Clientes
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.TotalClientes</h2>
+                <p class="card-text">Cadastrados</p>
+                <i class="bi bi-person-badge card-icon-bg"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5" />
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body text-center p-4 p-md-5">
+                <h4 class="card-title mb-4 fw-bold text-dark">Acesso Rápido</h4>
+
+                <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                    <a asp-controller="Livros" asp-action="Index" class="btn btn-primary btn-lg rounded-pill px-4">
+                        <i class="bi bi-book me-2"></i> Gerenciar Livros
+                    </a>
+
+                    <a asp-controller="Exemplares" asp-action="Index" class="btn btn-dark btn-lg rounded-pill px-4">
+                        <i class="bi bi-upc-scan me-2"></i> Exemplares
+                    </a>
+
+                    <a asp-controller="Clientes" asp-action="Index" class="btn btn-info text-white btn-lg rounded-pill px-4">
+                        <i class="bi bi-person-lines-fill me-2"></i> Clientes
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -2,83 +2,117 @@
 
 @{
     ViewData["Title"] = "Editar Livro";
+
+    var imagemExibir = !string.IsNullOrEmpty(Model.FotoCaminhoAtual)
+        ? Model.FotoCaminhoAtual
+        : "https://via.placeholder.com/150x220?text=Sem+Capa";
+
+    // Se tiver URL externa salva no model (caso de validação falha), prioriza ela
+    if (!string.IsNullOrEmpty(Model.CapaUrlExterna))
+    {
+        imagemExibir = Model.CapaUrlExterna;
+    }
 }
 
-<h2>@ViewData["Title"]</h2>
+<div class="container py-4">
+    <div class="row mb-3 align-items-center">
+        <div class="col">
+            <h2 class="fw-bold text-primary"><i class="bi bi-pencil-square"></i> @ViewData["Title"]</h2>
+            <p class="text-muted small mb-0">Atualize as informações do título abaixo.</p>
+        </div>
+    </div>
 
-<h4>Alterar Dados do Título</h4>
-<hr />
-<div class="row">
-    <div class="col-md-9">
-        <form asp-action="Edit" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <input type="hidden" asp-for="FotoCaminhoAtual" />
+    <form asp-action="Edit" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger shadow-sm mb-4"></div>
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="FotoCaminhoAtual" />
 
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card bg-light h-100">
-                        <div class="card-body text-center">
-                            <label class="form-label fw-bold">Capa Atual</label>
+        <div class="row g-4">
+            <div class="col-12 col-lg-4 order-1 order-lg-1">
+                <div class="card shadow border-0 h-100">
+                    <div class="card-header bg-white fw-bold text-center text-secondary">
+                        Capa do Livro
+                    </div>
+                    <div class="card-body bg-light text-center d-flex flex-column align-items-center justify-content-center">
 
-                            <div class="mb-3">
-                                @if (!string.IsNullOrEmpty(Model.FotoCaminhoAtual))
-                                {
-                                    <img id="imgPreview" src="@Model.FotoCaminhoAtual" class="img-fluid shadow-sm" style="max-height: 250px;" />
-                                }
-                                else
-                                {
-                                    <img id="imgPreview" src="https://via.placeholder.com/150x220?text=Sem+Capa" class="img-fluid shadow-sm" />
-                                }
-                            </div>
+                        <div class="bg-white p-2 rounded shadow-sm mb-3 position-relative" style="max-width: 200px; width: 100%;">
+                            <img id="imgPreview"
+                                 src="@imagemExibir"
+                                 class="img-fluid rounded"
+                                 style="max-height: 280px; width: 100%; object-fit: cover;"
+                                 onerror="this.src='https://via.placeholder.com/150x220?text=Erro+Imagem'" />
+                        </div>
 
-                            <button type="button" class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="buscarCapaGoogle()">
-                                <i class="bi bi-google"></i> Buscar Nova no Google
+                        <div class="d-grid gap-2 w-100">
+                            <button type="button" class="btn btn-outline-primary shadow-sm" onclick="buscarCapaGoogle()">
+                                <i class="bi bi-google"></i> <span class="d-none d-sm-inline">Buscar no</span> Google
                             </button>
 
-                            <input asp-for="ArquivoFoto" type="file" class="form-control form-control-sm" onchange="previewImagemManual(this)" />
-                            <input type="hidden" asp-for="CapaUrlExterna" id="CapaUrlExterna" />
-                            <div id="msgErroGoogle" class="text-danger mt-2 small fw-bold" style="display:none;"></div>
+                            <label class="btn btn-outline-secondary shadow-sm cursor-pointer">
+                                <i class="bi bi-upload"></i> Upload Manual
+                                <input asp-for="ArquivoFoto" type="file" hidden onchange="previewImagemManual(this)" accept="image/*" />
+                            </label>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-md-8">
-                    <div class="form-group mb-3">
-                        <label asp-for="Titulo" class="control-label"></label>
-                        <input asp-for="Titulo" class="form-control" id="InputTitulo" />
-                        <span asp-validation-for="Titulo" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        <label asp-for="Autor" class="control-label"></label>
-                        <input asp-for="Autor" class="form-control" id="InputAutor" />
-                        <span asp-validation-for="Autor" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        <label asp-for="ISBN" class="control-label"></label>
-                        <input asp-for="ISBN" class="form-control" id="InputISBN" />
-                        <span asp-validation-for="ISBN" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        <label asp-for="Valor" class="control-label">Preço Base</label>
-                        <div class="input-group">
-                            <span class="input-group-text">R$</span>
-                            <input asp-for="Valor" class="form-control" type="number" step="0.01" />
-                        </div>
-                        <span asp-validation-for="Valor" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group mt-3">
-                        <input type="submit" value="Salvar Alterações" class="btn btn-primary" />
-                        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+                        <input type="hidden" asp-for="CapaUrlExterna" id="CapaUrlExterna" />
+                        <div id="msgErroGoogle" class="alert alert-warning mt-2 small p-1 w-100 text-center" style="display:none;"></div>
+                        <span asp-validation-for="ArquivoFoto" class="text-danger small mt-1"></span>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+
+            <div class="col-12 col-lg-8 order-2 order-lg-2">
+                <div class="card shadow border-0 h-100">
+                    <div class="card-body p-4">
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Titulo" class="form-control" id="InputTitulo" placeholder="Nome do Livro" />
+                            <label asp-for="Titulo">Título do Livro</label>
+                            <span asp-validation-for="Titulo" class="text-danger small"></span>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Autor" class="form-control" id="InputAutor" placeholder="Nome do Autor" />
+                                    <label asp-for="Autor">Autor(es)</label>
+                                </div>
+                                <span asp-validation-for="Autor" class="text-danger small"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="ISBN" class="form-control" id="InputISBN" placeholder="0000000000" />
+                                    <label asp-for="ISBN">ISBN</label>
+                                </div>
+                                <span asp-validation-for="ISBN" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Valor" class="form-label text-muted small fw-bold text-uppercase">Preço Base</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bg-light text-success fw-bold">R$</span>
+                                <input asp-for="Valor" class="form-control fw-bold" type="number" step="0.01" placeholder="0,00" />
+                            </div>
+                            <span asp-validation-for="Valor" class="text-danger small"></span>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="d-flex flex-column flex-md-row justify-content-end gap-2">
+                            <a asp-action="Index" class="btn btn-outline-secondary btn-lg px-4 order-2 order-md-1">
+                                Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-primary btn-lg px-5 fw-bold shadow-sm order-1 order-md-2">
+                                <i class="bi bi-check-lg"></i> Salvar Alterações
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 @section Scripts {
@@ -91,11 +125,20 @@
             var autor = document.getElementById("InputAutor").value;
             var isbn = document.getElementById("InputISBN").value;
             var msgErro = document.getElementById("msgErroGoogle");
+            var btnGoogle = document.querySelector("button[onclick='buscarCapaGoogle()']");
 
             msgErro.style.display = "none";
             msgErro.innerText = "";
 
-            if (!titulo && !isbn) { alert("Preencha Título ou ISBN."); return; }
+            if (!titulo && !isbn) {
+                alert("Por favor, preencha o Título ou o ISBN para buscar.");
+                return;
+            }
+
+            // Feedback visual de carregamento
+            var originalText = btnGoogle.innerHTML;
+            btnGoogle.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Buscando...';
+            btnGoogle.disabled = true;
 
             var query = isbn ? `isbn:${isbn}` : `intitle:${titulo}` + (autor ? `+inauthor:${autor}` : ``);
 
@@ -104,15 +147,27 @@
                 .then(d => {
                     if (d.totalItems > 0 && d.items[0].volumeInfo.imageLinks) {
                         var url = d.items[0].volumeInfo.imageLinks.thumbnail.replace("http://", "https://");
+
                         document.getElementById("imgPreview").src = url;
                         document.getElementById("CapaUrlExterna").value = url;
-                        document.getElementById("ArquivoFoto").value = "";
+
+                        // Limpa o input file pois agora usamos URL
+                        var inputFile = document.getElementById("ArquivoFoto");
+                        if(inputFile) inputFile.value = "";
                     } else {
-                        msgErro.innerText = "Capa não encontrada.";
+                        msgErro.innerText = "Nenhuma capa encontrada.";
                         msgErro.style.display = "block";
                     }
                 })
-                .catch(() => { msgErro.innerText = "Erro ao buscar."; msgErro.style.display = "block"; });
+                .catch(() => {
+                    msgErro.innerText = "Erro de conexão ao buscar capa.";
+                    msgErro.style.display = "block";
+                })
+                .finally(() => {
+                    // Restaura o botão
+                    btnGoogle.innerHTML = originalText;
+                    btnGoogle.disabled = false;
+                });
         }
 
         function previewImagemManual(input) {
@@ -120,7 +175,9 @@
                 var reader = new FileReader();
                 reader.onload = function (e) {
                     document.getElementById("imgPreview").src = e.target.result;
+                    // Limpa a URL externa pois agora é upload manual
                     document.getElementById("CapaUrlExterna").value = "";
+                    document.getElementById("msgErroGoogle").style.display = "none";
                 }
                 reader.readAsDataURL(input.files[0]);
             }

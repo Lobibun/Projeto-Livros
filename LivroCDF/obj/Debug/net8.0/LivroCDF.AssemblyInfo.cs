@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LivroCDF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ee858de299a084018f8fb8d2c7860349181e4e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb3d2cae0b2ca287dca3db26d6f768ee53795f6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LivroCDF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LivroCDF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

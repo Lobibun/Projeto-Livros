@@ -2,15 +2,15 @@
 @using LivroCDF.Models.Enums
 
 <div class="table-responsive">
-    <table class="table table-hover align-middle">
-        <thead>
+    <table class="table table-hover align-middle mb-0 text-nowrap">
+        <thead class="table-light">
             <tr>
-                <th style="width: 60px;">Capa</th>
+                <th style="width: 60px;" class="text-center">Capa</th>
                 <th>Livro</th>
                 <th>Data Entrada</th>
                 <th>Valor</th>
                 <th>Status</th>
-                <th>Ações</th>
+                <th class="text-end">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -18,28 +18,42 @@
             {
                 string classeLinha = (item.Status == StatusLivro.APagar) ? "table-warning" : "";
                 <tr class="@classeLinha">
-                    <td>
+                    <td class="text-center">
                         @if (item.Livro != null && !string.IsNullOrEmpty(item.Livro.FotoCaminho))
                         {
-                            <img src="@item.Livro.FotoCaminho" class="rounded shadow-sm"
+                            <img src="@item.Livro.FotoCaminho" class="rounded shadow-sm border"
                                  style="width: 40px; height: 60px; object-fit: cover;" />
                         }
                         else
                         {
-                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center rounded"
+                            <div class="bg-secondary text-white d-inline-flex align-items-center justify-content-center rounded shadow-sm"
                                  style="width: 40px; height: 60px;">
                                 <i class="bi bi-book"></i>
                             </div>
                         }
                     </td>
-
-                    <td>@item.Livro.Titulo</td>
-                    <td>@item.DataEntrada.ToShortDateString()</td>
-                    <td>R$ @item.Valor</td>
-                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    <td class="fw-bold text-dark text-wrap" style="min-width: 150px;">@item.Livro?.Titulo</td>
+                    <td class="text-muted">@item.DataEntrada.ToShortDateString()</td>
+                    <td>R$ @item.Valor.ToString("N2")</td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning" title="Editar">✏️</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Excluir">🗑️</a>
+                        @if (item.Status == StatusLivro.APagar)
+                        {
+                            <span class="badge bg-warning text-dark">@Html.DisplayFor(modelItem => item.Status)</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                        }
+                    </td>
+                    <td class="text-end">
+                        <div class="btn-group">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Editar">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Excluir">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </div>
                     </td>
                 </tr>
             }
@@ -48,6 +62,9 @@
 
     @if (!Model.Any())
     {
-        <div class="alert alert-info mt-3">Nenhum livro encontrado.</div>
+        <div class="text-center py-5">
+            <i class="bi bi-inbox fs-1 text-muted"></i>
+            <p class="text-muted mt-2">Nenhum livro encontrado no estoque.</p>
+        </div>
     }
 </div>

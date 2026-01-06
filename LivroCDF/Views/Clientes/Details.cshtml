@@ -1,89 +1,127 @@
-﻿@model LivroCDF.Models.Cliente
-@using LivroCDF.Models.Enums
+﻿@using LivroCDF.Models.Enums
+@model LivroCDF.Models.Cliente
 
 @{
     ViewData["Title"] = "Detalhes do Cliente";
 }
 
-<div class="container mt-4">
+@* Header Gradient Responsivo *@
+<div class="bg-gradient-clientes text-white py-4 shadow-sm mb-4 mt-n3 mx-n3 px-3 px-md-4 rounded-bottom">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start gap-3">
+        <div>
+            <h1 class="display-6 fw-bold mb-0"><i class="bi bi-person-lines-fill"></i> Detalhes</h1>
+            <p class="mb-0 opacity-75">Perfil completo e histórico de compras</p>
+        </div>
+        <a asp-action="Index" class="btn btn-light text-success fw-bold shadow-sm w-100 w-md-auto">
+            <i class="bi bi-arrow-left"></i> Voltar
+        </a>
+    </div>
+</div>
 
-    <div class="card shadow-sm mb-4">
-        <div class="card-body">
+<div class="container">
+
+    @* Card Principal de Informações *@
+    <div class="card shadow-sm mb-5 border-0 rounded-4">
+        <div class="card-body p-4">
             <div class="row align-items-center">
-                <div class="col-md-3 text-center mb-3 mb-md-0">
-                    @if (!string.IsNullOrEmpty(Model.FotoCaminho))
-                    {
-                        <img src="@Model.FotoCaminho" alt="Foto de @Model.Nome" class="rounded-circle img-thumbnail shadow-sm" style="width: 150px; height: 150px; object-fit: cover;">
-                    }
-                    else
-                    {
-                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm" style="width: 150px; height: 150px;">
-                            <i class="bi bi-person text-secondary" style="font-size: 80px;"></i>
-                        </div>
-                    }
+                @* Coluna da Foto: Centralizada no mobile *@
+                <div class="col-12 col-md-3 text-center mb-3 mb-md-0 d-flex justify-content-center">
+                    <div style="width: 140px; height: 140px;">
+                        @if (!string.IsNullOrEmpty(Model.FotoCaminho))
+                        {
+                            <img src="@Model.FotoCaminho" class="rounded-circle img-thumbnail shadow-sm w-100 h-100" style="object-fit: cover;"
+                                 onerror="this.style.display='none'; this.nextElementSibling.classList.remove('d-none');">
+
+                            <div class="bg-gradient-clientes text-white rounded-circle d-flex align-items-center justify-content-center shadow-sm d-none w-100 h-100" style="font-size: 3.5rem;">
+                                @Model.Nome.Substring(0, 1).ToUpper()
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center shadow-sm w-100 h-100">
+                                <i class="bi bi-person text-secondary" style="font-size: 70px;"></i>
+                            </div>
+                        }
+                    </div>
                 </div>
-                <div class="col-md-9">
-                    <h2 class="display-6 fw-bold">@Html.DisplayFor(model => model.Nome)</h2>
-                    <p class="text-muted fs-5 mb-1"><i class="bi bi-envelope"></i> @Html.DisplayFor(model => model.Email)</p>
-                    <p class="text-muted fs-5"><i class="bi bi-telephone"></i> @(string.IsNullOrEmpty(Model.Telefone) ? "Não informado" : Model.Telefone)</p>
+
+                @* Coluna dos Dados: Texto centralizado no mobile, esquerda no PC *@
+                <div class="col-12 col-md-9 text-center text-md-start">
+                    <h2 class="display-6 fw-bold text-dark fs-3 fs-md-2">@Html.DisplayFor(model => model.Nome)</h2>
+                    <p class="text-muted fs-5 mb-1"><i class="bi bi-envelope text-success me-2"></i>@Html.DisplayFor(model => model.Email)</p>
+                    <p class="text-muted fs-5"><i class="bi bi-telephone text-success me-2"></i>@(string.IsNullOrEmpty(Model.Telefone) ? "Não informado" : Model.Telefone)</p>
+
                     <div class="mt-3">
-                        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar Dados</a>
+                        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning shadow-sm w-100 w-md-auto">
+                            <i class="bi bi-pencil-square"></i> Editar Dados
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <h3 class="mb-3 text-primary"><i class="bi bi-clock-history"></i> Histórico de Compras / Pendências</h3>
+    @* Título Histórico *@
+    <h3 class="mb-3 text-dark fw-bold border-start border-5 border-success ps-3 fs-4">
+        <i class="bi bi-clock-history"></i> Histórico de Compras
+    </h3>
 
-    <div class="card bg-light mb-3 p-3 shadow-sm">
+    @* Barra de Filtros Responsiva *@
+    <div class="card bg-light border-0 mb-4 p-3 shadow-sm rounded-3">
         <div class="row g-2 align-items-end">
-            <div class="col-md-4">
+            @* Busca Texto *@
+            <div class="col-12 col-md-4">
                 <label class="small text-muted fw-bold">Buscar Livro:</label>
-                <input type="text" id="filtroTermo" class="form-control" placeholder="Ex: Dom Casmurro..." />
+                <input type="text" id="filtroTermo" class="form-control" placeholder="Título..." />
             </div>
-            <div class="col-md-2">
+
+            @* Selects e Datas: Mobile 2 por linha (col-6), PC linha única *@
+            <div class="col-6 col-md-2">
                 <label class="small text-muted fw-bold">Status:</label>
                 <select id="filtroStatus" class="form-select" asp-items="Html.GetEnumSelectList<StatusLivro>()">
                     <option value="">Todos</option>
                 </select>
             </div>
-            <div class="col-md-2">
+            <div class="col-6 col-md-2">
                 <label class="small text-muted fw-bold">Data Início:</label>
                 <input type="date" id="filtroInicio" class="form-control" />
             </div>
-            <div class="col-md-2">
+            <div class="col-6 col-md-2">
                 <label class="small text-muted fw-bold">Data Fim:</label>
                 <input type="date" id="filtroFim" class="form-control" />
             </div>
-            <div class="col-md-2">
-                <button onclick="limparFiltros()" class="btn btn-outline-secondary w-100">Limpar</button>
+
+            @* Botão Limpar *@
+            <div class="col-12 col-md-2">
+                <button onclick="limparFiltros()" class="btn btn-outline-secondary w-100 bg-white">
+                    <i class="bi bi-x-circle"></i> Limpar
+                </button>
             </div>
         </div>
     </div>
 
-    <div id="containerHistorico">
+    @* Container da Tabela (AJAX) *@
+    <div id="containerHistorico" class="table-responsive">
         @if (Model.Compras != null && Model.Compras.Any())
         {
             <partial name="_HistoricoCliente" model="Model.Compras.OrderByDescending(x => x.DataVenda)" />
         }
         else
         {
-            <div class="alert alert-info shadow-sm">
-                <i class="bi bi-info-circle-fill"></i> Nenhuma movimentação registrada para este cliente.
+            <div class="alert alert-light text-center border shadow-sm py-5 rounded-3">
+                <i class="bi bi-info-circle-fill text-muted" style="font-size: 2rem;"></i>
+                <p class="mt-2 mb-0 text-muted">Nenhuma movimentação registrada.</p>
             </div>
         }
     </div>
-    <div class="mt-4">
-        <a asp-action="Index" class="btn btn-outline-secondary">
-            <i class="bi bi-arrow-left"></i> Voltar para Lista
-        </a>
-    </div>
+
+    <div class="mt-5 pb-5"></div>
 </div>
 
 @section Scripts {
     <script>
         $(document).ready(function () {
+            // Eventos para acionar o filtro
             $("#filtroTermo").on("keyup", function() { atualizarHistorico(); });
             $("#filtroStatus, #filtroInicio, #filtroFim").on("change", function() { atualizarHistorico(); });
         });
@@ -95,7 +133,7 @@
             var inicio = $("#filtroInicio").val();
             var fim = $("#filtroFim").val();
 
-            $("#containerHistorico").css("opacity", "0.5");
+            $("#containerHistorico").css("opacity", "0.5"); // Feedback visual de carregamento
 
             $.get("/Clientes/FiltrarHistorico",
                 {
@@ -109,7 +147,10 @@
                     $("#containerHistorico").html(data);
                     $("#containerHistorico").css("opacity", "1");
                 }
-            );
+            ).fail(function() {
+                $("#containerHistorico").css("opacity", "1");
+                console.log("Erro ao filtrar histórico");
+            });
         }
 
         function limparFiltros() {

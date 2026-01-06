@@ -1,43 +1,56 @@
 ﻿@model IEnumerable<LivroCDF.Models.Cliente>
-
 @{
     ViewData["Title"] = "Clientes";
 }
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h1>👥 Clientes</h1>
-    <a asp-action="Create" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i> Novo Cliente</a>
-</div>
-
-@* --- BARRA DE PESQUISA --- *@
-<div class="row mb-4">
-    <div class="col-md-6">
-        <div class="input-group">
-            <span class="input-group-text bg-light"><i class="bi bi-search"></i></span>
-            <input type="text" id="campoPesquisa" class="form-control" placeholder="Pesquisar por nome ou email..." autocomplete="off">
+<div class="card border-0 shadow mb-4 overflow-hidden">
+    <div class="card-body p-4 bg-gradient-clientes text-white d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+        <div class="mb-3 mb-md-0">
+            <h1 class="fw-bold mb-0 display-6">
+                <i class="bi bi-people-fill me-2"></i> Clientes
+            </h1>
+            <p class="mb-0 opacity-75">Gerencie sua base de contatos e histórico</p>
         </div>
+
+        <a asp-action="Create" class="btn btn-light btn-lg rounded-pill fw-bold shadow-sm px-4">
+            <i class="bi bi-person-plus-fill text-success"></i> <span class="d-none d-sm-inline">Novo Cliente</span>
+            <span class="d-inline d-sm-none">Novo</span> 
+        </a>
     </div>
 </div>
 
-@* --- LOCAL ONDE A TABELA VAI CARREGAR --- *@
-<div id="containerTabela">
-    <partial name="_TabelaClientes" model="Model" />
+<div class="card border-0 shadow-sm rounded-4">
+    <div class="card-body p-3 p-md-4">
+
+        <div class="row justify-content-center mb-4 mt-2">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="input-group input-group-lg shadow-sm rounded-pill border p-1 bg-white">
+                    <span class="input-group-text border-0 bg-transparent ps-3 ps-md-4">
+                        <i class="bi bi-search text-secondary"></i>
+                    </span>
+                    <input type="text" id="campoPesquisa" class="form-control border-0 bg-transparent fs-6 fs-md-5" placeholder="Buscar cliente..." autocomplete="off">
+                </div>
+            </div>
+        </div>
+
+        <div id="containerTabela" class="table-responsive">
+            <partial name="_TabelaClientes" model="Model" />
+        </div>
+    </div>
 </div>
 
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // Quando digitar no campo...
             $("#campoPesquisa").on("keyup", function () {
                 var valor = $(this).val();
-
-                // Chama o Controller e atualiza só a div da tabela
                 $.ajax({
                     url: '@Url.Action("FiltrarClientes", "Clientes")',
                     data: { termoPesquisa: valor },
                     success: function (resultado) {
                         $("#containerTabela").html(resultado);
-                    }
+                    },
+                    error: function() { console.log("Erro ao filtrar."); }
                 });
             });
         });

@@ -3,16 +3,135 @@
   "WorkspaceRootPath": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\_historicocliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\_historicocliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\_tabelaclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\_tabelaclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\enums\\statuslivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\enums\\statuslivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\_tabelalivros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\_tabelalivros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\auditoria\\_tabelalogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\auditoria\\_tabelalogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\auditoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\auditoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\usuarios\\_tabelausuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\usuarios\\_tabelausuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\_tabelaestoque.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\_tabelaestoque.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\_tabelavendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\_tabelavendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\auditoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\auditoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\logauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\logauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,112 +142,28 @@
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\vendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\_tabelavendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\_tabelavendas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\_tabelalivros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\_tabelalivros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\_historicocliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\_historicocliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\exemplares\\_tabelaestoque.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\exemplares\\_tabelaestoque.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\livros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\livros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\viewmodels\\livroformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\viewmodels\\livroformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -143,44 +178,64 @@
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\exemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\exemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\viewmodels\\livroformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\viewmodels\\livroformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\exemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,36 +254,8 @@
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\data\\livrariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103142037_AdicionaFotoCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LivroCDF\\Migrations\\20260103142037_AdicionaFotoCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\controllers\\auditoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\controllers\\auditoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\auditoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\auditoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\exemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\exemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\logauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\logauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -245,10 +272,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\migrations\\20260102173849_criandotabelaclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\migrations\\20260102173849_criandotabelaclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\models\\enums\\statuslivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|solutionrelative:livrocdf\\models\\enums\\statuslivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54F8C008-5976-4092-A454-C8AB17E0C2D8}|LivroCDF\\LivroCDF.csproj|c:\\users\\alan fl\\desktop\\livrocdf\\livrocdf\\migrations\\20251230232533_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -278,7 +301,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 247,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -286,514 +309,475 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Vendas.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAIwF0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T16:47:29.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
-              "RelativeToolTip": "LivroCDF\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T15:59:51.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_TabelaClientes.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml*",
-              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T05:14:56.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAwwIcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T03:25:33.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
-              "ViewState": "AgIAAC8AAAAAAAAAAADwv0kAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T03:33:22.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_TabelaUsuarios.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
-              "ViewState": "AgIAAIIAAAAAAAAAAADwv5MAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-05T12:07:18.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Edit.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Edit.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Edit.cshtml",
-              "ViewState": "AgIAAFgAAAAAAAAAAADwv2kAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-31T03:29:23.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Details.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Details.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Details.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T19:01:24.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ClientesController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ClientesController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAABwBAAAAAAAAAAAAwCYBAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T18:20:44.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_TabelaVendas.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-05T11:48:08.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
-              "ViewState": "AgIAAGoAAAAAAAAAAADwv34AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-31T02:03:07.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LivrosController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\LivrosController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\LivrosController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAPQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T23:35:05.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_TabelaLivros.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T20:42:53.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExemplaresController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ExemplaresController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\ExemplaresController.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAIwF0AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T00:54:13.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Index.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAADwvzAAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T23:46:58.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Index.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAADwvzQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-31T02:02:21.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_HistoricoCliente.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAIwHIAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T20:10:12.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Delete.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Delete.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Delete.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAIwCsAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-31T03:29:59.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "_TabelaEstoque.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T15:05:09.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20260103194201_AdicaoFotoLivro.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
-              "RelativeToolTip": "LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:42:03.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "LivroFormViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\ViewModels\\LivroFormViewModel.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\ViewModels\\LivroFormViewModel.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\ViewModels\\LivroFormViewModel.cs",
-              "RelativeToolTip": "LivroCDF\\ViewModels\\LivroFormViewModel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA6wBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:13:30.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Edit.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Edit.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T20:12:19.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Delete.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Delete.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T21:12:24.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Create.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Create.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T23:49:06.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Details.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Details.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-31T00:27:19.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Livro.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Livro.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Models\\Livro.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Livro.cs",
-              "RelativeToolTip": "LivroCDF\\Models\\Livro.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA0wBIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T21:17:46.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvywAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T18:29:11.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Edit.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Edit.cshtml",
               "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Edit.cshtml",
               "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Edit.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAADwv3MAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswIMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-02T19:00:53.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "LivroService.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Services\\LivroService.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Services\\LivroService.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Services\\LivroService.cs",
-              "RelativeToolTip": "LivroCDF\\Services\\LivroService.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAwwGMAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Details.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Details.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Details.cshtml",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAwwKMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T19:01:24.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Delete.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T19:01:50.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_TabelaClientes.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\_TabelaClientes.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T05:14:56.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Create.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Create.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAwwH8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T18:29:48.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Index.cshtml*",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Index.cshtml*",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T23:46:58.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_HistoricoCliente.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\_HistoricoCliente.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAswIcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T20:10:12.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T18:29:11.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Details.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Details.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Details.cshtml",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswKoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T00:27:19.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StatusLivro.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Enums\\StatusLivro.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Models\\Enums\\StatusLivro.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Enums\\StatusLivro.cs",
+              "RelativeToolTip": "LivroCDF\\Models\\Enums\\StatusLivro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T21:00:51.118Z",
+              "WhenOpened": "2025-12-30T21:27:32.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LivrosController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\LivrosController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\LivrosController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\LivrosController.cs",
+              "ViewState": "AgIAAMYAAAAAAAAAAIAwwN4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T23:35:05.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_TabelaLivros.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\_TabelaLivros.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAswGEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T20:42:53.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Create.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Create.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Create.cshtml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T23:49:06.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Delete.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Delete.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Delete.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAswDwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T21:12:24.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Edit.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Livros\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Livros\\Edit.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Livros\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T20:12:19.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAcwF0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T23:51:00.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_TabelaLogs.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Auditoria\\_TabelaLogs.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Auditoria\\_TabelaLogs.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Auditoria\\_TabelaLogs.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Auditoria\\_TabelaLogs.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T17:38:19.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Usuarios\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAADwv0oAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T03:33:22.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Program.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Program.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Program.cs",
+              "RelativeToolTip": "LivroCDF\\Program.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T22:21:29.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ViewState": "AgIAAJwCAAAAAAAAAAAawKYCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-01-05T18:46:22.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Auditoria\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Auditoria\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Auditoria\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Auditoria\\Index.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAADwv3cAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T04:40:10.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Create.cshtml",
+              "ViewState": "AgIAAGoAAAAAAAAAAADwv3sAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T02:03:07.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_TabelaUsuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Usuarios\\_TabelaUsuarios.cshtml",
+              "ViewState": "AgIAAIYAAAAAAAAAAADwv5QAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T12:07:18.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Delete.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Delete.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Delete.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvzMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T03:29:59.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Edit.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Edit.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Edit.cshtml",
+              "ViewState": "AgIAAGIAAAAAAAAAAADwv3MAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T03:29:23.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Vendas.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Vendas.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv1wAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T16:47:29.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_TabelaEstoque.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\_TabelaEstoque.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAADwvzwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T15:05:09.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_TabelaVendas.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\_TabelaVendas.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAADwvzQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T11:48:08.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Exemplares\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Exemplares\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Exemplares\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T02:02:21.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAIwIIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T16:56:29.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Email.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAIwI8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T18:07:46.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Email.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T18:04:12.694Z",
+              "WhenOpened": "2026-01-03T00:46:43.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "ChangePassword.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAIwGMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T18:08:29.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "_ManageNav.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T17:40:54.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T17:57:01.345Z",
+              "WhenOpened": "2026-01-05T12:57:23.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAIwKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T03:25:33.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AuditoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\AuditoriaController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\AuditoriaController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\AuditoriaController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\AuditoriaController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T04:38:11.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAADwvycAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T18:06:30.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "_ManageNav.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T17:36:50.041Z",
+              "Title": "LogAuditoria.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\LogAuditoria.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Models\\LogAuditoria.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\LogAuditoria.cs",
+              "RelativeToolTip": "LivroCDF\\Models\\LogAuditoria.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAxwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T04:24:44.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAADwv0QAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T16:59:06.486Z",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Usuario.cs",
+              "RelativeToolTip": "LivroCDF\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T15:59:51.862Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAADwv0EAAAABAAAAAAAAAA==",
+              "DocumentIndex": 35,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T03:57:23.18Z",
+              "WhenOpened": "2026-01-05T16:50:50.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
@@ -806,46 +790,280 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABgAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T23:51:00.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 37,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAADwv0EAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-03T01:12:44.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAADwv0kAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 38,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwCEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T00:46:43.272Z",
+              "WhenOpened": "2026-01-03T17:57:01.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T03:57:23.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "_ManageNav.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvyEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T17:36:50.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvy4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T18:06:30.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Email.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAADwvzcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T18:04:12.694Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 43,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAADwv1IAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-03T16:59:06.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "LivroCDF\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "LivroCDF\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-05T14:26:13.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAtwA4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T00:56:52.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Exemplar.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Exemplar.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Models\\Exemplar.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Exemplar.cs",
+              "RelativeToolTip": "LivroCDF\\Models\\Exemplar.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T21:34:45.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\ViewModels\\HomeViewModel.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "LivroCDF\\ViewModels\\HomeViewModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T13:10:08.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "LivroFormViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\ViewModels\\LivroFormViewModel.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\ViewModels\\LivroFormViewModel.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\ViewModels\\LivroFormViewModel.cs",
+              "RelativeToolTip": "LivroCDF\\ViewModels\\LivroFormViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA6wBAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:13:30.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAABwBAAAAAAAAAAAAwCYBAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T18:20:44.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ExemplaresController.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\ExemplaresController.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\ExemplaresController.cs",
+              "RelativeToolTip": "LivroCDF\\Controllers\\ExemplaresController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwF0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T00:54:13.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "20260103194201_AdicaoFotoLivro.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
+              "RelativeToolTip": "LivroCDF\\Migrations\\20260103194201_AdicaoFotoLivro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:42:03.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Livro.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Livro.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Models\\Livro.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Livro.cs",
+              "RelativeToolTip": "LivroCDF\\Models\\Livro.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA0wBIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T21:17:46.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "LivroService.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Services\\LivroService.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Services\\LivroService.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Services\\LivroService.cs",
+              "RelativeToolTip": "LivroCDF\\Services\\LivroService.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAwwGMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T21:00:51.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAIwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T16:56:29.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Email.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAIwI8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T18:07:46.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAIwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T18:08:29.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "_ManageNav.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
+              "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
+              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
+              "RelativeToolTip": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T17:40:54.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -858,7 +1076,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 59,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -871,7 +1089,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 60,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Models\\Cliente.cs",
@@ -884,20 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Program.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Program.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Program.cs",
-              "RelativeToolTip": "LivroCDF\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAFMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T22:21:29.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 61,
               "Title": "20260103160624_Modifica\u00E7\u00E3oUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103160624_Modifica\u00E7\u00E3oUsuario.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103160624_Modifica\u00E7\u00E3oUsuario.cs",
@@ -910,7 +1115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 62,
               "Title": "LivrariaContext.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Data\\LivrariaContext.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Data\\LivrariaContext.cs",
@@ -923,20 +1128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Create.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Create.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Create.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAADwv0oAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T18:29:48.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 63,
               "Title": "20260103142037_AdicionaFotoCliente.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103142037_AdicionaFotoCliente.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103142037_AdicionaFotoCliente.cs",
@@ -949,57 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAIwAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T00:56:52.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "AuditoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\AuditoriaController.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Controllers\\AuditoriaController.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Controllers\\AuditoriaController.cs",
-              "RelativeToolTip": "LivroCDF\\Controllers\\AuditoriaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T04:38:11.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Auditoria\\Index.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Auditoria\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Auditoria\\Index.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Auditoria\\Index.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAADwv3cAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-03T04:40:10.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Exemplar.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Exemplar.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Models\\Exemplar.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Exemplar.cs",
-              "RelativeToolTip": "LivroCDF\\Models\\Exemplar.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T21:34:45.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 71,
               "Title": "20260103042932_CriarLogs.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103042932_CriarLogs.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103042932_CriarLogs.cs",
@@ -1011,19 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "LogAuditoria.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\LogAuditoria.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Models\\LogAuditoria.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\LogAuditoria.cs",
-              "RelativeToolTip": "LivroCDF\\Models\\LogAuditoria.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T04:24:44.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 72,
               "Title": "20260103031630_AdicionandoCargos.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260103031630_AdicionandoCargos.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260103031630_AdicionandoCargos.cs",
@@ -1035,19 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Delete.cshtml",
-              "RelativeDocumentMoniker": "LivroCDF\\Views\\Clientes\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Views\\Clientes\\Delete.cshtml",
-              "RelativeToolTip": "LivroCDF\\Views\\Clientes\\Delete.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T19:01:50.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 64,
               "Title": "ClienteService.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Services\\ClienteService.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Services\\ClienteService.cs",
@@ -1059,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 66,
               "Title": "20260102195701_AdicionandoClienteNoExemplar.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102195701_AdicionandoClienteNoExemplar.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102195701_AdicionandoClienteNoExemplar.cs",
@@ -1070,7 +1188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 65,
               "Title": "20260102200036_AdicionandoClienteNoExemplar.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102200036_AdicionandoClienteNoExemplar.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102200036_AdicionandoClienteNoExemplar.cs",
@@ -1082,7 +1200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 70,
               "Title": "20260102192029_AdicionandoVendas.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102192029_AdicionandoVendas.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102192029_AdicionandoVendas.cs",
@@ -1094,7 +1212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 67,
               "Title": "20260102173849_CriandoTabelaClientes.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20260102173849_CriandoTabelaClientes.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20260102173849_CriandoTabelaClientes.cs",
@@ -1106,19 +1224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "StatusLivro.cs",
-              "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Enums\\StatusLivro.cs",
-              "RelativeDocumentMoniker": "LivroCDF\\Models\\Enums\\StatusLivro.cs",
-              "ToolTip": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Models\\Enums\\StatusLivro.cs",
-              "RelativeToolTip": "LivroCDF\\Models\\Enums\\StatusLivro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T21:27:32.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 68,
               "Title": "20251230232533_Inicial.cs",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\Migrations\\20251230232533_Inicial.cs",
               "RelativeDocumentMoniker": "LivroCDF\\Migrations\\20251230232533_Inicial.cs",
@@ -1130,7 +1236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 69,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Alan fl\\Desktop\\LivroCDF\\LivroCDF\\appsettings.json",
               "RelativeDocumentMoniker": "LivroCDF\\appsettings.json",

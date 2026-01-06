@@ -2,23 +2,23 @@
 @model IEnumerable<LivroCDF.Models.Cliente>
 
 <div class="table-responsive">
-    <table class="table table-hover align-middle mb-0">
-        <thead class="table-light">
+    <table class="table align-middle mb-0 table-hover border-top text-nowrap">
+        <thead class="bg-light text-secondary small text-uppercase">
             <tr>
-                <th class="ps-4">Foto</th>
-                <th>@Html.DisplayNameFor(model => model.Nome)</th>
-                <th>@Html.DisplayNameFor(model => model.Email)</th>
-                <th>Telefone</th>
-                <th>Data Cadastro</th>
-                <th class="text-end pe-4">Ações</th>
+                <th class="ps-3 ps-md-4">Cliente</th>
+                <th>Contato</th>
+                <th class="text-center">Situação</th>
+                <th class="d-none d-md-table-cell">Cadastro</th>
+                <th class="text-end pe-3 pe-md-4">Ações</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white">
             @if (!Model.Any())
             {
                 <tr>
-                    <td colspan="6" class="text-center text-muted py-4">
-                        <div class="alert alert-info mb-0">Nenhum cliente encontrado.</div>
+                    <td colspan="5" class="text-center text-muted py-5">
+                        <i class="bi bi-people fs-1 d-block mb-2 opacity-50"></i>
+                        Nenhum cliente encontrado.
                     </td>
                 </tr>
             }
@@ -26,59 +26,67 @@
             {
                 @foreach (var item in Model)
                 {
-                    // --- LÓGICA VISUAL (A SUA LÓGICA ORIGINAL) ---
-                    // Verifica se o cliente tem ALGUM exemplar com status 'A Pagar'
                     bool temPendencia = item.Compras != null && item.Compras.Any(c => c.Status == StatusLivro.APagar);
+                    string classeLinha = temPendencia ? "border-start border-5 border-danger bg-danger bg-opacity-10" : "";
 
-                    // Se tiver pendência, aplica a classe de aviso (amarelo claro)
-                    string classeLinha = temPendencia ? "table-warning" : "";
-                    // ---------------------------------------------
-
-                    <tr class="@classeLinha">
-
-                        <td class="ps-4">
-                            @if (!string.IsNullOrEmpty(item.FotoCaminho))
-                            {
-                                <img src="@item.FotoCaminho" class="rounded-circle border border-2 border-white shadow-sm"
-                                     style="width: 45px; height: 45px; object-fit: cover;" />
-                            }
-                            else
-                            {
-                                <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center shadow-sm"
-                                     style="width: 45px; height: 45px; font-size: 18px; font-weight: bold;">
-                                    @(string.IsNullOrEmpty(item.Nome) ? "?" : item.Nome.Substring(0, 1).ToUpper())
+                    <tr class="@classeLinha border-bottom">
+                        <td class="ps-3 ps-md-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-2 me-md-3 position-relative">
+                                    @if (!string.IsNullOrEmpty(item.FotoCaminho))
+                                    {
+                                        <img src="@item.FotoCaminho" class="rounded-circle shadow-sm" style="width: 40px; height: 40px; object-fit: cover;" />
+                                    }
+                                    else
+                                    {
+                                        <div class="rounded-circle bg-primary bg-gradient text-white d-flex align-items-center justify-content-center shadow-sm"
+                                             style="width: 40px; height: 40px; font-weight: bold;">
+                                            @(string.IsNullOrEmpty(item.Nome) ? "?" : item.Nome.Substring(0, 1).ToUpper())
+                                        </div>
+                                    }
+                                    @if (temPendencia)
+                                    {
+                                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                                    }
                                 </div>
-                            }
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark text-truncate" style="max-width: 150px;">@Html.DisplayFor(modelItem => item.Nome)</h6>
+                                    @if (temPendencia)
+                                    {
+                                        <small class="text-danger fw-bold d-block d-md-none" style="font-size: 0.7rem;">Pendente</small>
+                                    }
+                                </div>
+                            </div>
                         </td>
 
                         <td>
-                            <span class="fw-bold">@Html.DisplayFor(modelItem => item.Nome)</span>
+                            <div class="d-flex flex-column text-muted small">
+                                <span class="mb-1 text-truncate" style="max-width: 140px;"><i class="bi bi-envelope me-1"></i> @item.Email</span>
+                                <span><i class="bi bi-telephone me-1"></i> @item.Telefone</span>
+                            </div>
+                        </td>
 
-                            @* Se tiver pendência, mostra o aviso *@
+                        <td class="text-center">
                             @if (temPendencia)
                             {
-                                <span class="badge bg-danger text-white ms-2" title="Este cliente possui débitos pendentes (A Pagar)">
-                                    <i class="bi bi-exclamation-triangle-fill"></i> A Pagar
-                                </span>
+                                <span class="badge rounded-pill bg-danger bg-opacity-10 text-danger border border-danger">A Pagar</span>
+                            }
+                            else
+                            {
+                                <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success">Regular</span>
                             }
                         </td>
 
-                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td class="text-secondary small d-none d-md-table-cell">
+                            <i class="bi bi-calendar3 me-1"></i> @item.DataCadastro.ToString("dd/MM/yy")
+                        </td>
 
-                        <td>@Html.DisplayFor(modelItem => item.Telefone)</td>
-
-                        <td>@item.DataCadastro.ToString("dd/MM/yyyy")</td>
-
-                        <td class="text-end pe-4">
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning" title="Editar">
-                                <i class="bi bi-pencil-square"></i> Editar
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white" title="Detalhes">
-                                <i class="bi bi-eye-fill"></i> Detalhes
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Excluir">
-                                <i class="bi bi-trash-fill"></i> Excluir
-                            </a>
+                        <td class="text-end pe-3 pe-md-4">
+                            <div class="btn-group shadow-sm" role="group">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-light border"><i class="bi bi-pencil-fill text-warning"></i></a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-light border"><i class="bi bi-eye-fill text-primary"></i></a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-light border"><i class="bi bi-trash-fill text-danger"></i></a>
+                            </div>
                         </td>
                     </tr>
                 }

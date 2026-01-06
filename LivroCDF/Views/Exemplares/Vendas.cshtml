@@ -2,64 +2,64 @@
 
 @{
     ViewData["Title"] = "Relatório Financeiro";
-    // Nota: O cálculo de total abaixo é apenas para a carga inicial.
-    // Se quiser atualizar o total via AJAX, precisaria retornar um JSON com o valor ou atualizar no HTML retornado.
     float totalInicial = (Model != null) ? Model.Sum(x => x.Valor) : 0;
-    int qtdInicial = (Model != null) ? Model.Count() : 0;
 }
 
-<h1>💰 Relatório de Vendas</h1>
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+    <h1 class="h2 mb-0 text-center text-md-start">💰 Relatório de Vendas</h1>
 
-<div class="card p-4 mb-4 bg-light shadow-sm">
-    <h5 class="card-title text-muted mb-3">Filtrar Vendas</h5>
-    <div class="row g-3 align-items-end">
-
-        <div class="col-md-4">
-            <label class="fw-bold">Pesquisa Rápida:</label>
-            <input type="text" id="filtroTexto" class="form-control" placeholder="Livro ou Cliente..." />
-        </div>
-
-        <div class="col-md-3">
-            <label class="fw-bold">De:</label>
-            <input type="date" id="dataInicio" class="form-control" value="@ViewBag.DataInicio" />
-        </div>
-        <div class="col-md-3">
-            <label class="fw-bold">Até:</label>
-            <input type="date" id="dataFim" class="form-control" value="@ViewBag.DataFim" />
-        </div>
-
-        <div class="col-md-2">
-            <button onclick="limparFiltros()" class="btn btn-outline-secondary w-100">
-                <i class="bi bi-x-circle"></i> Limpar
-            </button>
+    <div class="card bg-success text-white shadow-sm w-100 w-md-auto">
+        <div class="card-body py-2 px-4 text-center">
+            <span class="d-block small opacity-75">Faturamento (Atual)</span>
+            <span class="h4 fw-bold mb-0">R$ @totalInicial.ToString("N2")</span>
         </div>
     </div>
 </div>
 
-<div class="alert alert-success d-flex justify-content-between align-items-center mb-3">
-    <div>
-        <h4 class="alert-heading mb-0">Resultado</h4>
-        <small>Valores baseados na exibição atual.</small>
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white py-3">
+        <h5 class="card-title text-muted mb-0"><i class="bi bi-funnel"></i> Filtros de Pesquisa</h5>
     </div>
-    <div class="text-end">
-        <span class="d-block small">Faturamento Inicial:</span>
-        <span style="font-size: 1.5em; font-weight: bold;">R$ @totalInicial.ToString("N2")</span>
+    <div class="card-body bg-light">
+        <div class="row g-3 align-items-end">
+            <div class="col-12 col-md-4">
+                <label class="form-label fw-bold">Texto</label>
+                <input type="text" id="filtroTexto" class="form-control" placeholder="Livro ou Cliente..." />
+            </div>
+
+            <div class="col-6 col-md-3">
+                <label class="form-label fw-bold">De</label>
+                <input type="date" id="dataInicio" class="form-control" value="@ViewBag.DataInicio" />
+            </div>
+
+            <div class="col-6 col-md-3">
+                <label class="form-label fw-bold">Até</label>
+                <input type="date" id="dataFim" class="form-control" value="@ViewBag.DataFim" />
+            </div>
+
+            <div class="col-12 col-md-2">
+                <button onclick="limparFiltros()" class="btn btn-outline-secondary w-100">
+                    <i class="bi bi-x-circle"></i> Limpar
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div id="containerTabela">
-    <partial name="_TabelaVendas" model="Model" />
+<div id="containerTabela" class="card shadow-sm border-0">
+    <div class="card-body p-0">
+        <partial name="_TabelaVendas" model="Model" />
+    </div>
 </div>
 
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // Monitora digitação (com delay para não travar) e mudança de datas
             let timeout = null;
 
             $("#filtroTexto").on("keyup", function() {
                 clearTimeout(timeout);
-                timeout = setTimeout(atualizarTabela, 500); // Espera 500ms após parar de digitar
+                timeout = setTimeout(atualizarTabela, 500);
             });
 
             $("#dataInicio, #dataFim").on("change", atualizarTabela);
@@ -70,7 +70,6 @@
             var inicio = $("#dataInicio").val();
             var fim = $("#dataFim").val();
 
-            // Efeito visual de carregamento
             $("#containerTabela").css("opacity", "0.5");
 
             $.get("/Exemplares/FiltrarVendas", { termo: termo, dataInicio: inicio, dataFim: fim })

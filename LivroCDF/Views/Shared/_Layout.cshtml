@@ -3,85 +3,100 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LivroCDF</title>
+    <title>@ViewData["Title"] - Codex</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LivroCDF.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LivroCDF</a>
+
+                <a class="navbar-brand fw-bold text-warning" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-journal-bookmark-fill"></i> CODEX
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
-                    @* --- IMPORTANTE: Injeção das ferramentas de Login --- *@
+                <div class="navbar-collapse collapse">
+
                     @using Microsoft.AspNetCore.Identity
                     @inject SignInManager<Usuario> SignInManager
 
-                    <ul class="navbar-nav flex-grow-1">
-                        @* --- LÓGICA: SÓ MOSTRA O MENU SE ESTIVER LOGADO --- *@
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">👥 Clientes</a>
+                                <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="Index">
+                                    <i class="bi bi-people text-info"></i> Clientes
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Livros" asp-action="Index">Livros</a>
+                                <a class="nav-link" asp-area="" asp-controller="Livros" asp-action="Index">
+                                    <i class="bi bi-book text-success"></i> Livros
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Exemplares" asp-action="Index">Estoque</a>
+                                <a class="nav-link" asp-area="" asp-controller="Exemplares" asp-action="Index">
+                                    <i class="bi bi-boxes text-warning"></i> Estoque
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Exemplares" asp-action="Vendas">Relatório de Vendas</a>
+                                <a class="nav-link" asp-area="" asp-controller="Exemplares" asp-action="Vendas">Relatório</a>
                             </li>
 
-                            @* --- ÁREA RESTRITA (ADMINISTRATIVO) --- *@
                             @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
                             {
-                                <li class="nav-item border-start ms-2 ps-2 d-flex">
-                                    @* Link para os Logs *@
-                                    <a class="nav-link text-danger fw-bold" asp-area="" asp-controller="Auditoria" asp-action="Index" title="Ver Histórico de Ações">
-                                        <i class="bi bi-shield-lock-fill"></i> Auditoria
+                                
+                                <li class="nav-item border-start border-secondary ms-lg-3 ps-lg-3 d-none d-lg-block">
+                                </li>
+
+                                <li class="nav-item mt-2 mt-lg-0">
+                                    <a class="nav-link text-danger" asp-area="" asp-controller="Auditoria" asp-action="Index" title="Auditoria">
+                                        <i class="bi bi-shield-lock-fill me-1 d-lg-none"></i> <i class="bi bi-shield-lock-fill d-none d-lg-inline"></i> <span class="d-lg-none">Auditoria</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    @* Link para Gerenciar Usuários (Resetar Senhas) *@
-                                    <a class="nav-link text-primary fw-bold" asp-area="" asp-controller="Usuarios" asp-action="Index" title="Gerenciar Equipe">
-                                        <i class="bi bi-people-fill"></i> Equipe
+                                    <a class="nav-link text-info" asp-area="" asp-controller="Usuarios" asp-action="Index" title="Equipe">
+                                        <i class="bi bi-people-fill me-1 d-lg-none"></i>
+                                        <i class="bi bi-people-fill d-none d-lg-inline"></i>
+                                        <span class="d-lg-none">Equipe</span>
                                     </a>
                                 </li>
                             }
                         }
                     </ul>
 
-                    @* O _LoginPartial cuida de mostrar o perfil ou nada *@
                     <partial name="_LoginPartial" />
 
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="bg-dark text-center py-3 mt-auto border-top border-secondary">
         <div class="container">
-            &copy; 2025 - LivroCDF - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
+            <span class="text-secondary">
+                &copy; 2026 - <strong class="text-white-50">Codex</strong> -
+            </span>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

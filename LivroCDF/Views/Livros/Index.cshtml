@@ -4,57 +4,55 @@
     ViewData["Title"] = "Catálogo de Livros";
 }
 
-<div class="container mt-4">
-
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="text-primary fw-bold mb-0">
-            <i class="bi bi-book"></i> @ViewData["Title"]
-        </h2>
-        <a asp-action="Create" class="btn btn-primary shadow-sm">
-            <i class="bi bi-plus-lg"></i> Novo Título
+<div class="bg-primary text-white py-4 shadow-sm mb-4 mt-n3 mx-n3 px-3 px-md-4 rounded-bottom"
+     style="background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div class="text-center text-md-start">
+            <h1 class="display-6 fw-bold mb-0 fs-2 fs-md-1"><i class="bi bi-journal-bookmark-fill"></i> Acervo</h1>
+            <p class="mb-0 opacity-75 small">Gerencie títulos</p>
+        </div>
+        <a asp-action="Create" class="btn btn-light text-primary fw-bold shadow-sm px-4 py-2 w-100 w-md-auto">
+            <i class="bi bi-plus-lg"></i> <span class="d-inline d-md-none">Novo</span><span class="d-none d-md-inline">Novo Título</span>
         </a>
     </div>
+</div>
 
-    <div class="card bg-light mb-4 shadow-sm border-0">
-        <div class="card-body py-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <label class="form-label small fw-bold text-muted mb-1">Pesquisar Livro</label>
-                    <div class="input-group">
-                        <span class="input-group-text bg-white border-end-0 text-muted">
-                            <i class="bi bi-search"></i>
-                        </span>
-                        <input type="text" id="filtroTexto" class="form-control border-start-0"
-                               placeholder="Digite o Título, Autor ou ISBN..." />
-                    </div>
-                </div>
+<div class="container px-2 px-md-3">
+
+    <div class="card border-0 shadow-sm mb-4" style="border-radius: 12px;">
+        <div class="card-body p-3 p-md-4">
+            <label class="form-label fw-bold text-muted small text-uppercase mb-2">
+                <i class="bi bi-search"></i> Pesquisa Rápida
+            </label>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text bg-light border-0"><i class="bi bi-search text-primary"></i></span>
+                <input type="text" id="filtroTexto" class="form-control border-0 bg-light fs-6 fs-md-5"
+                       placeholder="Buscar Título, Autor..."
+                       style="box-shadow: none;" />
             </div>
         </div>
     </div>
 
-    <div id="containerTabela">
+    <div id="containerTabela" class="position-relative">
         <partial name="_TabelaLivros" model="Model" />
     </div>
-
 </div>
 
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // Monitora a digitação no campo de busca
             $("#filtroTexto").on("keyup", function () {
                 var termo = $(this).val();
-
-                // Animação visual de "carregando"
-                $("#containerTabela").css("opacity", "0.5");
-
-                $.get("/Livros/FiltrarCatalogo", { termo: termo }, function (data) {
+                $("#containerTabela").css("opacity", "0.6");
+                $.get("/Livros/FiltrarCatalogo", { termo: termo })
+                 .done(function (data) {
                     $("#containerTabela").html(data);
                     $("#containerTabela").css("opacity", "1");
-                }).fail(function() {
-                    alert("Erro ao filtrar livros.");
+                 })
+                 .fail(function() {
+                    alert("Erro ao filtrar.");
                     $("#containerTabela").css("opacity", "1");
-                });
+                 });
             });
         });
     </script>

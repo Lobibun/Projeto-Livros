@@ -9,63 +9,73 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
 
-<h2>Adicionar Exemplar ao Estoque</h2>
-<hr />
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow border-0">
+                <div class="card-header bg-success text-white py-3">
+                    <h4 class="mb-0 fs-5"><i class="bi bi-box-seam"></i> Nova Entrada de Estoque</h4>
+                </div>
+                <div class="card-body p-3 p-md-4">
+                    <form asp-action="Create" id="formEstoque">
 
-<div class="row">
-    <div class="col-md-5">
-        <form asp-action="Create" id="formEstoque">
+                        <div class="text-center mb-4 p-3 border rounded bg-light" id="previewCapaContainer" style="display:none;">
+                            <img id="imgCapaPreview" src="" class="rounded shadow-sm" style="max-height: 180px; object-fit: contain;" />
+                            <p class="text-muted small mt-2 mb-0 fw-bold" id="tituloPreview">Capa do livro selecionado</p>
+                        </div>
 
-            <div class="text-center mb-3 p-2 border rounded bg-light" id="previewCapaContainer" style="display:none;">
-                <img id="imgCapaPreview" src="" class="rounded shadow-sm" style="max-height: 150px;" />
-                <p class="text-muted small mt-1 mb-0 fw-bold" id="tituloPreview">Capa do livro selecionado</p>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Escolha o Livro</label>
+                            <select asp-for="LivroId" class="form-select" id="ddlLivros" required>
+                                <option value="" data-imagem="">-- Digite para buscar --</option>
+                                @if (livros != null)
+                                {
+                                    foreach (var item in livros)
+                                    {
+                                        <option value="@item.Id"
+                                                data-preco="@item.Valor"
+                                                data-imagem="@item.FotoCaminho">
+                                            @item.Titulo (ISBN: @item.ISBN)
+                                        </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label asp-for="Valor" class="form-label fw-bold">Valor Unitário (R$)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">R$</span>
+                                    <input asp-for="Valor" class="form-control" type="number" step="0.01" min="0" id="txtValor" placeholder="0,00" />
+                                </div>
+                                <div class="form-text">Deixe 0 para usar preço de capa.</div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-bold">Quantidade</label>
+                                <input type="number" name="Quantidade" class="form-control" value="1" min="1" required />
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-1">
+                            <div class="col-12 col-md-6">
+                                <label asp-for="Status" class="form-label fw-bold"></label>
+                                <select asp-for="Status" class="form-select" asp-items="Html.GetEnumSelectList<StatusLivro>()"></select>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label asp-for="DataEntrada" class="form-label fw-bold"></label>
+                                <input asp-for="DataEntrada" class="form-control" type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4">
+                            <input type="submit" value="Confirmar Entrada" class="btn btn-success btn-lg" />
+                            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="form-group mb-3">
-                <label class="control-label fw-bold">Escolha o Livro</label>
-                <select asp-for="LivroId" class="form-select" id="ddlLivros" required>
-                    <option value="" data-imagem="">-- Digite para buscar --</option>
-                    @if (livros != null)
-                    {
-                        foreach (var item in livros)
-                        {
-                            <option value="@item.Id"
-                                    data-preco="@item.Valor"
-                                    data-imagem="@item.FotoCaminho">
-                                @item.Titulo (ISBN: @item.ISBN)
-                            </option>
-                        }
-                    }
-                </select>
-            </div>
-
-            <div class="form-group mb-3">
-                <label asp-for="Valor" class="control-label">Valor desta unidade (R$)</label>
-                <input asp-for="Valor" class="form-control" type="number" step="0.01" min="0" id="txtValor" placeholder="0,00" />
-                <small class="text-muted">Se deixar em branco ou 0, usa o preço de capa.</small>
-            </div>
-
-            <div class="form-group mb-3">
-                <label asp-for="Status" class="control-label"></label>
-                <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<StatusLivro>()"></select>
-            </div>
-
-            <div class="form-group mb-3">
-                <label asp-for="DataEntrada" class="control-label"></label>
-                <input asp-for="DataEntrada" class="form-control" type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
-            </div>
-
-            <div class="form-group mb-3">
-                <label class="control-label">Quantidade de Cópias</label>
-                <input type="number" name="Quantidade" class="form-control" value="1" min="1" required />
-                <small class="text-muted">Quantos livros chegaram?</small>
-            </div>
-
-            <div class="form-group mt-3">
-                <input type="submit" value="Adicionar ao Estoque" class="btn btn-success" />
-                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
@@ -73,41 +83,29 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <script>
         $(document).ready(function() {
-            // 1. INICIALIZA O SELECT2 COM TEMA BOOTSTRAP
             $('#ddlLivros').select2({
                 theme: 'bootstrap-5',
                 placeholder: "Digite o nome do livro...",
-                allowClear: true
+                allowClear: true,
+                width: '100%'
             });
 
-            // 2. EVENTO DE MUDANÇA (Substitui o addEventListener antigo)
-            // O Select2 usa jQuery, então usamos .on('change') ou .on('select2:select')
             $('#ddlLivros').on('select2:select change', function (e) {
-                // Pega a opção selecionada
                 var opcao = $(this).find(':selected');
-
-                // Recupera os dados (data-attributes)
                 var preco = opcao.data('preco');
                 var img = opcao.data('imagem');
-                var titulo = opcao.text();
 
-                // Atualiza Preço (Mantendo lógica antiga)
                 if (preco) {
-                    // Garante formato correto para input number (ponto em vez de vírgula)
                     $('#txtValor').val(String(preco).replace(',', '.'));
                 } else {
                     $('#txtValor').val('');
                 }
 
-                // Atualiza Imagem (Mantendo lógica antiga)
                 if (img) {
                     $('#imgCapaPreview').attr('src', img);
-                    // Adicionei slideDown para ficar suave
                     $('#previewCapaContainer').slideDown();
                 } else {
                     $('#imgCapaPreview').attr('src', '');
@@ -115,7 +113,6 @@
                 }
             });
 
-            // 3. VALIDAÇÃO DO FORMULÁRIO (Mantendo lógica antiga de zerar valor vazio)
             $('#formEstoque').on('submit', function() {
                 var campoValor = $('#txtValor');
                 if (!campoValor.val()) {

@@ -3,17 +3,17 @@
 @inject SignInManager<Usuario> SignInManager
 @inject UserManager<Usuario> UserManager
 
-<ul class="navbar-nav">
+<ul class="navbar-nav ms-lg-auto">
     @if (SignInManager.IsSignedIn(User))
     {
         var user = await UserManager.GetUserAsync(User);
         var ehSuperAdmin = user != null && await UserManager.IsInRoleAsync(user, "SuperAdmin");
         var ehAdmin = user != null && await UserManager.IsInRoleAsync(user, "Admin");
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown mt-3 mt-lg-0 border-top border-secondary pt-3 pt-lg-0 border-lg-0">
 
-                @* --- FOTO DO USUÁRIO --- *@
+            <a class="nav-link dropdown-toggle text-light d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
                 @if (user != null && !string.IsNullOrEmpty(user.FotoCaminho))
                 {
                     <img src="@user.FotoCaminho" class="rounded-circle me-2" style="width:28px; height:28px; object-fit:cover;" />
@@ -23,7 +23,6 @@
                     <i class="bi bi-person-circle me-2"></i>
                 }
 
-                @* --- EXIBE O NOME (OU EMAIL SE NOME FOR NULO) --- *@
                 <span>Olá, @(user?.Nome ?? User.Identity?.Name)</span>
 
                 @if (ehSuperAdmin)
@@ -69,6 +68,15 @@
                     </form>
                 </li>
             </ul>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Register">Registrar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Login">Entrar</a>
         </li>
     }
 </ul>

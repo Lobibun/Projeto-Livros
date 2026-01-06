@@ -4,56 +4,57 @@
     ViewData["Title"] = "Novo Usuário";
 }
 
-<div class="row justify-content-center mt-4">
-    <div class="col-md-6">
-        <div class="card shadow">
-            <div class="card-header bg-primary text-white">
-                <h4 class="mb-0"><i class="bi bi-person-plus-fill"></i> Cadastrar Novo Usuário</h4>
+<div class="row justify-content-center align-items-center mt-4">
+    <div class="col-md-7 col-lg-6">
+        <div class="card border-0 shadow-lg rounded-3">
+            <div class="card-header bg-primary bg-gradient text-white text-center py-3 rounded-top-3">
+                <h4 class="mb-0 fw-bold"><i class="bi bi-person-plus-fill me-2"></i> Cadastrar Usuário</h4>
             </div>
-            <div class="card-body">
-                @* 1. ADICIONADO: enctype="multipart/form-data" é obrigatório para upload *@
-                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" enctype="multipart/form-data">
-                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
-                    @* 2. ADICIONADO: Campo para o Nome *@
+            <div class="card-body p-4 p-md-5">
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger border-0 shadow-sm mb-3" role="alert"></div>
+
                     <div class="form-floating mb-3">
                         <input asp-for="Input.Nome" class="form-control" placeholder="Nome Completo" />
                         <label asp-for="Input.Nome">Nome Completo</label>
-                        <span asp-validation-for="Input.Nome" class="text-danger"></span>
+                        <span asp-validation-for="Input.Nome" class="text-danger small"></span>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="nome@exemplo.com" />
-                        <label asp-for="Input.Email">E-mail do Usuário</label>
-                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        <label asp-for="Input.Email">E-mail de Acesso</label>
+                        <span asp-validation-for="Input.Email" class="text-danger small"></span>
                     </div>
 
-                    @* 3. ADICIONADO: Campo para a Foto de Perfil *@
-                    <div class="mb-3">
-                        <label asp-for="Input.ArquivoFoto" class="form-label text-muted">Foto de Perfil (Opcional)</label>
-                        <input asp-for="Input.ArquivoFoto" class="form-control" type="file" accept="image/*" />
-                        <span asp-validation-for="Input.ArquivoFoto" class="text-danger"></span>
+                    <div class="mb-4">
+                        <label asp-for="Input.ArquivoFoto" class="form-label fw-bold text-secondary small">Foto de Perfil (Opcional)</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-image"></i></span>
+                            <input asp-for="Input.ArquivoFoto" class="form-control" type="file" accept="image/*" />
+                        </div>
+                        <span asp-validation-for="Input.ArquivoFoto" class="text-danger small"></span>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-2 mb-4">
                         <div class="col-md-6">
-                            <div class="form-floating mb-3">
-                                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="senha" />
+                            <div class="form-floating">
+                                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Senha" />
                                 <label asp-for="Input.Password">Senha Inicial</label>
-                                <span asp-validation-for="Input.Password" class="text-danger"></span>
                             </div>
+                            <span asp-validation-for="Input.Password" class="text-danger small"></span>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-floating mb-3">
-                                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="senha" />
+                            <div class="form-floating">
+                                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Confirmar" />
                                 <label asp-for="Input.ConfirmPassword">Confirmar Senha</label>
-                                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                             </div>
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
                         </div>
                     </div>
 
-                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-success">
-                        <i class="bi bi-check-circle"></i> Criar Conta
+                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-success shadow-sm">
+                        <i class="bi bi-check-lg me-2"></i> Criar Conta
                     </button>
                 </form>
             </div>

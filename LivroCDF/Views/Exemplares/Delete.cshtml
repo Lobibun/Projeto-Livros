@@ -4,41 +4,49 @@
     ViewData["Title"] = "Excluir";
 }
 
-<h3>Tem certeza que deseja excluir este item?</h3>
-<div class="alert alert-danger">
-    <strong>Atenção:</strong> Isso removerá o item do histórico permanentemente.
-    Use isso apenas se cadastrou errado. Se o livro foi vendido, altere o Status na edição.
-</div>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0 fs-5"><i class="bi bi-exclamation-triangle-fill"></i> Confirmar Exclusão</h4>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <h5 class="card-title text-danger mb-3">Tem certeza que deseja excluir este item?</h5>
+                    <p class="card-text text-muted mb-4 small">
+                        Isso removerá o item do histórico <strong>permanentemente</strong>.
+                        <br />Se o livro foi vendido, altere o Status na edição.
+                    </p>
 
-<div>
-    <h4>Detalhes do Exemplar</h4>
-    <hr />
-    <dl class="row align-items-center">
-        <dt class="col-sm-2">Capa</dt>
-        <dd class="col-sm-10">
-            @if (Model.Livro != null && !string.IsNullOrEmpty(Model.Livro.FotoCaminho))
-            {
-                <img src="@Model.Livro.FotoCaminho" class="rounded shadow-sm" style="height: 100px;" />
-            }
-            else
-            {
-                <span class="text-muted">Sem capa</span>
-            }
-        </dd>
+                    <div class="card bg-light border-0 mb-4 p-3 text-start">
+                        <div class="d-flex align-items-center">
+                            @if (Model.Livro != null && !string.IsNullOrEmpty(Model.Livro.FotoCaminho))
+                            {
+                                <img src="@Model.Livro.FotoCaminho" class="rounded shadow-sm me-3" style="height: 80px; width: 55px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <div class="bg-secondary rounded me-3 d-flex align-items-center justify-content-center text-white" style="height: 80px; width: 55px;">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                            }
+                            <div>
+                                <h5 class="mb-1 text-break">@Model.Livro?.Titulo</h5>
+                                <div class="text-muted small">Valor: <strong>R$ @Model.Valor.ToString("N2")</strong></div>
+                                <div class="text-muted small">Entrada: @Model.DataEntrada.ToShortDateString()</div>
+                            </div>
+                        </div>
+                    </div>
 
-        <dt class="col-sm-2">Livro</dt>
-        <dd class="col-sm-10">@Model.Livro.Titulo</dd>
-
-        <dt class="col-sm-2">Valor</dt>
-        <dd class="col-sm-10">R$ @Model.Valor</dd>
-
-        <dt class="col-sm-2">Entrada</dt>
-        <dd class="col-sm-10">@Model.DataEntrada</dd>
-    </dl>
-
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Confirmar Exclusão" class="btn btn-danger" /> |
-        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-    </form>
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="d-grid gap-2">
+                            <input type="submit" value="Confirmar Exclusão" class="btn btn-danger btn-lg" />
+                            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,5 +1,6 @@
 ﻿using LivroCDF.Data;
 using LivroCDF.Models;
+using LivroCDF.Models.Enums;
 using LivroCDF.Services;
 using LivroCDF.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -122,36 +123,26 @@ namespace LivroCDF.Controllers
                     // Se ele deixou tudo vazio, mantemos a foto antiga (livroOriginal.FotoCaminho).
                     if (viewModel.ArquivoFoto != null || !string.IsNullOrEmpty(viewModel.CapaUrlExterna))
                     {
-                        // (Opcional) Poderíamos apagar a foto antiga do disco aqui se quiséssemos economizar espaço
-
-                        // Salva a nova
                         livroOriginal.FotoCaminho = await ProcessarFoto(viewModel.ArquivoFoto, viewModel.CapaUrlExterna);
                     }
 
                     await _livroService.UpdateAsync(livroOriginal);
-
-                    // Auditoria
                     await RegistrarLog("Edição de Título", $"Editou dados do livro ID {livroOriginal.Id}: {livroOriginal.Titulo}");
 
                     return RedirectToAction(nameof(Index));
                 }
                 catch (Exception)
                 {
-                    // Lógica de erro simples
                     return View(viewModel);
                 }
             }
             return View(viewModel);
         }
-
-        // --- MÉTODOS AUXILIARES (Para não repetir código) ---
-
         private async Task<string?> ProcessarFoto(IFormFile? arquivo, string? urlExterna)
         {
             string pastaDestino = Path.Combine(_webHostEnvironment.WebRootPath, "imagens", "livros");
             if (!Directory.Exists(pastaDestino)) Directory.CreateDirectory(pastaDestino);
 
-            // PRIORIDADE 1: Upload Manual
             if (arquivo != null)
             {
                 string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(arquivo.FileName);
@@ -164,7 +155,6 @@ namespace LivroCDF.Controllers
                 return "/imagens/livros/" + nomeArquivo;
             }
 
-            // PRIORIDADE 2: URL do Google (Download)
             else if (!string.IsNullOrEmpty(urlExterna))
             {
                 try
@@ -172,7 +162,7 @@ namespace LivroCDF.Controllers
                     using (var httpClient = new HttpClient())
                     {
                         var imageBytes = await httpClient.GetByteArrayAsync(urlExterna);
-                        string nomeArquivo = Guid.NewGuid().ToString() + ".jpg"; // Google geralmente é JPG
+                        string nomeArquivo = Guid.NewGuid().ToString() + ".jpg"; 
                         string caminhoCompleto = Path.Combine(pastaDestino, nomeArquivo);
 
                         await System.IO.File.WriteAllBytesAsync(caminhoCompleto, imageBytes);
@@ -181,12 +171,11 @@ namespace LivroCDF.Controllers
                 }
                 catch
                 {
-                    // Se der erro no download, retorna null (sem foto)
                     return null;
                 }
             }
 
-            return null; // Nenhuma foto enviada
+            return null; 
         }
 
         private async Task RegistrarLog(string acao, string detalhes)
@@ -201,13 +190,41 @@ namespace LivroCDF.Controllers
             _context.LogsAuditoria.Add(log);
             await _context.SaveChangesAsync();
         }
-
-        // --- MÉTODOS DETAILS E DELETE (Sem alterações na lógica da foto) ---
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id, string filtroStatus, DateTime? dataInicio, DateTime? dataFim)
         {
             if (id == null) return NotFound();
-            var livro = await _livroService.FindByIdAsync(id.Value);
+
+            var livro = await _context.Livros
+                .Include(l => l.Exemplares)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (livro == null) return NotFound();
+
+            var itensFiltrados = livro.Exemplares.AsQueryable();
+
+            if (!string.IsNullOrEmpty(filtroStatus))
+            {
+                if (Enum.TryParse<StatusLivro>(filtroStatus, true, out var statusEnum))
+                {
+                    itensFiltrados = itensFiltrados.Where(i => i.Status == statusEnum);
+                }
+            }
+
+            // 2. Filtro por Data
+            if (dataInicio.HasValue)
+                itensFiltrados = itensFiltrados.Where(i => i.DataEntrada >= dataInicio.Value);
+
+            if (dataFim.HasValue)
+                itensFiltrados = itensFiltrados.Where(i => i.DataEntrada <= dataFim.Value);
+
+            // 3. Ordenação e atribuição
+            livro.Exemplares = itensFiltrados.OrderByDescending(i => i.DataEntrada).ToList();
+
+            // Mantém os dados na tela
+            ViewData["FiltroStatus"] = filtroStatus;
+            ViewData["DataInicio"] = dataInicio?.ToString("yyyy-MM-dd");
+            ViewData["DataFim"] = dataFim?.ToString("yyyy-MM-dd");
+
             return View(livro);
         }
 
@@ -254,7 +271,6 @@ namespace LivroCDF.Controllers
 
             var livrosFiltrados = await query.ToListAsync();
 
-            // Retorna a PartialView apenas com a tabela atualizada
             return PartialView("_TabelaLivros", livrosFiltrados);
         }
     }

@@ -4,39 +4,45 @@
     ViewData["Title"] = "Controle de Estoque";
 }
 
-<h1>📦 Controle de Estoque (Ativos)</h1>
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+    <h1 class="h2 mb-0 text-center text-md-start">📦 Controle de Estoque (Ativos)</h1>
+    <a asp-action="Create" class="btn btn-success btn-lg w-100 w-md-auto">
+        <i class="bi bi-plus-lg"></i> Nova Entrada
+    </a>
+</div>
 
-<div class="row mb-3">
-    <div class="col-md-6">
-        <a asp-action="Create" class="btn btn-success">Nova Entrada</a>
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-body bg-light rounded">
+        <div class="row g-3 align-items-end">
+            <div class="col-12 col-md-8">
+                <label class="form-label fw-bold text-muted">Pesquisa Rápida</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                    <input type="text" id="campoBusca" class="form-control" placeholder="Digite o nome do livro..." />
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <label class="form-label fw-bold text-muted">Filtrar por Status</label>
+                <select id="filtroStatus" class="form-select">
+                    <option value="">Todos os Status</option>
+                    <option value="0">Em Estoque</option>
+                    <option value="1">A Pagar</option>
+                </select>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="card p-3 mb-4 bg-light">
-    <div class="row">
-        <div class="col-md-8">
-            <label>Pesquisa Rápida (Nome do Livro):</label>
-            <input type="text" id="campoBusca" class="form-control" placeholder="Nome do livro" />
-        </div>
-        <div class="col-md-4">
-            <label>Filtro Rápido:</label>
-            <select id="filtroStatus" class="form-control">
-                <option value="">Todos</option>
-                <option value="0">Em Estoque</option>
-                <option value="1">A Pagar</option>
-            </select>
-        </div>
+<div id="containerTabela" class="card shadow-sm border-0">
+    <div class="card-body p-0">
+        <partial name="_TabelaEstoque" model="Model" />
     </div>
-</div>
-
-<div id="containerTabela">
-    <partial name="_TabelaEstoque" model="Model" />
 </div>
 
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // SCRIPT ORIGINAL DE AJAX MANTIDO
             function atualizarTabela() {
                 var termo = $("#campoBusca").val();
                 var status = $("#filtroStatus").val();

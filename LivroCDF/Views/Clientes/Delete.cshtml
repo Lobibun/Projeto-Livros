@@ -1,30 +1,73 @@
 ﻿@model LivroCDF.Models.Cliente
 
 @{
-    ViewData["Title"] = "Excluir";
+    ViewData["Title"] = "Excluir Cliente";
 }
 
-<h1>Excluir Cliente</h1>
-@if (ViewData["ErroExclusao"] != null)
-{
-    <div class="alert alert-danger">
-        @ViewData["ErroExclusao"]
+<div class="container mt-3 mt-md-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow border-danger rounded-4">
+
+                <div class="card-header bg-danger text-white text-center py-3 rounded-top-4">
+                    <h4 class="mb-0 fw-bold fs-5 fs-md-4"><i class="bi bi-exclamation-triangle-fill me-2"></i> Excluir Cliente</h4>
+                </div>
+
+                <div class="card-body text-center p-3 p-md-4">
+                    @if (ViewData["ErroExclusao"] != null)
+                    {
+                        <div class="alert alert-warning shadow-sm text-start d-flex align-items-center">
+                            <i class="bi bi-exclamation-circle fs-4 me-3"></i>
+                            <div>@ViewData["ErroExclusao"]</div>
+                        </div>
+                    }
+
+                    <h5 class="card-title mb-4 fw-normal">Tem certeza que deseja remover este registro?</h5>
+
+                    <div class="mb-3 d-flex justify-content-center">
+                        <div class="position-relative" style="width: 100px; height: 100px;">
+                            @if (!string.IsNullOrEmpty(Model.FotoCaminho))
+                            {
+                                <img src="@Model.FotoCaminho"
+                                     class="rounded-circle shadow border border-3 border-white"
+                                     style="width: 100px; height: 100px; object-fit: cover;"
+                                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('d-none');" />
+
+                                <div class="rounded-circle bg-gradient-clientes text-white d-flex align-items-center justify-content-center shadow border border-3 border-white d-none w-100 h-100"
+                                     style="font-size: 2.5rem;">
+                                    @Model.Nome.Substring(0, 1).ToUpper()
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center shadow border border-3 border-white w-100 h-100"
+                                     style="font-size: 2.5rem;">
+                                    @Model.Nome.Substring(0, 1).ToUpper()
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+                    <h3 class="fw-bold text-dark mb-0">@Model.Nome</h3>
+                    <p class="text-muted mb-4"><i class="bi bi-envelope me-1"></i>@Model.Email</p>
+
+                    <div class="alert alert-light border small text-muted mb-4">
+                        <i class="bi bi-info-circle me-1"></i> Esta ação é irreversível e removerá o histórico associado.
+                    </div>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                            <a asp-action="Index" class="btn btn-outline-secondary btn-lg px-4 w-100 w-md-auto order-1 order-md-0">
+                                <i class="bi bi-arrow-left"></i> Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-danger btn-lg px-4 w-100 w-md-auto order-0 order-md-1 shadow-sm">
+                                <i class="bi bi-trash-fill"></i> Confirmar Exclusão
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-}
-<h3>Tem certeza que deseja excluir isto?</h3>
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2"> @Html.DisplayNameFor(model => model.Nome) </dt>
-        <dd class="col-sm-10"> @Html.DisplayFor(model => model.Nome) </dd>
-
-        <dt class="col-sm-2"> @Html.DisplayNameFor(model => model.Email) </dt>
-        <dd class="col-sm-10"> @Html.DisplayFor(model => model.Email) </dd>
-    </dl>
-
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Excluir" class="btn btn-danger" /> |
-        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
-    </form>
 </div>
