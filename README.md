@@ -2,13 +2,13 @@
 
 Sistema completo para gerenciamento de estoque, vendas e controle financeiro de livrarias. O projeto foca em regras de negócio complexas, controle de acesso hierárquico e auditoria de ações.
 
-## 🚀 Funcionalidades Principais
+## Funcionalidades Principais
 
-### 📦 Gestão de Estoque e Produtos
+### Gestão de Estoque e Produtos
 * **Cadastro Inteligente:** Busca automática da capa e dados do livro via **API do Google Books** utilizando o ISBN.
 * **Gestão de Exemplares:** Controle individual de exemplares por livro (rastreabilidade do estoque).
 
-### 💰 Vendas e Financeiro
+### Vendas e Financeiro
 * **Controle de "Fiado" (Contas a Receber):**
     * Status de venda "A Pagar": O sistema registra o débito no perfil do cliente.
     * Monitoramento de tempo da dívida.
@@ -24,7 +24,7 @@ Sistema hierárquico de permissões (Role-Based Access Control):
 ### Auditoria e Logs
 * **Rastreabilidade Total:** O sistema grava um log imutável de todas as ações críticas (vendas, exclusões, promoções de cargo), identificando **quem** fez e **quando**.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 * **Linguagem:** C# (.NET)
 * **Framework:** ASP.NET Core MVC
 * **Banco de Dados:** MySQL (Server=localhost)
@@ -32,7 +32,7 @@ Sistema hierárquico de permissões (Role-Based Access Control):
 * **Integrações:** Google Books API
 * **Front-end:** HTML, CSS, Bootstrap (Razor Views)
 
-## 🔧 Como Rodar o Projeto
+## Como Rodar o Projeto
 
 1. Clone o repositório:
 ```bash
